@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mecha Factory</title>
+  <!-- Google Fonts fallback for Poppins -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>body { font-family: 'Poppins', Arial, sans-serif; }
+    /* Consistent yellow hover for nav menu */
+    .main-menu .nav > li > a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 30px;
+      padding: 4px 16px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .main-menu .nav > li > a:hover,
+    .main-menu .nav > li.active > a,
+    .main-menu .nav > li > a:focus {
+      background: #ffc107;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER START -->
+  <header>
+    <!-- TOPBAR (DARK) -->
+    <div class="navbar-mini" style="background:#222; color:#fff; font-family:'Poppins',sans-serif; padding:10px 0; width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw;">
+      <div style="display:flex;align-items:center;justify-content:flex-start;gap:38px;flex-wrap:nowrap;max-width:100vw;padding-left:32px;">
+        <span style="display:flex;align-items:center;gap:7px;"><i class="fa fa-phone"></i> 7086640797, 7002141830</span>
+        <span style="display:flex;align-items:center;gap:7px;"><i class="fa fa-envelope"></i> mechafactory2021@gmail.com</span>
+        <span style="display:flex;align-items:center;gap:7px;"><i class="fa fa-calendar"></i> Mon – Sat: 9:00 AM – 6:00 PM</span>
+      </div>
+    </div>
+    <!-- MAIN NAVBAR (WHITE) -->
+    <div class="header-area sticky-bar" style="background:#fff;">
+      <div class="menu-wrap" style="display:flex;align-items:center;justify-content:space-between;">
+        <div class="row align-items-center" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+          <!-- Logo left -->
+          <div class="col-md-3 col-sm-6 col-xs-6" style="display:flex;align-items:center;min-width:320px;">
+            <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:18px;">
+              <img src="images/mflogo.png" alt="Mecha Factory Logo" style="height:68px;display:block;">
+              <span style="font-weight:600;font-size:1.65rem;color:#222;line-height:1.1;vertical-align:middle;display:inline-block;">Mecha Factory</span>
+            </a>
+          </div>
+          <!-- Menu center -->
+          <div class="col-md-6 col-sm-6 col-xs-6" style="display:flex;justify-content:center;align-items:center;min-width:480px;">
+            <nav class="main-menu" aria-label="Main Navigation" style="width:100%;">
+              <button type="button" class="navbar-toggle collapsed d-lg-none" data-toggle="collapse" data-target="#mobile-menu" aria-expanded="false" style="background:none;border:none;outline:none;margin-right:10px;display:none;">
+                <i class="fa fa-bars" style="font-size:1.7em;color:#222;"></i>
+              </button>
+              <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex;gap:0;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;">
+                <li style="margin:0;"><a href="#home">HOME</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Button right -->
+          <div class="col-md-3 col-sm-12 col-xs-12 text-right" style="display:flex;justify-content:flex-end;align-items:center;min-width:260px;height:88px;">
+            <a href="#contact" class="btn btn-yellow theme-btn" style="font-weight:700;padding:10px 38px;border-radius:30px;text-transform:uppercase;box-shadow:0 1px 4px rgba(0,0,0,0.04);display:flex;align-items:center;height:48px;margin:auto 0;text-decoration:none;border-bottom:none;">GET IN TOUCH</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section" style="background: url('images/robotArm.jpg') center center/cover no-repeat; position: relative; min-height: 380px; width:100vw; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw;">
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);"></div>
+    <div class="hero-content" style="display:flex;align-items:center;gap:48px;padding-left:120px;max-width:1400px;margin:auto;">
+      <div>
+        <h1 class="hero-title" style="color:#fff;">Turning Your Ideas Into Reality</h1>
+        <p class="hero-subtext" style="color:#fff;">OEM &amp; ODM | 3D Designing | Prototyping | CNC | Laser Cutting</p>
+      </div>
+      <a href="#services" class="mecha-cta-btn" style="padding:18px 38px;font-size:1.4rem;font-weight:400;letter-spacing:1px;box-shadow:none;background:transparent;border-radius:0;color:#f5bf23;margin-left:140px;">VIEW SERVICES</a>
+    </div>
+  </section>
+
+  <!-- Services Section (Lightwire Factory Style, horizontal scroll) -->
+  <section class="service-area bg-light section-padding">
+    <div class="container">
+      <div class="title-base text-center mb-5">
+        <h2 class="section-main-title">Our Services</h2>
+      </div>
+      <div style="position:relative;">
+        <button class="services-arrow-left" aria-label="Scroll left" style="position:absolute;left:-24px;top:50%;transform:translateY(-50%);z-index:2;background:#fff;border-radius:50%;border:none;box-shadow:0 2px 8px rgba(0,0,0,0.08);width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;cursor:pointer;"><i class="fa fa-chevron-left"></i></button>
+        <button class="services-arrow-right" aria-label="Scroll right" style="position:absolute;right:-24px;top:50%;transform:translateY(-50%);z-index:2;background:#fff;border-radius:50%;border:none;box-shadow:0 2px 8px rgba(0,0,0,0.08);width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;cursor:pointer;"><i class="fa fa-chevron-right"></i></button>
+        <div class="services-scroll-row">
+          <div class="service-card-modern">
+            <img src="images/card1.jpg" alt="3D Designing" class="service-img">
+            <div class="service-icon-box"><i class="fa fa-cubes"></i></div>
+            <div class="service-body">
+              <div class="service-title">3D Designing</div>
+              <div class="service-desc">High-quality 3D modeling using modern CAD tools for visualizing complex parts.</div>
+              <a href="#" class="service-link">VIEW NOW</a>
+            </div>
+          </div>
+          <div class="service-card-modern">
+            <img src="images/card2.jpg" alt="2D Designing" class="service-img">
+            <div class="service-icon-box"><i class="fa fa-drafting-compass"></i></div>
+            <div class="service-body">
+              <div class="service-title">2D Designing</div>
+              <div class="service-desc">Accurate 2D drawings and technical documentation ready for prototyping or fabrication.</div>
+              <a href="#" class="service-link">VIEW NOW</a>
+            </div>
+          </div>
+          <div class="service-card-modern">
+            <img src="images/card3.jpg" alt="3D Printing" class="service-img">
+            <div class="service-icon-box"><i class="fa fa-print"></i></div>
+            <div class="service-body">
+              <div class="service-title">3D Printing</div>
+              <div class="service-desc">Rapid prototyping with precise FDM/Resin printing services for functional parts.</div>
+              <a href="#" class="service-link">VIEW NOW</a>
+            </div>
+          </div>
+          <div class="service-card-modern">
+            <img src="images/card4.jpg" alt="CNC Engraving" class="service-img">
+            <div class="service-icon-box"><i class="fa fa-pen-fancy"></i></div>
+            <div class="service-body">
+              <div class="service-title">CNC Engraving</div>
+              <div class="service-desc">Precision CNC engraving on various materials for industrial and creative projects.</div>
+              <a href="#" class="service-link">VIEW NOW</a>
+            </div>
+          </div>
+          <div class="service-card-modern">
+            <img src="images/card5.jpg" alt="Laser Cutting" class="service-img">
+            <div class="service-icon-box"><i class="fa fa-cut"></i></div>
+            <div class="service-body">
+              <div class="service-title">Laser Cutting</div>
+              <div class="service-desc">Clean, fast laser cutting for metal, acrylic, and wood with high accuracy.</div>
+              <a href="#" class="service-link">VIEW NOW</a>
+            </div>
+          </div>
+          <div class="service-card-modern">
+            <img src="images/card6.jpg" alt="Training & Scanning" class="service-img">
+            <div class="service-icon-box"><i class="fa fa-chalkboard-teacher"></i></div>
+            <div class="service-body">
+              <div class="service-title">Training & Scanning</div>
+              <div class="service-desc">Professional training in 3D scanning, reverse engineering, and CAD design workflows.</div>
+              <a href="#" class="service-link">VIEW NOW</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-section" style="position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;background: url('images/team.jpg') center center/cover no-repeat;">
+    <div class="why-choose-overlay"></div>
+    <div class="why-choose-container" style="display:flex;align-items:center;justify-content:center;width:100%;max-width:1400px;margin:auto;">
+      <div class="why-choose-box">
+        <h2 class="section-main-title why-choose-title">Why Choose Us</h2>
+        <div class="why-choose-features">
+          <div class="why-choose-feature">
+            <div class="why-choose-feature-title">Advanced R&amp;D Facilities</div>
+          </div>
+          <div class="why-choose-feature">
+            <div class="why-choose-feature-title">Rapid Turnaround Time</div>
+          </div>
+          <div class="why-choose-feature">
+            <div class="why-choose-feature-title">Tailored OEM &amp; ODM Solutions</div>
+          </div>
+          <div class="why-choose-feature">
+            <div class="why-choose-feature-title">Skilled Technical Team</div>
+          </div>
+          <div class="why-choose-feature">
+            <div class="why-choose-feature-title">End-to-End Services</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="aboutus" class="about-area section-padding">
+    <h2 class="section-main-title">About Us</h2>
+    <div class="about-subtitle" style="font-size:1.18rem;color:#444;font-weight:500;margin-bottom:18px;text-align:center;">Engineering your ideas into reality with precision and purpose.</div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0 about-content">
+          <p>Mecha Factory is India’s premier OEM and ODM design consultancy, offering complete product development solutions tailored to your needs. From the first sketch to final manufacturing, we specialize in transforming innovative concepts into fully functional, production-ready designs.</p>
+          <p>With a cutting-edge R&amp;D studio and a passionate team of design engineers, we deliver high-quality 3D and 2D modeling, 3D printing, CNC engraving, laser cutting, and technical training in design and reverse engineering.</p>
+          <p>Our focus is precision, speed, and collaboration. Whether you’re a startup building your first prototype or a business scaling up production, Mecha Factory ensures efficient, reliable, and scalable solutions — powered by experience and technology.</p>
+          <div class="about-highlights-row-wrap">
+            <div class="about-highlights-row">
+              <div class="col-md-6 mb-4">
+                <div class="about-highlight-card">
+                  <i class="fa fa-check-circle text-warning"></i>
+                  <span>End-to-end OEM/ODM product development</span>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="about-highlight-card">
+                  <i class="fa fa-check-circle text-warning"></i>
+                  <span>Advanced R&amp;D & design capabilities</span>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="about-highlight-card">
+                  <i class="fa fa-check-circle text-warning"></i>
+                  <span>Rapid prototyping & 3D printing</span>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="about-highlight-card">
+                  <i class="fa fa-check-circle text-warning"></i>
+                  <span>Skilled engineers & modern tools</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center" style="order:2;display:flex;align-items:center;justify-content:center;padding-top:32px;padding-bottom:32px;">
+          <img src="images/about.jpg" alt="About Mecha Factory" style="width:100%;max-width:480px;border-radius:14px;box-shadow:0 4px 32px rgba(0,0,0,0.10);object-fit:cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container footer-content">
+      <div class="footer-contact-row" style="display:flex;gap:40px;align-items:flex-start;justify-content:center;flex-wrap:wrap;">
+        <h2 class="section-main-title" style="width:100%;text-align:center;margin-bottom:32px;">Contact Us</h2>
+        <div class="footer-contact-col" style="flex:1 1 320px;min-width:260px;max-width:420px;text-align:left;">
+          <div class="contact-row" style="margin-bottom:32px;flex-direction:column;align-items:flex-start;gap:6px;">
+            <div class="contact-semiheading" style="font-size:0.98rem;font-weight:700;text-transform:uppercase;color:#222d38;letter-spacing:1px;margin-bottom:2px;">Phone</div>
+            <div style="display:flex;align-items:center;gap:8px;"><i class="fa fa-phone contact-icon"></i><span style="color:#222d38;display:flex;flex-direction:column;gap:2px;">7086640797<br>7002141830</span></div>
+          </div>
+          <div class="contact-row" style="margin-bottom:32px;flex-direction:column;align-items:flex-start;gap:6px;">
+            <div class="contact-semiheading" style="font-size:0.98rem;font-weight:700;text-transform:uppercase;color:#222d38;letter-spacing:1px;margin-bottom:2px;">Email</div>
+            <div style="display:flex;align-items:center;gap:8px;"><i class="fa fa-envelope contact-icon"></i><span style="color:#222d38;">mechafactory2021@gmail.com</span></div>
+          </div>
+          <div class="contact-row" style="margin-bottom:32px;flex-direction:column;align-items:flex-start;gap:6px;">
+            <div class="contact-semiheading" style="font-size:0.98rem;font-weight:700;text-transform:uppercase;color:#222d38;letter-spacing:1px;margin-bottom:2px;">Address</div>
+            <div style="display:flex;align-items:center;gap:8px;"><i class="fa fa-map-marker-alt contact-icon"></i><span>2 No. Masjid Path, A.K Dev Road, Katahbari,<br>Guwahati, Kamrup Metropolitan,<br>Assam – 781035</span></div>
+          </div>
+          <div class="contact-row" style="margin-bottom:0;flex-direction:column;align-items:flex-start;gap:6px;">
+            <div class="contact-semiheading" style="font-size:0.98rem;font-weight:700;text-transform:uppercase;color:#222d38;letter-spacing:1px;margin-bottom:2px;">Business Hours</div>
+            <div style="display:flex;align-items:center;gap:8px;"><i class="fa fa-clock contact-icon"></i><span>Monday – Saturday: 9:00 AM – 6:00 PM</span></div>
+          </div>
+        </div>
+        <div class="footer-contact-col" style="flex:1 1 320px;min-width:260px;max-width:420px;text-align:center;">
+          <div class="footer-map-wrap" style="margin:18px 0 18px 0;">
+            <iframe src="https://www.google.com/maps?q=2+No.+Masjid+Path,+A.K+Dev+Road,+Katahbari,+Guwahati,+Kamrup+Metropolitan,+Assam+781035&output=embed" width="100%" height="220" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <a href="https://wa.me/917086640797" class="contact-now-btn" target="_blank" rel="noopener">Contact Now</a>
+        </div>
+      </div>
+      <div class="footer-social">
+        <h2 class="section-main-title" style="margin-bottom:18px;">Follow Us</h2>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-tagline">
+        <p>We turn innovative ideas into exceptional products</p>
+      </div>
+      <div class="footer-copyright-section" style="background:#111;padding:18px 0 12px 0;margin-top:32px;">
+        <div style="text-align:center;font-size:0.98rem;color:#fff;letter-spacing:0.2px;">
+          Copyright © 2025 Designed by <a href="#" style="color:#1da1f2;text-decoration:none;font-weight:500;">GITCS</a> All rights reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html> 

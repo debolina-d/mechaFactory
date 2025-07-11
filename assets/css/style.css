@@ -49,11 +49,31 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 }
 
 /* Lightwire-style horizontal navbar with boxed menu items */
-.mecha-navbar {
+.mecha-navbar, .header-area.sticky-bar {
+  width: 100vw;
+  min-width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
   background: #fff !important;
   border-bottom: 1px solid #e0e0e0;
   box-shadow: 0 4px 16px -4px rgba(0,0,0,0.10);
   padding: 0;
+  z-index: 1000;
+}
+.menu-wrap, .navbar-content, .header-area .row.align-items-center {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar-logo, .col-md-3, .col-md-6, .col-md-12, .col-sm-6, .col-xs-6, .col-xs-12 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
 }
 
 .navbar-content {
@@ -669,6 +689,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   text-align: center;
   line-height: 1.1;
   position: relative;
+  display: block;
 }
 .section-main-title::after {
   content: '';
@@ -678,6 +699,25 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   height: 3px;
   background: #f5bf23;
   border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s, height 0.3s;
+}
+.section-main-title:hover::after,
+.section-main-title:focus::after {
+  width: 80px !important;
+  background: #ffd84a !important;
+  height: 3px !important;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s, height 0.3s !important;
+}
+/* Remove any custom margin overrides for section-main-title underline */
+.footer-social .section-main-title::after,
+.section-main-title.why-choose-title::after,
+.about-content .section-main-title::after {
+  margin: 18px auto 0 auto !important;
+  width: 48px !important;
+  height: 3px !important;
+  background: #f5bf23 !important;
+  border-radius: 2px !important;
+  display: block !important;
 }
 @media (max-width: 600px) {
   .section-main-title {
@@ -687,6 +727,10 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
     width: 32px;
     height: 2px;
     margin-top: 12px;
+  }
+  .section-main-title:hover::after,
+  .section-main-title:focus::after {
+    width: 56px;
   }
 } 
 
@@ -896,7 +940,10 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 } 
 
 .btn.btn-yellow, .theme-btn {
-  font-size: 1.35rem !important;
+  font-size: 1.1rem !important;
+  padding: 10px 28px !important;
+  border-radius: 20px !important;
+  margin-right: 24px !important;
 } 
 
 .about-content {
@@ -931,22 +978,35 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   margin: 0 auto;
 }
 .about-highlight-card {
-  background: #fff;
-  border: 1.5px solid #ececec;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  width: 100%;
+  max-width: 320px;
+  min-width: 220px;
+  min-height: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
-  gap: 18px;
-  padding: 32px 28px;
-  font-size: 1.18rem;
-  font-weight: 700;
-  color: #222d38;
-  transition: box-shadow 0.25s, border-color 0.25s, transform 0.25s;
-  min-height: 140px;
   justify-content: flex-start;
-  width: 260px;
-  max-width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 20px;
+  border: 1.5px solid #F5BF23;
+  box-shadow: 0 2px 16px rgba(245,191,35,0.08);
+  color: #222d38;
+  font-family: 'Rajdhani', 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.08rem;
+  transition: box-shadow 0.25s, border-color 0.25s, transform 0.2s;
+  padding: 0 32px;
+}
+.about-highlight-card i {
+  color: #F5BF23;
+  font-size: 1.2rem;
+  margin-right: 14px;
+}
+.about-highlight-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(245,191,35,0.18), 0 0 32px 8px rgba(0,0,0,0.10);
+  border-color: #ffd84a;
+  transform: translateY(-2px) scale(1.03);
 }
 @media (max-width: 1200px) {
   .about-highlights-row {
@@ -982,74 +1042,136 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   padding-right: 0;
 }
 .about-area .row {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
 }
 .about-content {
   max-width: 520px;
-  margin-right: auto;
+  margin-right: 0;
   text-align: left;
   order: 1;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.about-area .col-lg-6.text-center {
+.about-highlights-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  min-width: 280px;
+  max-width: 340px;
+  width: 100%;
   order: 2;
+  margin-left: 48px;
+}
+.about-highlights-row.about-highlights-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 340px;
+}
+.about-highlight-card {
+  width: 100%;
+  max-width: 320px;
+  min-width: 220px;
+  min-height: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.about-highlights-row.about-highlights-vertical {
+  width: 100%;
+  max-width: 320px;
 }
 @media (max-width: 991px) {
-  .about-area .container {
-    display: block;
+  .about-highlight-card {
+    max-width: 320px;
+    min-width: 180px;
+    min-height: 56px;
+    height: 56px;
   }
-  .about-area .row {
-    flex-direction: column;
-    display: block;
-  }
-  .about-content {
-    margin-bottom: 32px;
-    order: unset;
-    padding-top: 18px;
-    padding-bottom: 18px;
-  }
-  .about-area .col-lg-6.text-center {
-    order: unset;
-    padding-top: 18px;
-    padding-bottom: 18px;
+  .about-highlights-row.about-highlights-vertical {
+    max-width: 100%;
   }
 } 
 
-.about-content .section-main-title {
-  text-align: center;
-  margin-left: 48px;
-  margin-right: auto;
-  display: block;
-  margin-bottom: 1.2rem;
+.about-highlights-col {
+  align-self: flex-start;
+  margin-top: 48px;
 }
-.about-content .section-main-title::after {
+@media (max-width: 991px) {
+  .about-highlights-col {
+    align-self: center;
+    margin-top: 0;
+  }
+} 
+
+.why-choose-title.section-main-title,
+.footer-social .section-main-title {
+  position: relative;
+  cursor: pointer;
+}
+.why-choose-title.section-main-title::after,
+.footer-social .section-main-title::after {
+  content: '';
+  display: block;
+  margin: 18px auto 0 auto;
+  width: 48px;
+  height: 3px;
+  background: #f5bf23;
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s;
+}
+.why-choose-title.section-main-title:hover::after,
+.why-choose-title.section-main-title:focus::after,
+.footer-social .section-main-title:hover::after,
+.footer-social .section-main-title:focus::after {
+  width: 80px !important;
+  background: #ffd84a !important;
+  height: 3px !important;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s, height 0.3s !important;
+}
+@media (max-width: 600px) {
+  .footer-social .section-main-title:hover::after,
+  .footer-social .section-main-title:focus::after,
+  .why-choose-title.section-main-title:hover::after,
+  .why-choose-title.section-main-title:focus::after {
+    width: 56px !important;
+    height: 2.5px !important;
+  }
+} 
+
+.service-area .section-main-title {
+  text-align: center;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  display: block;
 }
-.about-content .about-subtitle {
-  text-align: center;
-  margin-left: 48px;
-  margin-right: auto;
+.service-area .section-main-title::after {
+  margin: 18px auto 0 auto !important;
+  width: 48px;
+  height: 3px;
+  background: #f5bf23;
+  border-radius: 2px;
   display: block;
-  margin-bottom: 28px;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s, height 0.3s;
 } 
-@media (max-width: 700px) {
-  .about-content .section-main-title,
-  .about-content .about-subtitle {
-    margin-left: auto;
-    margin-right: auto;
+.service-area .section-main-title:hover::after,
+.service-area .section-main-title:focus::after {
+  width: 80px;
+  background: #ffd84a;
+  height: 3px;
+}
+@media (max-width: 600px) {
+  .service-area .section-main-title:hover::after,
+  .service-area .section-main-title:focus::after {
+    width: 56px;
+    height: 2.5px;
   }
 } 

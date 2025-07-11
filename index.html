@@ -51,13 +51,18 @@
           <!-- Menu center -->
           <div class="col-md-6 col-sm-6 col-xs-6" style="display:flex;justify-content:center;align-items:center;min-width:480px;">
             <nav class="main-menu" aria-label="Main Navigation" style="width:100%;">
-              <button type="button" class="navbar-toggle collapsed d-lg-none" data-toggle="collapse" data-target="#mobile-menu" aria-expanded="false" style="background:none;border:none;outline:none;margin-right:10px;display:none;">
+              <button type="button" class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu" style="background:none;border:none;outline:none;margin-right:10px;display:none;">
                 <i class="fa fa-bars" style="font-size:1.7em;color:#222;"></i>
               </button>
               <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex;gap:0;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;">
                 <li style="margin:0;"><a href="#home">HOME</a></li>
                 <li><a href="#services">SERVICES</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+              </ul>
+              <ul class="nav navbar-nav ms-rounded" id="mobile-menu" style="display:none;flex-direction:column;gap:0;align-items:flex-start;justify-content:flex-start;margin:0;padding:0;list-style:none;text-transform:uppercase;position:absolute;top:60px;left:0;width:100vw;background:#fff;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+                <li style="margin:0;"><a href="#home">HOME</a></li>
+                <li><a href="#services">SERVICES</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#contact">CONTACT</a></li>
               </ul>
@@ -265,5 +270,29 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script>
+// Responsive Hamburger Menu Toggle
+const navbarToggle = document.getElementById('navbar-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const desktopMenu = document.getElementById('desktop-menu');
+function handleResize() {
+  if (window.innerWidth <= 900) {
+    navbarToggle.style.display = 'block';
+    desktopMenu.style.display = 'none';
+  } else {
+    navbarToggle.style.display = 'none';
+    desktopMenu.style.display = 'flex';
+    mobileMenu.style.display = 'none';
+    navbarToggle.setAttribute('aria-expanded', 'false');
+  }
+}
+navbarToggle.addEventListener('click', function() {
+  const expanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+  navbarToggle.setAttribute('aria-expanded', !expanded);
+  mobileMenu.style.display = expanded ? 'none' : 'flex';
+});
+window.addEventListener('resize', handleResize);
+document.addEventListener('DOMContentLoaded', handleResize);
+</script>
 </body>
 </html> 

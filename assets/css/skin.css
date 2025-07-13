@@ -29,34 +29,34 @@ COLORS
 
 .navbar .navbar-nav > li:hover > a, .navbar .navbar-nav > li > a:before, .dropdown-menu:hover, .btn:before, .advs-box.boxed-inverse:before, .title-base h2:after,
 .header-base .title-base h1:after, .pagination > li.page.active a, .pagination > li.page:hover a, .subline-bar li:hover {
-    background-color: #F5BF23;
+    background-color: #1e3a8a;
 }
 
 .white .btn.btn-yellow:before, .btn:before, .flex-control-paging li a.flex-active, .advs-box-top-icon-img h3:before, .img-box.i-center .im-record-music:after, .box-steps .step-item:hover:before,
 .progress-bar, .menu-transparent.scroll-css .btn.btn-border, .accordion-list .list-group-item > a:after, .accordion-list .list-group-item:before, .adv-img-classic-box .sub-text:before,
 .mega-tabs .tab-box .nav-tabs > li.active > a, .bg-color, .timeline > li > .timeline-badge, .timeline > li > .timeline-label:before, .list-items .list-item:before, .nav.inner.ms-minimal > li:before,
 .section-bg-color {
-    background-color: #F5BF23 !important;
+    background-color: #1e3a8a !important;
 }
 
 .btn:not(.btn-border):hover, .btn-border, .btn-border i, .footer-menu a:hover, header.bg-transparent .navbar-mini .navbar-form .btn:hover, header .navbar-mini i.fa:hover, header .btn-border,
 .ul-dots li:before, .advs-box-side-icon .icon-box i, .niche-box-team .content-box h4, .advs-box .tag-row i, .btn:not(.btn-border):hover i, .box-steps .step-number,
 .mega-menu .fa-ul .fa-li, .icon-box-cell i, .advs-box.advs-box-top-icon.boxed .icon, .breadcrumb > li + li:before, .list-items .list-item span, .porfolio-bar div i, [class*=col-md-] > .tag-row i,
 .content > .tag-row i, .box-menu-inner .icon-box i {
-    color: #F5BF23
+    color: #1e3a8a
 }
 
     .navbar .navbar-nav.lan-menu li > a:hover, .navbar-main .btn-search:hover span, .navbar-main .btn-search:hover .fa-close:before, .btn-border.btn-yellow, .img-box.i-center .im-record-music, .text-color,
     .white .btn-text:hover, .adv-img-classic-box p.sub-text, .white form p, .box-steps .step-item:after, .breadcrumb > .active, .nav.inner.ms-minimal > li.active > a, .adv-img h2, .adv-circle h2,
     header .side-menu-fixed .btn:hover {
-        color: #F5BF23 !important;
+        color: #1e3a8a !important;
     }
 
     .white .btn.btn-yellow, .btn-border:hover, .btn, .btn-text.text-color, .form-control:focus, .white .icon-box:not(.icon-box-top-bottom) .icon-box-cell:first-child, div.white .countdown > div:after,
     .img-box.thumbnail span:after, .img-box.thumbnail span:before, .advs-box-multiple div.circle, .name-box i, .list-item-img .icon, .white .form-control, .mega-tabs .nav-tabs, .pricing-table,
     .advs-box-top-icon .extra-content, .advs-box-side-icon .extra-content, .mi-menu ul li:hover > a, .mi-menu ul li.active > a, .img-box .caption, .timeline > li > .timeline-panel,
     .advs-box-top-icon-img .extra-content, .album-box > .img-box, .porfolio-bar div i:before, .widget .list-group-item.active, .list-group-item:hover, .list-blog a.img-box, .comment-list img {
-        border-color: #F5BF23 !important;
+        border-color: #1e3a8a !important;
     }
 
 body, .section-empty, .bg-white .advs-box.boxed-inverse {

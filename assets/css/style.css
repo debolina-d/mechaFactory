@@ -139,11 +139,11 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 .navbar-nav > li > a:hover,
 .nav-link.active,
 .nav-link:hover {
-  background: #f5bf23;
+  background: #1e3a8a;
   color: #222d38 !important;
 }
 
-/* Consistent yellow hover for all nav links */
+/* Consistent navy blue hover for all nav links */
 .navbar-nav > li > a,
 .nav-link {
   transition: background 0.2s, color 0.2s;
@@ -153,7 +153,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 .navbar-nav > li > a.active,
 .nav-link:hover,
 .nav-link.active {
-  background: #f5bf23 !important;
+  background: #1e3a8a !important;
   color: #222d38 !important;
 }
 
@@ -195,8 +195,8 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 }
 .mecha-cta-btn, .btn-yellow {
   background: #fff !important;
-  color: #f5bf23 !important;
-  border: 2px solid #f5bf23 !important;
+  color: #1e3a8a !important;
+  border: 2px solid #1e3a8a !important;
   border-radius: 999px !important;
   padding: 12px 36px !important;
   font-size: 1.15rem !important;
@@ -209,9 +209,9 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 
 .mecha-cta-btn:hover, .mecha-cta-btn:focus, .mecha-cta-btn:active,
 .btn-yellow:hover, .btn-yellow:focus, .btn-yellow:active {
-  background: #f5bf23 !important;
-  color: #fff !important;
-  border-color: #f5bf23 !important;
+  background: #e0e0e0 !important;
+  color: #222d38 !important;
+  border-color: #e0e0e0 !important;
 }
 
 
@@ -229,7 +229,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 }
 .topbar-content i {
   margin-right: 6px;
-  color: #F5BF23;
+  color: #1e3a8a;
 }
 @media (max-width: 767px) {
   .topbar-content {
@@ -293,8 +293,9 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 }
 
 .service-card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(30,58,138,0.18);
   transform: translateY(-4px);
+  border-color: #1e3a8a;
 } 
 
 .service-style-one {
@@ -307,12 +308,13 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 
 .service-style-one:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 24px rgba(30,58,138,0.18);
+  border-color: #1e3a8a;
 }
 
 .service-style-one .service-icon {
   font-size: 40px;
-  color: #f5bf23;
+  color: #1e3a8a;
   margin-bottom: 1rem;
 } 
 
@@ -333,22 +335,22 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 }
 
 .advs-box.boxed:hover {
-  box-shadow: 0 12px 32px rgba(0,0,0,0.13);
-  border-color: #f5bf23;
+  box-shadow: 0 12px 32px rgba(30,58,138,0.13);
+  border-color: #1e3a8a;
   transform: translateY(-8px) scale(1.03);
 }
 
 .advs-box-top-icon .icon-box .icon-box-cell i {
   font-size: 48px;
-  color: #f5bf23;
+  color: #1e3a8a;
   margin-bottom: 1.2rem;
   transition: color 0.3s, text-shadow 0.3s;
-  text-shadow: 0 2px 8px rgba(245,191,35,0.08);
+  text-shadow: 0 2px 8px rgba(30,58,138,0.08);
 }
 
 .advs-box.boxed:hover .icon-box .icon-box-cell i {
-  color: #ffce3a;
-  text-shadow: 0 4px 16px rgba(245,191,35,0.18);
+  color: #1e3a8a;
+  text-shadow: 0 4px 16px rgba(30,58,138,0.18);
 }
 
 .advs-box.boxed h3 {
@@ -363,7 +365,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 }
 
 .advs-box.boxed:hover h3 {
-  color: #f5bf23;
+  color: #1e3a8a;
 }
 
 .advs-box.boxed p {
@@ -411,7 +413,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 } 
 
 .services-arrow-left, .services-arrow-right {
-  background: #f5bf23 !important;
+  background: #1e3a8a !important;
   color: #fff !important;
   border: none;
   border-radius: 50%;
@@ -426,8 +428,9 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   transition: background 0.2s, color 0.2s;
 }
 .services-arrow-left:hover, .services-arrow-right:hover {
-  background: #e6b200 !important;
-  color: #fff !important;
+  background: #e0e0e0 !important;
+  color: #222d38 !important;
+  border: 2px solid #e0e0e0 !important;
 }
 .services-arrow-left i, .services-arrow-right i {
   color: #fff !important;
@@ -451,15 +454,15 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 .service-card-modern:hover {
   box-shadow: 0 12px 32px rgba(0,0,0,0.13);
   transform: translateY(-8px) scale(1.03);
-  border-top: 4px solid #f5bf23;
-  border-color: #f5bf23;
+  border-top: 4px solid #1e3a8a;
+  border-color: #1e3a8a;
 }
 .service-card-modern .service-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   display: block;
-  border-top: 4px solid #f5bf23;
+  border-top: 4px solid #1e3a8a;
 }
 .service-card-modern .service-icon-box {
   position: absolute;
@@ -472,13 +475,13 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   align-items: center;
   justify-content: center;
   border-radius: 0;
-  border-top: 4px solid #f5bf23;
+  border-top: 4px solid #1e3a8a;
   z-index: 2;
   box-shadow: 0 4px 16px rgba(0,0,0,0.10);
   transition: box-shadow 0.3s, transform 0.3s;
 }
 .service-card-modern:hover .service-icon-box {
-  box-shadow: 0 8px 24px rgba(245,191,35,0.18);
+  box-shadow: 0 8px 24px rgba(30,58,138,0.18);
   transform: scale(1.08);
 }
 .service-card-modern .service-icon-box i {
@@ -520,8 +523,8 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   width: fit-content;
 }
 .service-card-modern .service-link:hover {
-  color: #f5bf23;
-  border-color: #f5bf23;
+  color: #1e3a8a;
+  border-color: #1e3a8a;
 }
 
 @media (max-width: 600px) {
@@ -603,7 +606,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   min-width: 120px;
 }
 .why-choose-icon {
-  color: #f5bf23;
+  color: #1e3a8a;
   font-size: 2rem;
   margin-bottom: 0.2rem;
   display: block;
@@ -665,9 +668,9 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   padding: 2px 6px;
 }
 .why-choose-feature-title:hover {
-  color: #fff;
-  background: #f5bf23;
-  box-shadow: 0 4px 16px rgba(245,191,35,0.18);
+  color: #1e3a8a;
+  background: #1e3a8a;
+  box-shadow: 0 4px 16px rgba(30,58,138,0.18);
   transform: scale(1.08);
 }
 .why-choose-feature-desc {
@@ -707,14 +710,14 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   margin: 18px auto 0 auto;
   width: 48px;
   height: 3px;
-  background: #f5bf23;
+  background: #1e3a8a;
   border-radius: 2px;
   transition: width 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s, height 0.3s;
 }
 .section-main-title:hover::after,
 .section-main-title:focus::after {
   width: 80px !important;
-  background: #ffd84a !important;
+  background: #e0e0e0 !important;
   height: 3px !important;
   transition: width 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s, height 0.3s !important;
 }
@@ -725,7 +728,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   margin: 18px auto 0 auto !important;
   width: 48px !important;
   height: 3px !important;
-  background: #f5bf23 !important;
+  background: #1e3a8a !important;
   border-radius: 2px !important;
   display: block !important;
 }
@@ -775,7 +778,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   align-items: center;
 }
 .contact-icon {
-  color: #f5bf23;
+  color: #1e3a8a;
   font-size: 1.2rem;
   min-width: 28px;
   text-align: left;
@@ -793,7 +796,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   font-size: 1rem;
 }
 .footer-contact .contact-row i {
-  color: #f5bf23;
+  color: #1e3a8a;
   font-size: 1.2rem;
   margin-top: 2px;
   min-width: 22px;
@@ -805,7 +808,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   transition: color 0.2s;
 }
 .footer-contact .contact-row a:hover {
-  color: #f5bf23;
+  color: #1e3a8a;
 }
 .footer-contact .contact-row span {
   display: flex;
@@ -856,7 +859,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   display: inline-block;
   margin-top: 10px;
   padding: 12px 36px;
-  background: #f5bf23;
+  background: #1e3a8a;
   color: #222d38;
   font-family: 'Rajdhani', sans-serif;
   font-size: 1.1rem;
@@ -872,7 +875,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 .contact-now-btn:hover {
   background: #ffd84a;
   color: #222d38;
-  box-shadow: 0 6px 18px rgba(245,191,35,0.18);
+  box-shadow: 0 6px 18px rgba(30,58,138,0.18);
 }
 @media (max-width: 900px) {
   .footer-contact-row {
@@ -920,9 +923,9 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 .footer-social .social-link:hover {
-  color: #f5bf23;
+  color: #1e3a8a;
   background: #fff;
-  box-shadow: 0 4px 16px rgba(245,191,35,0.13);
+  box-shadow: 0 4px 16px rgba(30,58,138,0.13);
   transform: scale(1.13);
 }
 .footer-social .social-link i {
@@ -931,7 +934,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   transition: color 0.2s, transform 0.2s;
 }
 .footer-social .social-link:hover i {
-  color: #f5bf23;
+  color: #1e3a8a;
   transform: scale(1.18);
 } 
 
@@ -982,8 +985,8 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 
 .mecha-cta-btn {
   background: transparent !important;
-  color: #f5bf23 !important;
-  border: 2px solid #f5bf23 !important;
+  color: #1e3a8a !important;
+  border: 2px solid #1e3a8a !important;
   border-radius: 0 !important;
   padding: 18px 38px !important;
   font-size: 1.4rem !important;
@@ -994,9 +997,9 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .mecha-cta-btn:hover, .mecha-cta-btn:focus, .mecha-cta-btn:active {
-  background: #f5bf23 !important;
+  background: #1e3a8a !important;
   color: #fff !important;
-  border-color: #f5bf23 !important;
+  border-color: #1e3a8a !important;
 } 
 
 .about-content {
@@ -1042,8 +1045,8 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   box-sizing: border-box;
   background: #fff;
   border-radius: 20px;
-  border: 1.5px solid #F5BF23;
-  box-shadow: 0 2px 16px rgba(245,191,35,0.08);
+  border: 1.5px solid #1e3a8a;
+  box-shadow: 0 2px 16px rgba(30,58,138,0.08);
   color: #222d38;
   font-family: 'Rajdhani', 'Poppins', Arial, sans-serif;
   font-weight: 700;
@@ -1052,14 +1055,13 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   padding: 0 32px;
 }
 .about-highlight-card i {
-  color: #F5BF23;
+  color: #1e3a8a;
   font-size: 1.2rem;
   margin-right: 14px;
 }
 .about-highlight-card:hover {
-  box-shadow: 0 8px 32px 0 rgba(245,191,35,0.18), 0 0 32px 8px rgba(0,0,0,0.10);
-  border-color: #ffd84a;
-  transform: translateY(-2px) scale(1.03);
+  border-color: #1e3a8a;
+  box-shadow: 0 8px 32px 0 rgba(30,58,138,0.18), 0 0 32px 8px rgba(0,0,0,0.10);
 }
 @media (max-width: 1200px) {
   .about-highlights-row {
@@ -1177,7 +1179,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   margin: 18px auto 0 auto;
   width: 48px;
   height: 3px;
-  background: #f5bf23;
+  background: #1e3a8a;
   border-radius: 2px;
   transition: width 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s;
 }
@@ -1210,7 +1212,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   margin: 18px auto 0 auto !important;
   width: 48px;
   height: 3px;
-  background: #f5bf23;
+  background: #1e3a8a;
   border-radius: 2px;
   display: block;
   transition: width 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s, height 0.3s;
@@ -1277,8 +1279,8 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   }
   .mecha-cta-btn {
     background: transparent !important;
-    color: #f5bf23 !important;
-    border: 2px solid #f5bf23 !important;
+    color: #1e3a8a !important;
+    border: 2px solid #1e3a8a !important;
     border-radius: 0 !important;
     padding: 18px 38px !important;
     font-size: 1.4rem !important;
@@ -1289,9 +1291,9 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
     transition: background 0.2s, color 0.2s, border-color 0.2s;
   }
   .mecha-cta-btn:hover, .mecha-cta-btn:focus, .mecha-cta-btn:active {
-    background: #f5bf23 !important;
+    background: #1e3a8a !important;
     color: #fff !important;
-    border-color: #f5bf23 !important;
+    border-color: #1e3a8a !important;
   }
   .header-area .btn-yellow,
   .header-area .mecha-cta-btn,
@@ -1331,7 +1333,7 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
   background-color: #f9f9f9;
 }
 .accordion-button:not(.collapsed) {
-  background-color: #f5bf23;
+  background-color: #1e3a8a;
   color: #000;
 }
 .accordion-body {
@@ -1373,8 +1375,8 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 
 #bookingForm .form-control:focus,
 #bookingForm .form-select:focus {
-  border-color: #f5bf23;
-  box-shadow: 0 0 0 2px rgba(245,191,35,0.12);
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 2px rgba(30,58,138,0.12);
 }
 
 #bookingForm .col-md-6,
@@ -1400,22 +1402,22 @@ body, .mecha-navbar, .mecha-hero-section, .mecha-cta-btn, .mecha-logo, .mecha-fa
 button.mecha-cta-btn,
 button.mecha-cta-btn:focus,
 button.mecha-cta-btn:active {
-  color: #f5bf23 !important;
+  color: #1e3a8a !important;
   background: #fff !important;
-  border: 2px solid #f5bf23 !important;
+  border: 2px solid #1e3a8a !important;
 }
 button.mecha-cta-btn:hover {
   color: #fff !important;
-  background: #f5bf23 !important;
-  border: 2px solid #f5bf23 !important;
+  background: #1e3a8a !important;
+  border: 2px solid #1e3a8a !important;
 } 
 button.mecha-cta-btn,
 a.mecha-cta-btn,
 button.btn-yellow,
 a.btn-yellow {
-  color: #f5bf23 !important;
+  color: #1e3a8a !important;
   background: #fff !important;
-  border: 2px solid #f5bf23 !important;
+  border: 2px solid #1e3a8a !important;
 }
 
 button.mecha-cta-btn:hover,
@@ -1431,8 +1433,8 @@ a.btn-yellow:focus,
 button.btn-yellow:active,
 a.btn-yellow:active {
   color: #fff !important;
-  background: #f5bf23 !important;
-  border: 2px solid #f5bf23 !important;
+  background: #1e3a8a !important;
+  border: 2px solid #1e3a8a !important;
 } 
 
 /* --- Navbar logo and button spacing tweaks --- */
@@ -1471,7 +1473,7 @@ a.btn-yellow:active {
   right: 32px;
   bottom: 32px;
   z-index: 2000;
-  background: #f5bf23;
+  background: #1e3a8a;
   color: #fff !important;
   border: none;
   border-radius: 32px;
@@ -1492,7 +1494,7 @@ a.btn-yellow:active {
   background: #ffd84a;
   color: #222d38 !important;
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 10px 32px rgba(245,191,35,0.18);
+  box-shadow: 0 10px 32px rgba(30,58,138,0.18);
   outline: none;
 }
 @media (max-width: 600px) {
@@ -1507,8 +1509,8 @@ a.btn-yellow:active {
 
 .view-services-btn {
   background: #fff !important;
-  color: #f5bf23 !important;
-  border: 2px solid #f5bf23 !important;
+  color: #1e3a8a !important;
+  border: 2px solid #1e3a8a !important;
   border-radius: 999px !important;
   font-weight: 700 !important;
   box-shadow: none !important;
@@ -1517,13 +1519,13 @@ a.btn-yellow:active {
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .view-services-btn:hover, .view-services-btn:focus, .view-services-btn:active {
-  background: #f5bf23 !important;
+  background: #1e3a8a !important;
   color: #fff !important;
-  border-color: #f5bf23 !important;
+  border-color: #1e3a8a !important;
 } 
 
 .get-in-touch-btn {
-  background: #f5bf23 !important;
+  background: #1e3a8a !important;
   color: #fff !important;
   border: none !important;
   border-radius: 999px !important;
@@ -1536,7 +1538,7 @@ a.btn-yellow:active {
 .get-in-touch-btn:hover, .get-in-touch-btn:focus, .get-in-touch-btn:active {
   background: #ffd84a !important;
   color: #222d38 !important;
-  box-shadow: 0 4px 16px rgba(245,191,35,0.18) !important;
+  box-shadow: 0 4px 16px rgba(30,58,138,0.18) !important;
 } 
 
 /* --- FORCE GET IN TOUCH BUTTON STYLE --- */
@@ -1545,7 +1547,7 @@ a.btn-yellow:active {
 .theme-btn.get-in-touch-btn,
 .mecha-cta-btn.get-in-touch-btn,
 .get-in-touch-btn {
-  background: #f5bf23 !important;
+  background: #1e3a8a !important;
   color: #fff !important;
   border: none !important;
   border-radius: 999px !important;
@@ -1574,17 +1576,17 @@ a.btn-yellow:active {
 .get-in-touch-btn:focus {
   background: #ffd84a !important;
   color: #222d38 !important;
-  box-shadow: 0 4px 16px rgba(245,191,35,0.18) !important;
+  box-shadow: 0 4px 16px rgba(30,58,138,0.18) !important;
 } 
 
 /* --- ISOLATED ACCORDION CTA BUTTON STYLE (ACCORDION ONLY) --- */
 .accordion-cta-btn {
-  background: #f5bf23 !important;
+  background: #1e3a8a !important;
   color: #fff !important;
   border: none !important;
   border-radius: 32px !important;
   font-weight: 700 !important;
-  box-shadow: 0 10px 32px rgba(245,191,35,0.18) !important;
+  box-shadow: 0 10px 32px rgba(30,58,138,0.18) !important;
   text-transform: uppercase !important;
   letter-spacing: 1px !important;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s !important;
@@ -1603,7 +1605,7 @@ a.btn-yellow:active {
 .accordion-cta-btn:hover, .accordion-cta-btn:focus, .accordion-cta-btn:active {
   background: #ffd84a !important;
   color: #222d38 !important;
-  box-shadow: 0 10px 32px rgba(245,191,35,0.18) !important;
+  box-shadow: 0 10px 32px rgba(30,58,138,0.18) !important;
   transform: translateY(-2px) scale(1.04);
 } 
 
@@ -1663,7 +1665,7 @@ a.btn-yellow:active {
   border: 1px solid #eaeaea;
   padding: 2rem;
   border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 6px rgba(245,191,35,0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 6px rgba(30,58,138,0.08);
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
@@ -1671,7 +1673,8 @@ a.btn-yellow:active {
   transition: box-shadow 0.3s, transform 0.3s;
 }
 .consultant-card:hover, .consultant-card:focus {
-  box-shadow: 0 12px 48px rgba(245,191,35,0.18), 0 2px 16px rgba(0,0,0,0.10);
+  border-color: #1e3a8a;
+  box-shadow: 0 12px 48px rgba(30,58,138,0.18), 0 2px 16px rgba(0,0,0,0.10);
   transform: translateY(-6px) scale(1.025);
 }
 .consultant-card h4 {
@@ -1692,18 +1695,19 @@ a.btn-yellow:active {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background: #f5bf23;
+  background: #1e3a8a;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3.2rem;
   color: #fff;
   margin: 0 auto 18px auto;
-  box-shadow: 0 2px 12px rgba(245,191,35,0.13);
+  box-shadow: 0 2px 12px rgba(30,58,138,0.13);
   transition: box-shadow 0.3s, transform 0.3s;
 }
 .consultant-card:hover .consultant-icon {
-  box-shadow: 0 8px 32px rgba(245,191,35,0.22);
+  color: #1e3a8a;
+  box-shadow: 0 8px 32px rgba(30,58,138,0.22);
   transform: scale(1.07);
 } 
 
@@ -1767,6 +1771,7 @@ a.btn-yellow:active {
   display: block;
 }
 .about-gallery-card:hover {
+  border-color: #1e3a8a;
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
   transform: scale(1.04);
 }
@@ -1810,7 +1815,7 @@ a.btn-yellow:active {
   max-width: 220px;
   height: 4px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #f5bf23 60%, #fffbe6 100%);
+  background: linear-gradient(90deg, #1e3a8a 60%, #fffbe6 100%);
   transform: scaleX(0);
   transition: transform 0.4s cubic-bezier(.4,1.6,.6,1);
 }
@@ -1848,7 +1853,7 @@ a.btn-yellow:active {
   max-width: 180px;
   height: 3px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #f5bf23 60%, #fffbe6 100%);
+  background: linear-gradient(90deg, #1e3a8a 60%, #fffbe6 100%);
   transform: scaleX(0);
   transition: transform 0.4s cubic-bezier(.4,1.6,.6,1);
 }
@@ -1896,10 +1901,84 @@ a.btn-yellow:active {
   transition: border-color 0.2s;
 }
 .contact-form-card .form-control:focus, .contact-form-card textarea.form-control:focus {
-  border-color: #f5bf23;
+  border-color: #1e3a8a;
   box-shadow: 0 0 0 2px #fffbe6;
 }
 .contact-form-card .mecha-cta-btn {
   margin-top: 10px;
   min-width: 180px;
+} 
+
+/* --- FORCE GREY HOVER FOR ALL ACCENT BUTTONS --- */
+button.mecha-cta-btn:hover,
+a.mecha-cta-btn:hover,
+button.mecha-cta-btn:focus,
+a.mecha-cta-btn:focus,
+button.mecha-cta-btn:active,
+a.mecha-cta-btn:active,
+button.btn-yellow:hover,
+a.btn-yellow:hover,
+button.btn-yellow:focus,
+a.btn-yellow:focus,
+button.btn-yellow:active,
+a.btn-yellow:active,
+button.get-in-touch-btn:hover,
+a.get-in-touch-btn:hover,
+button.get-in-touch-btn:focus,
+a.get-in-touch-btn:focus,
+button.get-in-touch-btn:active,
+a.get-in-touch-btn:active,
+button.accordion-cta-btn:hover,
+a.accordion-cta-btn:hover,
+button.accordion-cta-btn:focus,
+a.accordion-cta-btn:focus,
+button.accordion-cta-btn:active,
+a.accordion-cta-btn:active,
+.floating-book-btn:hover,
+.floating-book-btn:focus,
+.view-services-btn:hover,
+.view-services-btn:focus,
+.view-services-btn:active {
+  background: #e0e0e0 !important;
+  color: #222d38 !important;
+  border: 2px solid #e0e0e0 !important;
+  box-shadow: 0 4px 16px rgba(30,58,138,0.18) !important;
+} 
+
+/* --- FORCE GREY HOVER FOR GET IN TOUCH BUTTON --- */
+button.get-in-touch-btn:hover,
+a.get-in-touch-btn:hover,
+button.get-in-touch-btn:focus,
+a.get-in-touch-btn:focus,
+button.get-in-touch-btn:active,
+a.get-in-touch-btn:active {
+  background: #e0e0e0 !important;
+  color: #222d38 !important;
+  border: 2px solid #e0e0e0 !important;
+  box-shadow: 0 4px 16px rgba(30,58,138,0.18) !important;
+} 
+
+/* --- ABSOLUTE OVERRIDE: FORCE GREY HOVER FOR GET IN TOUCH BUTTON --- */
+a.get-in-touch-btn:hover,
+a.get-in-touch-btn:focus,
+a.get-in-touch-btn:active,
+button.get-in-touch-btn:hover,
+button.get-in-touch-btn:focus,
+button.get-in-touch-btn:active,
+.btn.get-in-touch-btn:hover,
+.btn.get-in-touch-btn:focus,
+.btn.get-in-touch-btn:active,
+.btn-yellow.get-in-touch-btn:hover,
+.btn-yellow.get-in-touch-btn:focus,
+.btn-yellow.get-in-touch-btn:active,
+.theme-btn.get-in-touch-btn:hover,
+.theme-btn.get-in-touch-btn:focus,
+.theme-btn.get-in-touch-btn:active,
+.mecha-cta-btn.get-in-touch-btn:hover,
+.mecha-cta-btn.get-in-touch-btn:focus,
+.mecha-cta-btn.get-in-touch-btn:active {
+  background: #e0e0e0 !important;
+  color: #222d38 !important;
+  border: 2px solid #e0e0e0 !important;
+  box-shadow: 0 4px 16px rgba(30,58,138,0.18) !important;
 } 

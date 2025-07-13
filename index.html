@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>body { font-family: 'Poppins', Arial, sans-serif; }
     /* Consistent navy blue hover for nav menu */
     .main-menu .nav > li > a {
@@ -23,6 +24,96 @@
     .main-menu .nav > li > a:focus {
       background: #1e3a8a;
       color: #222;
+    }
+    
+    /* ScrollSpy Navigation Styles */
+    #services-nav {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+      border: 1px solid #dee2e6;
+    }
+    
+    #services-nav .nav-link {
+      color: #495057;
+      font-weight: 500;
+      padding: 12px 16px;
+      margin-bottom: 4px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      border: none;
+      background: transparent;
+    }
+    
+    #services-nav .nav-link:hover {
+      background: rgba(30, 58, 138, 0.1);
+      color: #1e3a8a;
+      transform: translateX(4px);
+    }
+    
+    #services-nav .nav-link.active {
+      background: #1e3a8a;
+      color: white;
+      box-shadow: 0 2px 8px rgba(30, 58, 138, 0.3);
+    }
+    
+    #services-nav .nav-link i {
+      width: 20px;
+      text-align: center;
+    }
+    
+    /* Service Section Styles */
+    .service-section {
+      padding: 40px 0;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .service-section:last-child {
+      border-bottom: none;
+    }
+    
+    .service-section h3 {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    .service-section .lead {
+      color: #6c757d;
+      font-weight: 500;
+    }
+    
+    .service-section img {
+      transition: transform 0.3s ease;
+    }
+    
+    .service-section img:hover {
+      transform: scale(1.02);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      #services-nav {
+        position: relative !important;
+        top: 0 !important;
+        margin-bottom: 30px;
+      }
+      
+      .service-section {
+        padding: 30px 0;
+      }
+    }
+    .service-img-scrollspy {
+      height: 320px;
+      width: 420px;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(30,58,138,0.08);
+      margin-bottom: 18px;
+    }
+    @media (max-width: 768px) {
+      .service-img-scrollspy {
+        height: 180px;
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -85,72 +176,130 @@
         <h1 class="hero-title" style="color:#fff;">Turning Your Ideas Into Reality</h1>
         <p class="hero-subtext" style="color:#fff;">OEM &amp; ODM | 3D Designing | Prototyping | CNC | Laser Cutting</p>
       </div>
-      <a href="services.html" class="mecha-cta-btn view-services-btn" style="padding:18px 38px;font-size:1.4rem;font-weight:400;letter-spacing:1px;box-shadow:none;background:transparent;border-radius:0;color:#1e3a8a;margin-left:140px;">VIEW SERVICES</a>
+      <a href="#services" class="mecha-cta-btn view-services-btn" style="padding:18px 38px;font-size:1.4rem;font-weight:400;letter-spacing:1px;box-shadow:none;background:transparent;border-radius:0;color:#1e3a8a;margin-left:140px;">VIEW SERVICES</a>
     </div>
   </section>
 
-  <!-- Services Section (Lightwire Factory Style, horizontal scroll) -->
-  <section class="service-area bg-light section-padding">
-    <div class="container">
+  <!-- Services Section with Bootstrap ScrollSpy -->
+  <section id="services" class="service-area bg-light section-padding" data-bs-spy="scroll" data-bs-target="#services-nav" data-bs-offset="0" tabindex="0">
+    <div class="container-fluid">
       <div class="title-base text-center mb-5">
         <h2 class="section-main-title">Our Services</h2>
       </div>
-      <div style="position:relative;">
-        <button class="services-arrow-left" aria-label="Scroll left" style="position:absolute;left:-24px;top:50%;transform:translateY(-50%);z-index:2;background:#fff;border-radius:50%;border:none;box-shadow:0 2px 8px rgba(0,0,0,0.08);width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;cursor:pointer;"><i class="fa fa-chevron-left"></i></button>
-        <button class="services-arrow-right" aria-label="Scroll right" style="position:absolute;right:-24px;top:50%;transform:translateY(-50%);z-index:2;background:#fff;border-radius:50%;border:none;box-shadow:0 2px 8px rgba(0,0,0,0.08);width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;cursor:pointer;"><i class="fa fa-chevron-right"></i></button>
-        <div class="services-scroll-row">
-          <div class="service-card-modern">
-            <img src="images/card1.jpg" alt="3D Designing" class="service-img">
-            <div class="service-icon-box"><i class="fa fa-cubes"></i></div>
-            <div class="service-body">
-              <div class="service-title">3D Designing</div>
-              <div class="service-desc">High-quality 3D modeling using modern CAD tools for visualizing complex parts.</div>
-              <a href="services.html" class="service-link">VIEW NOW</a>
+      <div class="row">
+        <!-- Left Sidebar Navigation -->
+        <div class="col-md-3 col-lg-2">
+          <nav id="services-nav" class="navbar navbar-light bg-light flex-column align-items-stretch p-3" style="position: sticky; top: 20px; height: fit-content; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <h5 class="navbar-brand mb-3 text-center w-100" style="color: #1e3a8a; font-weight: 600;">Our Services</h5>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link scrollspy-item" href="#design3d" data-service="3d-designing">
+                <i class="fa fa-cubes me-2"></i>3D Designing
+              </a>
+              <a class="nav-link scrollspy-item" href="#design2d" data-service="2d-designing">
+                <i class="fa fa-drafting-compass me-2"></i>2D Designing
+              </a>
+              <a class="nav-link scrollspy-item" href="#printing" data-service="3d-printing">
+                <i class="fa fa-print me-2"></i>3D Printing
+              </a>
+              <a class="nav-link scrollspy-item" href="#cnc" data-service="cnc-engraving">
+                <i class="fa fa-pen-fancy me-2"></i>CNC Engraving
+              </a>
+              <a class="nav-link scrollspy-item" href="#laser" data-service="laser-cutting">
+                <i class="fa fa-cut me-2"></i>Laser Cutting
+              </a>
+              <a class="nav-link scrollspy-item" href="#training" data-service="training-scanning">
+                <i class="fa fa-chalkboard-teacher me-2"></i>Training & Scanning
+              </a>
+            </nav>
+          </nav>
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="col-md-9 col-lg-10">
+          <div class="services-content">
+            <!-- 3D Designing Section -->
+            <div class="service-block" data-service="3d-designing">
+              <div class="service-row">
+                <div class="col-md-6 service-image">
+                  <img src="images/card1.jpg" alt="3D Designing">
+                </div>
+                <div class="col-md-6 service-text">
+                  <h3>3D Designing</h3>
+                  <p>Precise CAD models for products and prototypes using advanced 3D design tools.</p>
+                  <a href="service-3d-designing.html" class="service-knowmore-btn">Know More</a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="service-card-modern">
-            <img src="images/card2.jpg" alt="2D Designing" class="service-img">
-            <div class="service-icon-box"><i class="fa fa-drafting-compass"></i></div>
-            <div class="service-body">
-              <div class="service-title">2D Designing</div>
-              <div class="service-desc">Accurate 2D drawings and technical documentation ready for prototyping or fabrication.</div>
-              <a href="services.html" class="service-link">VIEW NOW</a>
+            <!-- 2D Designing Section -->
+            <div class="service-block" data-service="2d-designing">
+              <div class="service-row flex-row-reverse">
+                <div class="col-md-6 service-image">
+                  <div class="service-image-inner">
+                    <img src="images/card2.jpg" alt="2D Designing">
+                  </div>
+                </div>
+                <div class="col-md-6 service-text">
+                  <h3>2D Designing</h3>
+                  <p>Accurate technical drawings for manufacturing, fabrication, and laser/CNC cutting.</p>
+                  <a href="service-2d-designing.html" class="service-knowmore-btn">Know More</a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="service-card-modern">
-            <img src="images/card3.jpg" alt="3D Printing" class="service-img">
-            <div class="service-icon-box"><i class="fa fa-print"></i></div>
-            <div class="service-body">
-              <div class="service-title">3D Printing</div>
-              <div class="service-desc">Rapid prototyping with precise FDM/Resin printing services for functional parts.</div>
-              <a href="services.html" class="service-link">VIEW NOW</a>
+            <!-- 3D Printing Section -->
+            <div class="service-block" data-service="3d-printing">
+              <div class="service-row">
+                <div class="col-md-6 service-image service-image-3dprinting">
+                  <img src="images/card3.jpg" alt="3D Printing">
+                </div>
+                <div class="col-md-6 service-text">
+                  <h3>3D Printing</h3>
+                  <p>Rapid FDM and resin printing solutions for visual models and functional parts.</p>
+                  <a href="service-3d-printing.html" class="service-knowmore-btn">Know More</a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="service-card-modern">
-            <img src="images/card4.jpg" alt="CNC Engraving" class="service-img">
-            <div class="service-icon-box"><i class="fa fa-pen-fancy"></i></div>
-            <div class="service-body">
-              <div class="service-title">CNC Engraving</div>
-              <div class="service-desc">Precision CNC engraving on various materials for industrial and creative projects.</div>
-              <a href="services.html" class="service-link">VIEW NOW</a>
+            <!-- CNC Engraving Section -->
+            <div class="service-block" data-service="cnc-engraving">
+              <div class="service-row flex-row-reverse">
+                <div class="col-md-6 service-image">
+                  <div class="service-image-inner">
+                    <img src="images/card4.jpg" alt="CNC Engraving">
+                  </div>
+                </div>
+                <div class="col-md-6 service-text">
+                  <h3>CNC Engraving</h3>
+                  <p>High-precision engraving on metal, wood, and acrylic for industrial or creative use.</p>
+                  <a href="service-cnc-engraving.html" class="service-knowmore-btn">Know More</a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="service-card-modern">
-            <img src="images/card5.jpg" alt="Laser Cutting" class="service-img">
-            <div class="service-icon-box"><i class="fa fa-cut"></i></div>
-            <div class="service-body">
-              <div class="service-title">Laser Cutting</div>
-              <div class="service-desc">Clean, fast laser cutting for metal, acrylic, and wood with high accuracy.</div>
-              <a href="services.html" class="service-link">VIEW NOW</a>
+            <!-- Laser Cutting Section -->
+            <div class="service-block" data-service="laser-cutting">
+              <div class="service-row">
+                <div class="col-md-6 service-image">
+                  <img src="images/card5.jpg" alt="Laser Cutting">
+                </div>
+                <div class="col-md-6 service-text">
+                  <h3>Laser Cutting</h3>
+                  <p>Smooth and clean cuts on a range of materials for enclosures, signs, and frames.</p>
+                  <a href="service-laser-cutting.html" class="service-knowmore-btn">Know More</a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="service-card-modern">
-            <img src="images/card6.jpg" alt="Training & Scanning" class="service-img">
-            <div class="service-icon-box"><i class="fa fa-chalkboard-teacher"></i></div>
-            <div class="service-body">
-              <div class="service-title">Training & Scanning</div>
-              <div class="service-desc">Professional training in 3D scanning, reverse engineering, and CAD design workflows.</div>
-              <a href="services.html" class="service-link">VIEW NOW</a>
+            <!-- Training & Scanning Section -->
+            <div class="service-block" data-service="training-scanning">
+              <div class="service-row flex-row-reverse">
+                <div class="col-md-6 service-image">
+                  <div class="service-image-inner">
+                    <img src="images/card6.jpg" alt="Training & Scanning">
+                  </div>
+                </div>
+                <div class="col-md-6 service-text">
+                  <h3>Training & Scanning</h3>
+                  <p>Practical training in CAD software, 3D scanning, and reverse engineering workflows.</p>
+                  <a href="service-training-scanning.html" class="service-knowmore-btn">Know More</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -276,6 +425,7 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
 // Responsive Hamburger Menu Toggle
 const navbarToggle = document.getElementById('navbar-toggle');

@@ -77,3 +77,4 @@ Mecha Factory is a modern, user-friendly website for a manufacturing and prototy
 ## Credits
 - Designed and developed for Mecha Factory.
 - UI/UX implemented as per best practices for modern web projects.
+ 

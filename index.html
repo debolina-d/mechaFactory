@@ -10,6 +10,158 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>body { font-family: 'Poppins', Arial, sans-serif; }
+    /* --- Compact Top Bar --- */
+    .top-bar {
+      padding: 0.3rem 0;
+      font-size: 0.85rem;
+      background: #222;
+      color: #fff;
+      font-family: 'Poppins',sans-serif;
+      width: 100vw;
+      position: relative;
+      left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;
+    }
+    .top-bar .top-bar-content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2.1rem;
+      flex-wrap: nowrap;
+      max-width: 100vw;
+      padding-left: 2rem;
+    }
+    .top-bar span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .top-bar i {
+      font-size: 1em;
+      vertical-align: middle;
+    }
+    /* --- Ultra Compact Main Navbar --- */
+    .main-navbar {
+      background: #fff;
+      padding: 0.08rem 2.5rem 0.08rem 0.5rem;
+      box-shadow: none;
+    }
+    .main-navbar .menu-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: unset;
+    }
+    .main-navbar .row.align-items-center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: unset;
+    }
+    .main-navbar .navbar-brand img {
+      max-height: 72px;
+      height: 72px;
+      width: auto;
+      display: block;
+      margin-right: 8px;
+    }
+    .main-navbar .navbar-brand span {
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: #222;
+      line-height: 1.1;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    .main-navbar .logo-col {
+      margin-left: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    .main-navbar .get-in-touch-col {
+      margin-right: 0 !important;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .main-navbar .main-menu .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+    .main-navbar .main-menu .nav > li {
+      margin: 0 0.2rem;
+      display: flex;
+      align-items: center;
+      border: none;
+    }
+    .main-navbar .main-menu .nav > li:not(:last-child) {
+      border-right: 1px solid #e0e0e0;
+    }
+    .main-navbar .main-menu .nav > li:first-child {
+      border-left: none;
+    }
+    .main-navbar .main-menu .nav > li > a {
+      font-size: 0.87rem;
+      padding: 0.18rem 1.2rem 0.18rem 1.2rem;
+      border-radius: 16px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.5px;
+      border: none;
+      margin: 0;
+    }
+    /* --- Get in Touch Button: robust, accessible, and future-proof --- */
+    .main-navbar .get-in-touch-btn {
+      font-size: 1rem !important;
+      padding: 0 22px !important;
+      height: 36px !important;
+      min-width: 110px !important;
+      border-radius: 999px !important;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      margin: auto 0;
+      text-decoration: none;
+      border-bottom: none;
+      box-sizing: border-box;
+      background: #1e3a8a !important;
+      color: #fff !important;
+      border: none !important;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04) !important;
+      letter-spacing: 1px;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+    .main-navbar .get-in-touch-btn:hover,
+    .main-navbar .get-in-touch-btn:focus {
+      background: #e0e0e0 !important;
+      color: #222 !important;
+    }
+    @media (max-width: 900px) {
+      .main-navbar {
+        padding-right: 1rem;
+      }
+      .main-navbar .navbar-brand img {
+        max-height: 56px;
+        height: 56px;
+      }
+      .main-navbar .main-menu .nav > li > a {
+        font-size: 0.9rem;
+        padding: 0.18rem 0.7rem 0.18rem 0.7rem;
+      }
+      .main-navbar .get-in-touch-btn {
+        font-size: 0.95rem;
+        padding: 0 14px;
+        height: 32px;
+        min-width: 80px;
+      }
+      .main-navbar .logo-col {
+        margin-left: 0.5rem;
+      }
+    }
     /* Consistent navy blue hover for nav menu */
     .main-menu .nav > li > a {
       color: inherit;
@@ -115,70 +267,418 @@
         width: 100%;
       }
     }
+
+    /* Parallelogram Hero Categories Grid */
+    #hero-categories {
+      width: 100vw;
+      left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;
+      background: #f8f9fa;
+      padding: 36px 0 24px 0;
+      position: relative;
+      z-index: 2;
+    }
+    .parallelogram-grid {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .parallelogram {
+      position: relative;
+      width: 240px;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      transform: skew(-18deg);
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(30,58,138,0.10);
+      border-radius: 18px;
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 12px;
+    }
+    .parallelogram:hover {
+      transform: skew(-18deg) scale(1.04) translateY(-4px);
+      box-shadow: 0 8px 32px rgba(30,58,138,0.18);
+    }
+    .parallelogram::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 60%;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 80%, rgba(0,0,0,0.0) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .parallelogram-content {
+      position: absolute;
+      bottom: 0; left: 0; width: 100%;
+      z-index: 2;
+      background: none;
+      color: #fff;
+      font-size: 1.18rem;
+      font-weight: 700;
+      padding: 18px 18px 12px 18px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      border-radius: 0 0 16px 16px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 1100px) {
+      .parallelogram-grid {
+        gap: 18px;
+      }
+      .parallelogram {
+        width: 180px;
+        height: 200px;
+      }
+    }
+    @media (max-width: 700px) {
+      .parallelogram-grid {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .parallelogram {
+        width: 98vw;
+        max-width: 340px;
+        height: 140px;
+        margin: 0 auto 10px auto;
+      }
+      .parallelogram-content {
+        font-size: 1rem;
+        padding: 12px 8px 8px 8px;
+      }
+    }
+
+    /* About Us Section Visual Enhancements */
+    /* Remove About Us Section Visual Enhancements and restore previous styles */
+    .about-area.section-padding {
+      padding: 64px 0 64px 0;
+      background: none;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Restore previous About Us left box styles */
+    .about-text {
+      background: #f9f9f9;
+      border-radius: 22px;
+      box-shadow: 0 2px 16px rgba(30,58,138,0.06);
+      padding: 38px 38px 32px 38px;
+      max-width: 800px;
+      margin: 0 auto 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      min-width: 320px;
+      flex: 1 1 380px;
+      position: static;
+      z-index: auto;
+      border: none;
+      transition: none;
+    }
+    .about-text:hover {
+      box-shadow: 0 2px 16px rgba(30,58,138,0.06);
+      border: none;
+      background: #f9f9f9;
+    }
+    .about-text p {
+      color: #222;
+      font-size: 1.13rem;
+      line-height: 1.8;
+      margin-bottom: 1.2em;
+    }
+    @media (max-width: 900px) {
+      .about-text {
+        padding: 22px 10px 18px 10px;
+        max-width: 98vw;
+        min-width: unset;
+      }
+    }
+    .about-row-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      align-items: stretch;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: static;
+    }
+    @media (max-width: 900px) {
+      .about-row-flex {
+        flex-direction: column;
+        gap: 32px;
+      }
+      .about-text {
+        padding: 22px 10px 18px 10px;
+        max-width: 98vw;
+        min-width: unset;
+      }
+      .about-features-grid {
+        grid-template-columns: 1fr;
+        max-width: 98vw;
+      }
+    }
+    .about-features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px 28px;
+      align-items: stretch;
+      min-width: 260px;
+      flex: 1 1 320px;
+      max-width: 420px;
+      margin: 0 auto;
+      position: static;
+      z-index: auto;
+    }
+    .about-feature-box {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(30,58,138,0.07);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 18px 16px 18px 16px;
+      min-height: 90px;
+      border: 1px solid #f0f0f0;
+      transition: box-shadow 0.18s, border 0.18s, transform 0.18s;
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+    .about-feature-box:hover {
+      box-shadow: 0 4px 18px rgba(30,58,138,0.13);
+      border: 1px solid #e0e0e0;
+      transform: none;
+    }
+    .about-feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #f1f4fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #112b6c;
+      flex-shrink: 0;
+      box-shadow: 0 1px 4px rgba(30,58,138,0.06);
+    }
+    .about-feature-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .about-feature-title {
+      font-weight: 700;
+      color: #1e3a8a;
+      font-size: 1.08rem;
+      margin-bottom: 2px;
+    }
+    .about-feature-desc {
+      font-size: 0.98rem;
+      color: #444;
+    }
+    .about-btn {
+      background: #112b6c;
+      color: #fff;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.08rem;
+      border: none;
+      margin-top: 18px;
+      box-shadow: 0 2px 8px rgba(17,43,108,0.08);
+      transition: background 0.2s, transform 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .about-btn:hover,
+    .about-btn:focus {
+      background: #0d1e4a;
+      color: #fff;
+      transform: scale(1.06);
+    }
+/* CSS tweak for better vertical alignment and spacing */
+.about-feature-box {
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 90px;
+  padding: 18px 16px 18px 16px;
+}
+.about-feature-content {
+  justify-content: center;
+}
+.about-feature-title {
+  margin-bottom: 0;
+}
+.about-feature-desc {
+  margin-top: 2px;
+}
+/* Stronger, darker glassmorphic effect for About Us left box */
+.about-glass-box {
+  background: rgba(220, 224, 230, 0.96);
+  border-radius: 22px;
+  box-shadow: 0 12px 40px rgba(30,58,138,0.18), 0 2px 12px rgba(30,58,138,0.08);
+  border: 2px solid rgba(160, 170, 200, 0.32);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  padding: 48px 48px 38px 48px;
+  max-width: 800px;
+  margin: 0 auto 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 320px;
+  flex: 1 1 380px;
+  position: relative;
+  z-index: 2;
+  transition: box-shadow 0.25s, border 0.25s, background 0.25s;
+}
+.about-glass-box p {
+  color: #1a2236;
+  font-size: 1.18rem;
+  line-height: 1.8;
+  margin-bottom: 1.2em;
+}
+@media (max-width: 900px) {
+  .about-glass-box {
+    padding: 28px 12px 18px 12px;
+    max-width: 98vw;
+    min-width: unset;
+  }
+}
+/* Glassmorphic effect for About Us feature cards */
+.about-feature-box {
+  background: rgba(230, 240, 255, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(30,58,138,0.13), 0 1.5px 8px rgba(30,58,138,0.06);
+  border: 1.5px solid rgba(120, 160, 220, 0.18);
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 16px 18px 16px;
+  min-height: 90px;
+  transition: box-shadow 0.18s, border 0.18s, transform 0.18s;
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+.about-feature-box:hover {
+  box-shadow: 0 12px 40px rgba(30,58,138,0.18), 0 2px 12px rgba(30,58,138,0.08);
+  border: 2px solid rgba(80, 120, 200, 0.22);
+  transform: translateY(-4px) scale(1.03);
+}
+/* Add vertical spacing below the about-quote and above the boxes */
+.about-quote {
+  margin-bottom: 38px !important;
+}
+.about-row-flex {
+  margin-top: 18px;
+}
   </style>
 </head>
 <body>
   <!-- HEADER START -->
   <header>
     <!-- TOPBAR (DARK) -->
-    <div class="navbar-mini" style="background:#222; color:#fff; font-family:'Poppins',sans-serif; padding:10px 0; width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw;">
-      <div style="display:flex;align-items:center;justify-content:flex-start;gap:38px;flex-wrap:nowrap;max-width:100vw;padding-left:32px;">
-        <span style="display:flex;align-items:center;gap:7px;"><i class="fa fa-phone"></i> 7086640797, 7002141830</span>
-        <span style="display:flex;align-items:center;gap:7px;"><i class="fa fa-envelope"></i> mechafactory2021@gmail.com</span>
-        <span style="display:flex;align-items:center;gap:7px;"><i class="fa fa-calendar"></i> Mon – Sat: 9:00 AM – 6:00 PM</span>
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <span><i class="fa fa-phone"></i> 7086640797, 7002141830</span>
+        <span><i class="fa fa-envelope"></i> mechafactory2021@gmail.com</span>
+        <span><i class="fa fa-calendar"></i> Mon – Sat: 9:00 AM – 6:00 PM</span>
       </div>
     </div>
     <!-- MAIN NAVBAR (WHITE) -->
-    <div class="header-area sticky-bar" style="background:#fff;">
-      <div class="menu-wrap" style="display:flex;align-items:center;justify-content:space-between;">
-        <div class="row align-items-center" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+    <div class="main-navbar sticky-bar">
+      <div class="menu-wrap">
+        <div class="row align-items-center" style="display:flex;align-items:center;justify-content:space-between;width:100%;min-height:unset;">
           <!-- Logo left -->
-          <div class="col-md-3 col-sm-6 col-xs-6" style="display:flex;align-items:center;min-width:320px;">
-            <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:18px;">
-              <img src="images/mflogo.png" alt="Mecha Factory Logo" style="height:68px;display:block;">
-              <span style="font-weight:600;font-size:1.65rem;color:#222;line-height:1.1;vertical-align:middle;display:inline-block;">Mecha Factory</span>
+          <div class="col-md-3 col-sm-6 col-xs-6 logo-col">
+            <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:10px;">
+              <img src="images/mflogo.png" alt="Mecha Factory Logo">
+              <span>Mecha Factory</span>
             </a>
           </div>
           <!-- Menu center -->
-          <div class="col-md-6 col-sm-6 col-xs-6" style="display:flex;justify-content:center;align-items:center;min-width:480px;">
+          <div class="col-md-6 col-sm-6 col-xs-6" style="display:flex;justify-content:center;align-items:center;min-width:320px;">
             <nav class="main-menu" aria-label="Main Navigation" style="width:100%;">
               <button type="button" class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu" style="background:none;border:none;outline:none;margin-right:10px;display:none;">
-                <i class="fa fa-bars" style="font-size:1.7em;color:#222;"></i>
+                <i class="fa fa-bars" style="font-size:1.5em;color:#222;"></i>
               </button>
-              <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex;gap:0;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;">
-                <li style="margin:0;"><a href="#home">HOME</a></li>
-                <li><a href="services.html">SERVICES</a></li>
+              <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;gap:0;">
+                <li><a href="#home">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="#products">PRODUCTS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="#mecharetail">MechaRetail</a></li>
               </ul>
-              <ul class="nav navbar-nav ms-rounded" id="mobile-menu" style="display:none;flex-direction:column;gap:0;align-items:flex-start;justify-content:flex-start;margin:0;padding:0;list-style:none;text-transform:uppercase;position:absolute;top:60px;left:0;width:100vw;background:#fff;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
-                <li style="margin:0;"><a href="#home">HOME</a></li>
-                <li><a href="services.html">SERVICES</a></li>
+              <ul class="nav navbar-nav ms-rounded" id="mobile-menu" style="display:none;flex-direction:column;gap:0;align-items:flex-start;justify-content:flex-start;margin:0;padding:0;list-style:none;text-transform:uppercase;position:absolute;top:48px;left:0;width:100vw;background:#fff;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+                <li><a href="#home">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="#products">PRODUCTS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="#mecharetail">MechaRetail</a></li>
               </ul>
             </nav>
           </div>
           <!-- Button right -->
-          <div class="col-md-3 col-sm-12 col-xs-12 text-right" style="display:flex;justify-content:flex-end;align-items:center;min-width:260px;height:88px;">
-            <a href="https://wa.me/917086640797" target="_blank" rel="noopener" class="btn btn-yellow theme-btn get-in-touch-btn" style="font-weight:700;padding:10px 38px;border-radius:30px;text-transform:uppercase;box-shadow:0 1px 4px rgba(0,0,0,0.04);display:flex;align-items:center;height:48px;margin:auto 0;text-decoration:none;border-bottom:none;">GET IN TOUCH</a>
+          <div class="col-md-3 col-sm-12 col-xs-12 text-right get-in-touch-col">
+            <a href="https://wa.me/917086640797" target="_blank" rel="noopener" class="btn btn-yellow theme-btn get-in-touch-btn" tabindex="0">GET IN TOUCH</a>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero-section" style="background: url('images/robotArm.jpg') center center/cover no-repeat; position: relative; min-height: 380px; width:100vw; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw;">
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);"></div>
-    <div class="hero-content" style="display:flex;align-items:center;gap:48px;padding-left:120px;max-width:1400px;margin:auto;">
-      <div>
-        <h1 class="hero-title" style="color:#fff;">Turning Your Ideas Into Reality</h1>
-        <p class="hero-subtext" style="color:#fff;">OEM &amp; ODM | 3D Designing | Prototyping | CNC | Laser Cutting</p>
+  <!-- Hero Categories Section (now the main hero) -->
+  <section id="hero-categories">
+    <div class="parallelogram-grid">
+      <div class="parallelogram" style="background-image: url('images/drone.jpg');">
+        <div class="parallelogram-content" style="font-style: normal;">Defence and Drone</div>
       </div>
-      <a href="#services" class="mecha-cta-btn view-services-btn" style="padding:18px 38px;font-size:1.4rem;font-weight:400;letter-spacing:1px;box-shadow:none;background:transparent;border-radius:0;color:#1e3a8a;margin-left:140px;">VIEW SERVICES</a>
+      <div class="parallelogram" style="background-image: url('images/automobile.jpg');">
+        <div class="parallelogram-content" style="font-style: normal;">Automobile</div>
+      </div>
+      <div class="parallelogram" style="background-image: url('images/robotics.jpg');">
+        <div class="parallelogram-content" style="font-style: normal;">Robotics and Automation</div>
+      </div>
+      <div class="parallelogram" style="background-image: url('images/consumer-products.jpg');">
+        <div class="parallelogram-content" style="font-style: normal;">Consumer Products</div>
+      </div>
     </div>
   </section>
+
+  <!-- About Us Section -->
+  <div class="about-section-outer">
+    <div class="about-bg-svg">
+      <svg width="100%" height="320" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;width:100%;height:320px;z-index:0;pointer-events:none;"><path fill="#e9eefa" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+    </div>
+    <section id="aboutus" class="about-area section-padding" data-animate>
+      <h2 class="section-main-title">About Us</h2>
+      <div class="about-row-flex">
+        <!-- Left: Main Content -->
+        <div class="about-glass-box">
+          <p>Mecha Factory is a product design and consultancy company offering complete OEM and ODM solutions. We specialize in 3D/2D Design, rapid prototyping, CNC engraving, laser cutting, and Design training—Turning concepts into market-ready solutions.</p>
+          <p>We proudly serve startups, researchers, students, makers, and manufacturers, empowering innovation at every stage.</p>
+          <a href="about.html" class="btn about-btn">Know More</a>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <!-- Services Section with Bootstrap ScrollSpy -->
   <section id="services" class="service-area bg-light section-padding" data-bs-spy="scroll" data-bs-target="#services-nav" data-bs-offset="0" tabindex="0">
@@ -218,7 +718,7 @@
         <div class="col-md-9 col-lg-10">
           <div class="services-content">
             <!-- 3D Designing Section -->
-            <div class="service-block" data-service="3d-designing">
+            <div class="service-block" data-service="3d-designing" id="design3d">
               <div class="service-row">
                 <div class="col-md-6 service-image">
                   <img src="images/card1.jpg" alt="3D Designing">
@@ -231,7 +731,7 @@
               </div>
             </div>
             <!-- 2D Designing Section -->
-            <div class="service-block" data-service="2d-designing">
+            <div class="service-block" data-service="2d-designing" id="design2d">
               <div class="service-row flex-row-reverse">
                 <div class="col-md-6 service-image">
                   <div class="service-image-inner">
@@ -246,7 +746,7 @@
               </div>
             </div>
             <!-- 3D Printing Section -->
-            <div class="service-block" data-service="3d-printing">
+            <div class="service-block" data-service="3d-printing" id="printing">
               <div class="service-row">
                 <div class="col-md-6 service-image service-image-3dprinting">
                   <img src="images/card3.jpg" alt="3D Printing">
@@ -259,7 +759,7 @@
               </div>
             </div>
             <!-- CNC Engraving Section -->
-            <div class="service-block" data-service="cnc-engraving">
+            <div class="service-block" data-service="cnc-engraving" id="cnc">
               <div class="service-row flex-row-reverse">
                 <div class="col-md-6 service-image">
                   <div class="service-image-inner">
@@ -274,7 +774,7 @@
               </div>
             </div>
             <!-- Laser Cutting Section -->
-            <div class="service-block" data-service="laser-cutting">
+            <div class="service-block" data-service="laser-cutting" id="laser">
               <div class="service-row">
                 <div class="col-md-6 service-image">
                   <img src="images/card5.jpg" alt="Laser Cutting">
@@ -287,7 +787,7 @@
               </div>
             </div>
             <!-- Training & Scanning Section -->
-            <div class="service-block" data-service="training-scanning">
+            <div class="service-block" data-service="training-scanning" id="training">
               <div class="service-row flex-row-reverse">
                 <div class="col-md-6 service-image">
                   <div class="service-image-inner">
@@ -328,41 +828,6 @@
           </div>
           <div class="why-choose-feature">
             <div class="why-choose-feature-title">End-to-End Services</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Us Section -->
-  <section id="aboutus" class="about-area section-padding">
-    <h2 class="section-main-title">About Us</h2>
-    <div class="about-quote fadein-effect">Engineering your ideas into reality with precision and purpose.</div>
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-5 mb-lg-0 about-content" style="flex:1 1 0;max-width:520px;">
-          <p>Mecha Factory is India’s premier OEM and ODM design consultancy, offering complete product development solutions tailored to your needs. From the first sketch to final manufacturing, we specialize in transforming innovative concepts into fully functional, production-ready designs.</p>
-          <p>With a cutting-edge R&amp;D studio and a passionate team of design engineers, we deliver high-quality 3D and 2D modeling, 3D printing, CNC engraving, laser cutting, and technical training in design and reverse engineering.</p>
-          <p>Our focus is precision, speed, and collaboration. Whether you’re a startup building your first prototype or a business scaling up production, Mecha Factory ensures efficient, reliable, and scalable solutions — powered by experience and technology.</p>
-        </div>
-        <div class="col-lg-6 about-highlights-col" style="display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:24px;">
-          <div class="about-highlights-row about-highlights-vertical" style="display:flex;flex-direction:column;gap:24px;width:100%;max-width:340px;">
-            <div class="about-highlight-card">
-              <i class="fa fa-check-circle text-warning"></i>
-              <span>End-to-end OEM/ODM product development</span>
-            </div>
-            <div class="about-highlight-card">
-              <i class="fa fa-check-circle text-warning"></i>
-              <span>Advanced R&amp;D & design capabilities</span>
-            </div>
-            <div class="about-highlight-card">
-              <i class="fa fa-check-circle text-warning"></i>
-              <span>Rapid prototyping & 3D printing</span>
-            </div>
-            <div class="about-highlight-card">
-              <i class="fa fa-check-circle text-warning"></i>
-              <span>Skilled engineers & modern tools</span>
-            </div>
           </div>
         </div>
       </div>
@@ -449,6 +914,20 @@ navbarToggle.addEventListener('click', function() {
 });
 window.addEventListener('resize', handleResize);
 document.addEventListener('DOMContentLoaded', handleResize);
+
+// Fade-up animation on scroll for About Us section
+function animateAboutSection() {
+  var aboutSection = document.querySelector('.about-area.section-padding[data-animate]');
+  if (!aboutSection) return;
+  var rect = aboutSection.getBoundingClientRect();
+  var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  if (rect.top < windowHeight - 80) {
+    aboutSection.classList.add('fade-up');
+    window.removeEventListener('scroll', animateAboutSection);
+  }
+}
+window.addEventListener('scroll', animateAboutSection);
+document.addEventListener('DOMContentLoaded', animateAboutSection);
 </script>
 <a href="booking.html" class="floating-book-btn" aria-label="Book Now">BOOK NOW</a>
 </body>

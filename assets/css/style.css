@@ -2305,3 +2305,141 @@ button.get-in-touch-btn:active,
     min-width: 120px;
   }
 }
+
+/* Add this at the end of the file to override previous styles */
+.main-navbar .main-menu .nav {
+  margin-left: 18px !important;
+}
+@media (max-width: 900px) {
+  .main-navbar .main-menu .nav {
+    margin-left: 0 !important;
+  }
+}
+
+/* Remove previous margin-left override */
+.main-navbar .main-menu .nav {
+  margin-left: 0 !important;
+}
+/* Add margin-left to the menu container to move the menu closer to the logo */
+.main-navbar .main-menu {
+  margin-left: 8px !important;
+}
+@media (max-width: 900px) {
+  .main-navbar .main-menu {
+    margin-left: 0 !important;
+  }
+}
+
+/* Center the navbar menu between logo and right buttons */
+.main-navbar .menu-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-navbar .main-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: 0 !important;
+}
+@media (max-width: 900px) {
+  .main-navbar .main-menu {
+    justify-content: flex-start;
+  }
+}
+
+/* More precise centering of the navbar menu */
+.main-navbar .menu-wrap {
+  position: relative;
+}
+.main-navbar .main-menu {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0 !important;
+}
+@media (max-width: 900px) {
+  .main-navbar .main-menu {
+    position: static;
+    left: unset;
+    top: unset;
+    transform: none;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Visually appealing, modern About Us section styles */
+.about-row-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+}
+@media (max-width: 900px) {
+  .about-row-flex {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+/* Keep all other advanced About Us section styles */
+
+/* Center the About Us section horizontally and vertically */
+.about-section-outer {
+  position: relative;
+  background: linear-gradient(120deg, #f4f7fb 0%, #e9eefa 100%);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-row-flex {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-glass-box {
+  background: #fff !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: 0 8px 32px rgba(30,58,138,0.10) !important;
+  padding: 2.8rem 2.5rem 2.5rem 2.5rem !important;
+  max-width: 820px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.about-glass-box::before {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  .about-section-outer {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+  .about-glass-box {
+    padding: 1.1rem 0.7rem 1.1rem 0.7rem;
+    max-width: 99vw;
+  }
+}
+
+/* Remove underline/accent bar from about-quote */
+.about-quote::after, .about-quote-underline, .about-quote-accent {
+  display: none !important;
+}

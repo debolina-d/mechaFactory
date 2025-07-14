@@ -18,16 +18,27 @@ document.addEventListener('DOMContentLoaded', function() {
     var sidebarItem = document.querySelector('.scrollspy-item[data-service="' + service + '"]');
     if (sidebarItem) {
       block.addEventListener('mouseenter', function() {
-        console.log('Hovering service-block:', service);
         sidebarItem.classList.add('hover-active');
-        console.log('Added hover-active to:', sidebarItem);
       });
       block.addEventListener('mouseleave', function() {
         sidebarItem.classList.remove('hover-active');
-        console.log('Removed hover-active from:', sidebarItem);
       });
-    } else {
-      console.log('No sidebar item found for service:', service);
     }
   });
+
+  // --- Smooth Scroll for ScrollSpy Sidebar Links Only ---
+  var servicesNav = document.getElementById('services-nav');
+  if (servicesNav) {
+    servicesNav.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href^="#"]');
+      if (link && link.getAttribute('href').length > 1) {
+        var targetId = link.getAttribute('href').slice(1);
+        var target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  }
 }); 

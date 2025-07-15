@@ -7,52 +7,224 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <style>
+    body { font-family: 'Poppins', Arial, sans-serif; }
+    .top-bar {
+      padding: 0.3rem 0;
+      font-size: 0.85rem;
+      background: #222;
+      color: #fff;
+      font-family: 'Poppins',sans-serif;
+      width: 100vw;
+      position: relative;
+      left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;
+    }
+    .top-bar .top-bar-content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2.1rem;
+      flex-wrap: nowrap;
+      max-width: 100vw;
+      padding-left: 2rem;
+    }
+    .top-bar span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .top-bar i {
+      font-size: 1em;
+      vertical-align: middle;
+    }
+    .main-navbar {
+      background: #fff;
+      padding: 0.08rem 2.5rem 0.08rem 0.5rem;
+      box-shadow: none;
+    }
+    .main-navbar .menu-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: unset;
+    }
+    .main-navbar .row.align-items-center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: unset;
+    }
+    .main-navbar .navbar-brand img {
+      max-height: 72px;
+      height: 72px;
+      width: auto;
+      display: block;
+      margin-right: 8px;
+    }
+    .main-navbar .navbar-brand span {
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: #222;
+      line-height: 1.1;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    .main-navbar .logo-col {
+      margin-left: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    .main-navbar .get-in-touch-col {
+      margin-right: 0 !important;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .main-navbar .main-menu .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+    .main-navbar .main-menu .nav > li {
+      margin: 0 0.2rem;
+      display: flex;
+      align-items: center;
+      border: none;
+    }
+    .main-navbar .main-menu .nav > li:not(:last-child) {
+      border-right: 1px solid #e0e0e0;
+    }
+    .main-navbar .main-menu .nav > li:first-child {
+      border-left: none;
+    }
+    .main-navbar .main-menu .nav > li > a {
+      font-size: 0.87rem;
+      padding: 0.18rem 1.2rem 0.18rem 1.2rem;
+      border-radius: 16px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.5px;
+      border: none;
+      margin: 0;
+    }
+    .main-navbar .get-in-touch-btn {
+      font-size: 1rem !important;
+      padding: 0 22px !important;
+      height: 36px !important;
+      min-width: 110px !important;
+      border-radius: 999px !important;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      margin: auto 0;
+      text-decoration: none;
+      border-bottom: none;
+      box-sizing: border-box;
+      background: #1e3a8a !important;
+      color: #fff !important;
+      border: none !important;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04) !important;
+      letter-spacing: 1px;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+    .main-navbar .get-in-touch-btn:hover,
+    .main-navbar .get-in-touch-btn:focus {
+      background: #e0e0e0 !important;
+      color: #222 !important;
+    }
+    @media (max-width: 900px) {
+      .main-navbar {
+        padding-right: 1rem;
+      }
+      .main-navbar .navbar-brand img {
+        max-height: 56px;
+        height: 56px;
+      }
+      .main-navbar .main-menu .nav > li > a {
+        font-size: 0.9rem;
+        padding: 0.18rem 0.7rem 0.18rem 0.7rem;
+      }
+      .main-navbar .get-in-touch-btn {
+        font-size: 0.95rem;
+        padding: 0 14px;
+        height: 32px;
+        min-width: 80px;
+      }
+      .main-navbar .logo-col {
+        margin-left: 0.5rem;
+      }
+    }
+    .main-menu .nav > li > a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 30px;
+      padding: 4px 16px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .main-menu .nav > li > a:hover,
+    .main-menu .nav > li.active > a,
+    .main-menu .nav > li > a:focus {
+      background: #1e3a8a;
+      color: #222;
+    }
+  </style>
 </head>
 <body>
-  <!-- Navbar (copied from index.html) -->
+  <!-- HEADER START -->
   <header>
     <!-- TOPBAR (DARK) -->
-    <div class="navbar-mini" style="background:#222; color:#fff; font-family:'Poppins',sans-serif; padding:10px 0; width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw;">
-      <div style="display:flex;align-items:center;justify-content:flex-start;gap:38px;flex-wrap:nowrap;max-width:100vw;padding-left:32px;">
-        <span style="display:flex;align-items:center;gap:7px;"><i class="fa fa-phone"></i> 7086640797, 7002141830</span>
-        <span style="display:flex;align-items:center;gap:7px;"><i class="fa fa-envelope"></i> mechafactory2021@gmail.com</span>
-        <span style="display:flex;align-items:center;gap:7px;"><i class="fa fa-calendar"></i> Mon – Sat: 9:00 AM – 6:00 PM</span>
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <span><i class="fa fa-phone"></i> 7086640797, 7002141830</span>
+        <span><i class="fa fa-envelope"></i> mechafactory2021@gmail.com</span>
+        <span><i class="fa fa-calendar"></i> Mon – Sat: 9:00 AM – 6:00 PM</span>
       </div>
     </div>
     <!-- MAIN NAVBAR (WHITE) -->
-    <div class="header-area sticky-bar" style="background:#fff;">
-      <div class="menu-wrap" style="display:flex;align-items:center;justify-content:space-between;">
-        <div class="row align-items-center" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+    <div class="main-navbar sticky-bar">
+      <div class="menu-wrap">
+        <div class="row align-items-center" style="display:flex;align-items:center;justify-content:space-between;width:100%;min-height:unset;">
           <!-- Logo left -->
-          <div class="col-md-3 col-sm-6 col-xs-6" style="display:flex;align-items:center;min-width:320px;">
-            <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:18px;">
-              <img src="images/mflogo.png" alt="Mecha Factory Logo" style="height:68px;display:block;">
-              <span style="font-weight:600;font-size:1.65rem;color:#222;line-height:1.1;vertical-align:middle;display:inline-block;">Mecha Factory</span>
+          <div class="col-md-3 col-sm-6 col-xs-6 logo-col">
+            <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:10px;">
+              <img src="images/mflogo.png" alt="Mecha Factory Logo">
+              <span>Mecha Factory</span>
             </a>
           </div>
           <!-- Menu center -->
-          <div class="col-md-6 col-sm-6 col-xs-6" style="display:flex;justify-content:center;align-items:center;min-width:480px;">
+          <div class="col-md-6 col-sm-6 col-xs-6" style="display:flex;justify-content:center;align-items:center;min-width:320px;">
             <nav class="main-menu" aria-label="Main Navigation" style="width:100%;">
               <button type="button" class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu" style="background:none;border:none;outline:none;margin-right:10px;display:none;">
-                <i class="fa fa-bars" style="font-size:1.7em;color:#222;"></i>
+                <i class="fa fa-bars" style="font-size:1.5em;color:#222;"></i>
               </button>
-              <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex;gap:0;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;">
-                <li style="margin:0;"><a href="#home">HOME</a></li>
-                <li><a href="services.html">SERVICES</a></li>
+              <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;gap:0;">
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="#products">PRODUCTS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="mecharetail.html">MechaRetail</a></li>
               </ul>
-              <ul class="nav navbar-nav ms-rounded" id="mobile-menu" style="display:none;flex-direction:column;gap:0;align-items:flex-start;justify-content:flex-start;margin:0;padding:0;list-style:none;text-transform:uppercase;position:absolute;top:60px;left:0;width:100vw;background:#fff;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
-                <li style="margin:0;"><a href="#home">HOME</a></li>
-                <li><a href="services.html">SERVICES</a></li>
+              <ul class="nav navbar-nav ms-rounded" id="mobile-menu" style="display:none;flex-direction:column;gap:0;align-items:flex-start;justify-content:flex-start;margin:0;padding:0;list-style:none;text-transform:uppercase;position:absolute;top:48px;left:0;width:100vw;background:#fff;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="#products">PRODUCTS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="mecharetail.html">MechaRetail</a></li>
               </ul>
             </nav>
           </div>
           <!-- Button right -->
-          <div class="col-md-3 col-sm-12 col-xs-12 text-right" style="display:flex;justify-content:flex-end;align-items:center;min-width:260px;height:88px;">
-            <a href="https://wa.me/917086640797" target="_blank" rel="noopener" class="btn btn-yellow theme-btn get-in-touch-btn" style="font-weight:700;padding:10px 38px;border-radius:30px;text-transform:uppercase;box-shadow:0 1px 4px rgba(0,0,0,0.04);display:flex;align-items:center;height:48px;margin:auto 0;text-decoration:none;border-bottom:none;">GET IN TOUCH</a>
+          <div class="col-md-3 col-sm-12 col-xs-12 text-right get-in-touch-col">
+            <a href="https://wa.me/917086640797" target="_blank" rel="noopener" class="btn btn-yellow theme-btn get-in-touch-btn" tabindex="0">GET IN TOUCH</a>
           </div>
         </div>
       </div>
@@ -60,9 +232,24 @@
   </header>
 
   <!-- Section 1: Page Title -->
-  <section class="about-header bg-light text-center py-5">
-    <h2 class="section-title section-main-title">About Us</h2>
-    <div class="about-quote">“We turn innovative ideas into exceptional products.”</div>
+  <section class="about-header bg-light text-center py-5" style="position:relative;z-index:1;background:transparent;overflow:hidden;min-height:320px;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;">
+    <div style="position:absolute;top:0;left:0;width:100vw;height:100%;z-index:0;pointer-events:none;">
+      <svg width="100vw" height="100%" viewBox="0 0 1920 420" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100vw;height:100%;">
+        <defs>
+          <linearGradient id="blueWaves" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#b6d0f7"/>
+            <stop offset="100%" stop-color="#e9eefa"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,100 C480,200 1440,0 1920,100 L1920,0 L0,0 Z" fill="url(#blueWaves)" fill-opacity="1"/>
+        <path d="M0,260 C640,380 1280,80 1920,180 L1920,0 L0,0 Z" fill="#b6d0f7" fill-opacity="0.7"/>
+        <path d="M0,370 Q960,470 1920,370 L1920,420 L0,420 Z" fill="#e9eefa" fill-opacity="0.8"/>
+      </svg>
+    </div>
+    <div style="position:relative;z-index:1;">
+      <h2 class="section-title section-main-title">About Us</h2>
+      <div class="about-quote">“We turn innovative ideas into exceptional products.”</div>
+    </div>
   </section>
 
   <!-- Section 2: Company Overview -->
@@ -112,24 +299,46 @@
       </div>
     </div>
   </section>
-
-  <!-- Section 3: Consultant Profile -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="section-main-title" style="text-align:center;margin-bottom:32px;">Consultant Details</h2>
-      <div style="height:18px;"></div>
-      <div class="consultant-card">
-        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
-          <div class="consultant-icon"><i class="fa fa-user"></i></div>
-          <h4>Mehedi Alom</h4>
-          <p><b>Designation:</b> Design Engineer</p>
-          <p><b>Employee ID:</b> MF/FDR/2100001</p>
-          <p><b>Phone (WhatsApp):</b> 7086640797</p>
-          <p><b>Email:</b> mehedialom2017@gmail.com</p>
+  <div class="team-section-bg" style="background:linear-gradient(135deg,#f8faff 60%,#e9eefa 100%);padding:48px 0 32px 0;margin-top:0;">
+    <div class="container text-center">
+      <h2 class="section-main-title">Team</h2>
+      <div class="row justify-content-center align-items-end g-4" style="margin-top:32px;">
+        <!-- Team Member 1 -->
+        <div class="col-md-4 col-12">
+          <div class="team-card-modern" style="background:#fff;border-radius:18px;box-shadow:0 4px 18px rgba(30,58,138,0.10);padding:0 0 28px 0;display:flex;flex-direction:column;align-items:center;overflow:hidden;">
+            <div style="width:100%;height:260px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;position:relative;">
+              <img src="images/team.jpg" alt="Amit Sharma" style="width:100%;height:100%;object-fit:cover;border-radius:0 0 32px 32px;">
+              <div class="team-img-overlay"></div>
+            </div>
+            <div class="team-name" style="font-weight:700;font-size:1.22rem;color:#1e3a8a;margin:18px 0 6px 0;">Amit Sharma</div>
+            <div class="team-designation" style="font-size:1.08rem;color:#444;">Product Manager</div>
+          </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="col-md-4 col-12">
+          <div class="team-card-modern" style="background:#fff;border-radius:18px;box-shadow:0 4px 18px rgba(30,58,138,0.10);padding:0 0 28px 0;display:flex;flex-direction:column;align-items:center;overflow:hidden;">
+            <div style="width:100%;height:260px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;position:relative;">
+              <img src="images/team.jpg" alt="Priya Verma" style="width:100%;height:100%;object-fit:cover;border-radius:0 0 32px 32px;">
+              <div class="team-img-overlay"></div>
+            </div>
+            <div class="team-name" style="font-weight:700;font-size:1.22rem;color:#1e3a8a;margin:18px 0 6px 0;">Priya Verma</div>
+            <div class="team-designation" style="font-size:1.08rem;color:#444;">Design Engineer</div>
+          </div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="col-md-4 col-12">
+          <div class="team-card-modern" style="background:#fff;border-radius:18px;box-shadow:0 4px 18px rgba(30,58,138,0.10);padding:0 0 28px 0;display:flex;flex-direction:column;align-items:center;overflow:hidden;">
+            <div style="width:100%;height:260px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;position:relative;">
+              <img src="images/team.jpg" alt="Rahul Das" style="width:100%;height:100%;object-fit:cover;border-radius:0 0 32px 32px;">
+              <div class="team-img-overlay"></div>
+            </div>
+            <div class="team-name" style="font-weight:700;font-size:1.22rem;color:#1e3a8a;margin:18px 0 6px 0;">Rahul Das</div>
+            <div class="team-designation" style="font-size:1.08rem;color:#444;">Operations Lead</div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Section 4: Mission Statement -->
   <section class="py-5" style="background:#f8f9fa;">

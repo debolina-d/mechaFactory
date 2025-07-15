@@ -584,7 +584,7 @@
 }
 .about-row-flex {
   margin-top: 18px;
-}
+    }
   </style>
 </head>
 <body>
@@ -622,7 +622,7 @@
                 <li><a href="#products">PRODUCTS</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="#mecharetail">MechaRetail</a></li>
+                <li><a href="mecharetail.html">MechaRetail</a></li>
               </ul>
               <ul class="nav navbar-nav ms-rounded" id="mobile-menu" style="display:none;flex-direction:column;gap:0;align-items:flex-start;justify-content:flex-start;margin:0;padding:0;list-style:none;text-transform:uppercase;position:absolute;top:48px;left:0;width:100vw;background:#fff;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
                 <li><a href="#home">HOME</a></li>
@@ -631,7 +631,7 @@
                 <li><a href="#products">PRODUCTS</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="#mecharetail">MechaRetail</a></li>
+                <li><a href="mecharetail.html">MechaRetail</a></li>
               </ul>
             </nav>
           </div>
@@ -858,7 +858,7 @@
   </section>
 
   <!-- Why Choose Us Section -->
-  <section class="why-choose-section" style="position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;background: url('images/team.jpg') center center/cover no-repeat;">
+  <section class="why-choose-section" style="position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;background: url('images/about (2).jpg') center center/cover no-repeat;">
     <div class="why-choose-overlay"></div>
     <div class="why-choose-container" style="display:flex;align-items:center;justify-content:center;width:100%;max-width:1400px;margin:auto;">
       <div class="why-choose-box">
@@ -885,43 +885,65 @@
   </section>
 
   <!-- Gallery Section -->
-  <section id="gallery" class="gallery-section section-padding">
-    <div class="container">
-      <div class="title-base text-center mb-5">
-        <h2 class="section-main-title">Gallery</h2>
-      </div>
-      <div id="galleryCarousel" class="carousel slide gallery-carousel" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/gallery1.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 1">
-          </div>
-          <div class="carousel-item">
-            <img src="images/gallery2.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 2">
-          </div>
-          <div class="carousel-item">
-            <img src="images/gallery3.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 3">
-          </div>
-          <div class="carousel-item">
-            <img src="images/gallery4.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 4">
-          </div>
-          <div class="carousel-item">
-            <img src="images/gallery5.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 5">
-          </div>
-          <div class="carousel-item">
-            <img src="images/gallery6.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 6">
+  <div class="gallery-section-outer" style="position:relative;overflow:hidden;">
+    <div class="gallery-bg-svg">
+      <svg width="100%" height="320" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;width:100%;height:320px;z-index:0;pointer-events:none;"><path fill="#e9eefa" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+    </div>
+    <section id="gallery" class="gallery-section section-padding gallery-bg-transparent" style="position:relative;z-index:1;background:transparent;">
+      <div class="container">
+        <div class="title-base text-center mb-5">
+          <h2 class="section-main-title">Gallery</h2>
+        </div>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-9 col-md-10 col-12">
+            <div class="d-flex flex-row align-items-center justify-content-center" style="gap:32px;">
+              <div style="flex:2 1 0;">
+                <div id="galleryCarousel" class="carousel slide gallery-carousel" data-bs-ride="carousel" style="border-radius:18px !important;">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gallery1.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gallery2.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gallery3.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 3">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gallery4.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 4">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gallery5.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 5">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gallery6.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 6">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+              <div class="d-none d-md-flex flex-column align-items-start justify-content-center" style="flex:1 1 0;min-width:220px;gap:18px;margin-left:48px;">
+                <div style="font-size:1.08rem;font-weight:600;color:#1e3a8a;">Explore our work in action</div>
+                <div style="font-size:1rem;color:#444;max-width:260px;line-height:1.6;">From rapid prototyping to precision manufacturing, see our machines and projects in action at Mecha Factory.</div>
+                <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px;">
+                  <div style="display:flex;align-items:center;gap:10px;font-size:1.08rem;color:#1e3a8a;font-weight:500;"><i class="fas fa-cogs"></i> 10+ Machines</div>
+                  <div style="display:flex;align-items:center;gap:10px;font-size:1.08rem;color:#1e3a8a;font-weight:500;"><i class="fas fa-project-diagram"></i> 50+ Projects</div>
+                  <div style="display:flex;align-items:center;gap:10px;font-size:1.08rem;color:#1e3a8a;font-weight:500;"><i class="fas fa-cube"></i> 1000+ Parts</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- Partners and Collaborators Section -->
   <section id="partners" class="partners-section section-padding">
@@ -984,6 +1006,13 @@
             <div class="testimonial-client">
               <img src="images/client1.jpg" alt="Client 1" class="testimonial-client-img">
               <div class="testimonial-client-info">
+                <div class="testimonial-rating" style="margin-bottom: 6px; color: #ffd84a; font-size: 1.25rem;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
                 <div class="testimonial-client-name">Amit Sharma</div>
                 <div class="testimonial-client-role">Product Manager, TechNova</div>
               </div>
@@ -997,6 +1026,13 @@
             <div class="testimonial-client">
               <img src="images/client2.jpg" alt="Client 2" class="testimonial-client-img">
               <div class="testimonial-client-info">
+                <div class="testimonial-rating" style="margin-bottom: 6px; color: #ffd84a; font-size: 1.25rem;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
                 <div class="testimonial-client-name">Priya Verma</div>
                 <div class="testimonial-client-role">Founder, MakerSpace</div>
               </div>
@@ -1010,6 +1046,13 @@
             <div class="testimonial-client">
               <img src="images/client3.jpg" alt="Client 3" class="testimonial-client-img">
               <div class="testimonial-client-info">
+                <div class="testimonial-rating" style="margin-bottom: 6px; color: #ffd84a; font-size: 1.25rem;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
                 <div class="testimonial-client-name">Rahul Das</div>
                 <div class="testimonial-client-role">CEO, InnovateX</div>
               </div>

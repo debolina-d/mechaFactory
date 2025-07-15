@@ -3,56 +3,317 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services | Mecha Factory</title>
+  <title>Services | Mecha Factory</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <style>
+    body { font-family: 'Poppins', Arial, sans-serif; }
+    .top-bar {
+      padding: 0.3rem 0;
+      font-size: 0.85rem;
+      background: #222;
+      color: #fff;
+      font-family: 'Poppins',sans-serif;
+      width: 100vw;
+      position: relative;
+      left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;
+    }
+    .top-bar .top-bar-content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2.1rem;
+      flex-wrap: nowrap;
+      max-width: 100vw;
+      padding-left: 2rem;
+    }
+    .top-bar span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .top-bar i {
+      font-size: 1em;
+      vertical-align: middle;
+    }
+    .main-navbar {
+      background: #fff;
+      padding: 0.08rem 2.5rem 0.08rem 0.5rem;
+      box-shadow: none;
+    }
+    .main-navbar .menu-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: unset;
+    }
+    .main-navbar .row.align-items-center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: unset;
+    }
+    .main-navbar .navbar-brand img {
+      max-height: 72px;
+      height: 72px;
+      width: auto;
+      display: block;
+      margin-right: 8px;
+    }
+    .main-navbar .navbar-brand span {
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: #222;
+      line-height: 1.1;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    .main-navbar .logo-col {
+      margin-left: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    .main-navbar .get-in-touch-col {
+      margin-right: 0 !important;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .main-navbar .main-menu .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+    .main-navbar .main-menu .nav > li {
+      margin: 0 0.2rem;
+      display: flex;
+      align-items: center;
+      border: none;
+    }
+    .main-navbar .main-menu .nav > li:not(:last-child) {
+      border-right: 1px solid #e0e0e0;
+    }
+    .main-navbar .main-menu .nav > li:first-child {
+      border-left: none;
+    }
+    .main-navbar .main-menu .nav > li > a {
+      font-size: 0.87rem;
+      padding: 0.18rem 1.2rem 0.18rem 1.2rem;
+      border-radius: 16px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.5px;
+      border: none;
+      margin: 0;
+    }
+    .main-navbar .get-in-touch-btn {
+      font-size: 1rem !important;
+      padding: 0 22px !important;
+      height: 36px !important;
+      min-width: 110px !important;
+      border-radius: 999px !important;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      margin: auto 0;
+      text-decoration: none;
+      border-bottom: none;
+      box-sizing: border-box;
+      background: #1e3a8a !important;
+      color: #fff !important;
+      border: none !important;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04) !important;
+      letter-spacing: 1px;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+    .main-navbar .get-in-touch-btn:hover,
+    .main-navbar .get-in-touch-btn:focus {
+      background: #e0e0e0 !important;
+      color: #222 !important;
+    }
+    @media (max-width: 900px) {
+      .main-navbar {
+        padding-right: 1rem;
+      }
+      .main-navbar .navbar-brand img {
+        max-height: 56px;
+        height: 56px;
+      }
+      .main-navbar .main-menu .nav > li > a {
+        font-size: 0.9rem;
+        padding: 0.18rem 0.7rem 0.18rem 0.7rem;
+      }
+      .main-navbar .get-in-touch-btn {
+        font-size: 0.95rem;
+        padding: 0 14px;
+        height: 32px;
+        min-width: 80px;
+      }
+      .main-navbar .logo-col {
+        margin-left: 0.5rem;
+      }
+    }
+    .main-menu .nav > li > a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 30px;
+      padding: 4px 16px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .main-menu .nav > li > a:hover,
+    .main-menu .nav > li.active > a,
+    .main-menu .nav > li > a:focus {
+      background: #1e3a8a;
+      color: #222;
+    }
+    /* Services Grid for Mobile: 3 Columns */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 12px 0 12px 0;
+      margin-bottom: 24px;
+    }
+    .services-accordion { display: none; }
+    @media (max-width: 900px) {
+      .services-grid { display: none; }
+      .services-accordion { display: block; margin-bottom: 24px; }
+    }
+    .service-card {
+      background: #f7faff;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(30,58,138,0.07);
+      padding: 18px 10px 18px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      min-height: 210px;
+      transition: box-shadow 0.2s;
+    }
+    .service-card h3 {
+      font-size: 1.08rem;
+      color: #1e3a8a;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .service-card p {
+      font-size: 0.92rem;
+      color: #333;
+      margin-bottom: 1.1rem;
+      flex: 1 1 auto;
+    }
+    .service-card-btn {
+      display: inline-block;
+      background: #1e3a8a;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 999px;
+      padding: 7px 18px;
+      font-size: 0.98rem;
+      text-decoration: none;
+      transition: background 0.18s;
+      box-shadow: 0 1px 4px rgba(30,58,138,0.08);
+    }
+    .service-card-btn:hover,
+    .service-card-btn:focus {
+      background: #0d1e3a;
+      color: #fff;
+    }
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        padding: 8px 0 8px 0;
+      }
+      .service-card {
+        padding: 14px 6px 14px 6px;
+        min-height: 170px;
+      }
+      .service-card h3 {
+        font-size: 1rem;
+      }
+      .service-card p {
+        font-size: 0.88rem;
+      }
+    }
+    @media (max-width: 600px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        padding: 4px 0 4px 0;
+      }
+      .service-card {
+        padding: 10px 2px 10px 2px;
+        min-height: 120px;
+      }
+      .service-card h3 {
+        font-size: 0.95rem;
+      }
+      .service-card p {
+        font-size: 0.82rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Navbar (copied from index.html, links updated) -->
+  <!-- HEADER START -->
   <header>
     <!-- TOPBAR (DARK) -->
-    <div class="navbar-mini" style="background:#222; color:#fff; font-family:'Poppins',sans-serif; padding:10px 0; width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw;">
-      <div style="display:flex;align-items:center;justify-content:flex-start;gap:38px;flex-wrap:nowrap;max-width:100vw;padding-left:32px;">
-        <span style="display:flex;align-items:center;gap:7px;"><i class="fa fa-phone"></i> 7086640797, 7002141830</span>
-        <span style="display:flex;align-items:center;gap:7px;"><i class="fa fa-envelope"></i> mechafactory2021@gmail.com</span>
-        <span style="display:flex;align-items:center;gap:7px;"><i class="fa fa-calendar"></i> Mon – Sat: 9:00 AM – 6:00 PM</span>
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <span><i class="fa fa-phone"></i> 7086640797, 7002141830</span>
+        <span><i class="fa fa-envelope"></i> mechafactory2021@gmail.com</span>
+        <span><i class="fa fa-calendar"></i> Mon – Sat: 9:00 AM – 6:00 PM</span>
       </div>
     </div>
     <!-- MAIN NAVBAR (WHITE) -->
-    <div class="header-area sticky-bar" style="background:#fff;">
-      <div class="menu-wrap" style="display:flex;align-items:center;justify-content:space-between;">
-        <div class="row align-items-center" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+    <div class="main-navbar sticky-bar">
+      <div class="menu-wrap">
+        <div class="row align-items-center" style="display:flex;align-items:center;justify-content:space-between;width:100%;min-height:unset;">
           <!-- Logo left -->
-          <div class="col-md-3 col-sm-6 col-xs-6" style="display:flex;align-items:center;min-width:320px;">
-            <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:18px;">
-              <img src="images/mflogo.png" alt="Mecha Factory Logo" style="height:68px;display:block;">
-              <span style="font-weight:600;font-size:1.65rem;color:#222;line-height:1.1;vertical-align:middle;display:inline-block;">Mecha Factory</span>
+          <div class="col-md-3 col-sm-6 col-xs-6 logo-col">
+            <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:10px;">
+              <img src="images/mflogo.png" alt="Mecha Factory Logo">
+              <span>Mecha Factory</span>
             </a>
           </div>
           <!-- Menu center -->
-          <div class="col-md-6 col-sm-6 col-xs-6" style="display:flex;justify-content:center;align-items:center;min-width:480px;">
+          <div class="col-md-6 col-sm-6 col-xs-6" style="display:flex;justify-content:center;align-items:center;min-width:320px;">
             <nav class="main-menu" aria-label="Main Navigation" style="width:100%;">
               <button type="button" class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu" style="background:none;border:none;outline:none;margin-right:10px;display:none;">
-                <i class="fa fa-bars" style="font-size:1.7em;color:#222;"></i>
+                <i class="fa fa-bars" style="font-size:1.5em;color:#222;"></i>
               </button>
-              <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex;gap:0;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;">
-                <li style="margin:0;"><a href="#home">HOME</a></li>
-                <li><a href="services.html">SERVICES</a></li>
+              <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;gap:0;">
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="#products">PRODUCTS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="mecharetail.html">MechaRetail</a></li>
               </ul>
-              <ul class="nav navbar-nav ms-rounded" id="mobile-menu" style="display:none;flex-direction:column;gap:0;align-items:flex-start;justify-content:flex-start;margin:0;padding:0;list-style:none;text-transform:uppercase;position:absolute;top:60px;left:0;width:100vw;background:#fff;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
-                <li style="margin:0;"><a href="#home">HOME</a></li>
-                <li><a href="services.html">SERVICES</a></li>
+              <ul class="nav navbar-nav ms-rounded" id="mobile-menu" style="display:none;flex-direction:column;gap:0;align-items:flex-start;justify-content:flex-start;margin:0;padding:0;list-style:none;text-transform:uppercase;position:absolute;top:48px;left:0;width:100vw;background:#fff;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="#products">PRODUCTS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="mecharetail.html">MechaRetail</a></li>
               </ul>
             </nav>
           </div>
           <!-- Button right -->
-          <div class="col-md-3 col-sm-12 col-xs-12 text-right" style="display:flex;justify-content:flex-end;align-items:center;min-width:260px;height:88px;">
-            <a href="https://wa.me/917086640797" target="_blank" rel="noopener" class="btn btn-yellow theme-btn get-in-touch-btn" style="font-weight:700;padding:10px 38px;border-radius:30px;text-transform:uppercase;box-shadow:0 1px 4px rgba(0,0,0,0.04);display:flex;align-items:center;height:48px;margin:auto 0;text-decoration:none;border-bottom:none;">GET IN TOUCH</a>
+          <div class="col-md-3 col-sm-12 col-xs-12 text-right get-in-touch-col">
+            <a href="https://wa.me/917086640797" target="_blank" rel="noopener" class="btn btn-yellow theme-btn get-in-touch-btn" tabindex="0">GET IN TOUCH</a>
           </div>
         </div>
       </div>
@@ -66,97 +327,117 @@
       <p class="service-subtitle" style="text-align:center; max-width:700px; margin:0 auto 32px auto; font-size:1.18rem; color:#444; font-weight:500;">
         From concept to creation — we offer everything you need under one roof.
       </p>
-      <div class="accordion" id="servicesAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading1">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-              3D Designing
-            </button>
-          </h2>
-          <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#servicesAccordion">
-            <div class="accordion-body">
-              Our 3D design services convert your ideas into precise digital models, using cutting-edge CAD tools.<br>
-              <b>Deliverables:</b> STL, STEP, IGES files<br>
-              <b>Best For:</b> Product development, mechanical parts, prototypes
-              <br><br>
-              <a href="booking.html" class="accordion-cta-btn" style="margin-top:10px;">Book Now</a>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>3D Designing</h3>
+          <p>Convert your ideas into precise digital models using cutting-edge CAD tools.</p>
+          <a href="booking.html" class="service-card-btn">Book Now</a>
+        </div>
+        <div class="service-card">
+          <h3>2D Designing</h3>
+          <p>Professional drafting for fabrication-ready blueprints and technical documentation.</p>
+          <a href="booking.html" class="service-card-btn">Book Now</a>
+        </div>
+        <div class="service-card">
+          <h3>3D Printing</h3>
+          <p>Rapid prototyping with PLA, ABS, PETG, or Resin for mockups and fit testing.</p>
+          <a href="booking.html" class="service-card-btn">Book Now</a>
+        </div>
+        <div class="service-card">
+          <h3>CNC Engraving</h3>
+          <p>Precision engraving for signage, logos, or industrial components on various materials.</p>
+          <a href="booking.html" class="service-card-btn">Book Now</a>
+        </div>
+        <div class="service-card">
+          <h3>Laser Cutting</h3>
+          <p>Accurate, clean cuts for metals, acrylic, or wood. Ideal for panels and artworks.</p>
+          <a href="booking.html" class="service-card-btn">Book Now</a>
+        </div>
+        <div class="service-card">
+          <h3>Training & Reverse Engineering</h3>
+          <p>Customizable training in CAD, 3D scanning, and reverse engineering (Online/Offline).</p>
+          <a href="booking.html" class="service-card-btn">Join Now</a>
+        </div>
+      </div>
+      <!-- Mobile Accordion for Services -->
+      <div class="services-accordion d-block d-md-none" id="servicesAccordionMobile">
+        <div class="accordion" id="accordionMobile">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1m">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1m" aria-expanded="false" aria-controls="collapse1m">
+                3D Designing
+              </button>
+            </h2>
+            <div id="collapse1m" class="accordion-collapse collapse" aria-labelledby="heading1m" data-bs-parent="#accordionMobile">
+              <div class="accordion-body">
+                Convert your ideas into precise digital models using cutting-edge CAD tools.<br>
+                <a href="booking.html" class="accordion-cta-btn" style="margin-top:10px;">Book Now</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading2">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-              2D Designing
-            </button>
-          </h2>
-          <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#servicesAccordion">
-            <div class="accordion-body">
-              Professional 2D drafting for fabrication-ready blueprints and technical documentation.<br>
-              <b>Deliverables:</b> PDF, DWG, DXF<br>
-              <b>Best For:</b> Laser cutting, CNC milling
-              <br><br>
-              <a href="booking.html" class="accordion-cta-btn" style="margin-top:10px;">Book Now</a>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2m">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2m" aria-expanded="false" aria-controls="collapse2m">
+                2D Designing
+              </button>
+            </h2>
+            <div id="collapse2m" class="accordion-collapse collapse" aria-labelledby="heading2m" data-bs-parent="#accordionMobile">
+              <div class="accordion-body">
+                Professional drafting for fabrication-ready blueprints and technical documentation.<br>
+                <a href="booking.html" class="accordion-cta-btn" style="margin-top:10px;">Book Now</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading3">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-              3D Printing
-            </button>
-          </h2>
-          <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#servicesAccordion">
-            <div class="accordion-body">
-              Rapid prototyping with PLA, ABS, PETG, or Resin.<br>
-              <b>Pricing:</b> ₹8/g + GST or ₹9.5/g flat<br>
-              <b>Use Case:</b> Visual mockups, fit testing
-              <br><br>
-              <a href="booking.html" class="accordion-cta-btn" style="margin-top:10px;">Book Now</a>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3m">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3m" aria-expanded="false" aria-controls="collapse3m">
+                3D Printing
+              </button>
+            </h2>
+            <div id="collapse3m" class="accordion-collapse collapse" aria-labelledby="heading3m" data-bs-parent="#accordionMobile">
+              <div class="accordion-body">
+                Rapid prototyping with PLA, ABS, PETG, or Resin for mockups and fit testing.<br>
+                <a href="booking.html" class="accordion-cta-btn" style="margin-top:10px;">Book Now</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading4">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-              CNC Engraving
-            </button>
-          </h2>
-          <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#servicesAccordion">
-            <div class="accordion-body">
-              Precision engraving for signage, logos, or industrial components on aluminum, wood, etc.
-              <br><br>
-              <a href="booking.html" class="accordion-cta-btn" style="margin-top:10px;">Book Now</a>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading4m">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4m" aria-expanded="false" aria-controls="collapse4m">
+                CNC Engraving
+              </button>
+            </h2>
+            <div id="collapse4m" class="accordion-collapse collapse" aria-labelledby="heading4m" data-bs-parent="#accordionMobile">
+              <div class="accordion-body">
+                Precision engraving for signage, logos, or industrial components on various materials.<br>
+                <a href="booking.html" class="accordion-cta-btn" style="margin-top:10px;">Book Now</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading5">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-              Laser Cutting
-            </button>
-          </h2>
-          <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#servicesAccordion">
-            <div class="accordion-body">
-              Accurate, clean cuts for metals, acrylic, or wood.<br>
-              <b>Applications:</b> Panels, artworks, mechanical parts
-              <br><br>
-              <a href="booking.html" class="accordion-cta-btn" style="margin-top:10px;">Book Now</a>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading5m">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5m" aria-expanded="false" aria-controls="collapse5m">
+                Laser Cutting
+              </button>
+            </h2>
+            <div id="collapse5m" class="accordion-collapse collapse" aria-labelledby="heading5m" data-bs-parent="#accordionMobile">
+              <div class="accordion-body">
+                Accurate, clean cuts for metals, acrylic, or wood. Ideal for panels and artworks.<br>
+                <a href="booking.html" class="accordion-cta-btn" style="margin-top:10px;">Book Now</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading6">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-              Training & Reverse Engineering
-            </button>
-          </h2>
-          <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#servicesAccordion">
-            <div class="accordion-body">
-              Customizable training in CAD, 3D scanning, reverse engineering.<br>
-              <b>Topics:</b> Solid modeling, mesh repair, scan to CAD<br>
-              <b>Duration:</b> 1–14 days (Online/Offline)
-              <br><br>
-              <a href="booking.html" class="accordion-cta-btn" style="margin-top:10px;">Join Now</a>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading6m">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6m" aria-expanded="false" aria-controls="collapse6m">
+                Training & Reverse Engineering
+              </button>
+            </h2>
+            <div id="collapse6m" class="accordion-collapse collapse" aria-labelledby="heading6m" data-bs-parent="#accordionMobile">
+              <div class="accordion-body">
+                Customizable training in CAD, 3D scanning, and reverse engineering (Online/Offline).<br>
+                <a href="booking.html" class="accordion-cta-btn" style="margin-top:10px;">Join Now</a>
+              </div>
             </div>
           </div>
         </div>
@@ -274,6 +555,5 @@
     window.addEventListener('resize', handleResize);
     document.addEventListener('DOMContentLoaded', handleResize);
   </script>
-  <a href="booking.html" class="floating-book-btn" aria-label="Book Now">BOOK NOW</a>
 </body>
 </html>

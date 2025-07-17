@@ -206,7 +206,7 @@
               <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;gap:0;">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="index.html#services">SERVICES</a></li>
                 <li><a href="#products">PRODUCTS</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
@@ -215,7 +215,7 @@
               <ul class="nav navbar-nav ms-rounded" id="mobile-menu" style="display:none;flex-direction:column;gap:0;align-items:flex-start;justify-content:flex-start;margin:0;padding:0;list-style:none;text-transform:uppercase;position:absolute;top:48px;left:0;width:100vw;background:#fff;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="index.html#services">SERVICES</a></li>
                 <li><a href="#products">PRODUCTS</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
@@ -267,9 +267,10 @@
             <option value="3d-design">3D Designing</option>
             <option value="2d-design">2D Designing</option>
             <option value="3d-printing">3D Printing</option>
-            <option value="cnc-engraving">CNC Engraving</option>
-            <option value="laser-cutting">Laser Cutting</option>
-            <option value="training">Training & Reverse Engineering</option>
+            <option value="cnc-engraving-cutting">CNC Engraving and Cutting</option>
+            <option value="laser-cutting-engraving">Laser Cutting and laser Engraving</option>
+            <option value="training-reverse">Design Training & Scanning</option>
+            <option value="personalized-gifts">Personalized 3D Printed Gifts</option>
           </select>
           <div class="invalid-feedback">Please select a service.</div>
         </div>
@@ -277,6 +278,11 @@
           <label for="message" class="form-label">Project Details</label>
           <textarea class="form-control" id="message" name="message" rows="5" placeholder="Describe your requirements..." required></textarea>
           <div class="invalid-feedback">Please describe your project.</div>
+        </div>
+        <div class="col-md-12">
+          <label for="projectFiles" class="form-label">Upload File(s) <span style="font-weight:400;font-size:0.98em;">(Photo/Design File/PDF/STL/STEP/DXF/DWG/ZIP etc.)</span></label>
+          <input class="form-control" type="file" id="projectFiles" name="projectFiles[]" multiple accept=".jpg,.jpeg,.png,.pdf,.stl,.step,.stp,.dxf,.dwg,.zip">
+          <div class="form-text">You can upload multiple files. Allowed: images, PDF, STL, STEP, DXF, DWG, ZIP.</div>
         </div>
         <div class="col-md-12 text-center mt-3">
           <button type="submit" class="mecha-cta-btn">Submit Request</button>

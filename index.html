@@ -585,6 +585,23 @@
 .about-row-flex {
   margin-top: 18px;
     }
+  .why-choose-box {
+      background: #fff;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+      border-radius: 0;
+      padding: 48px 48px 36px 48px;
+      max-width: 540px;
+      min-width: 340px;
+      position: relative;
+      z-index: 3;
+      margin: 48px auto;
+    }
+    @media (max-width: 600px) {
+      .why-choose-box {
+        padding: 18px 6vw 18px 6vw;
+        min-width: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -618,25 +635,25 @@
               <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;gap:0;">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="#products">PRODUCTS</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="product.html">PRODUCTS</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
                 <li><a href="mecharetail.html">MechaRetail</a></li>
               </ul>
               <ul class="nav navbar-nav ms-rounded" id="mobile-menu" style="display:none;flex-direction:column;gap:0;align-items:flex-start;justify-content:flex-start;margin:0;padding:0;list-style:none;text-transform:uppercase;position:absolute;top:48px;left:0;width:100vw;background:#fff;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="#products">PRODUCTS</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="mecharetail.html">MechaRetail</a></li>
+                <li style="display:inline-block;"><a href="#home">HOME</a></li>
+                <li style="display:inline-block;"><a href="about.html">ABOUT</a></li>
+                <li style="display:inline-block;"><a href="#services">SERVICES</a></li>
+                <li style="display:inline-block;"><a href="product.html">PRODUCTS</a></li>
+                <li style="display:inline-block;"><a href="projects.html">PROJECTS</a></li>
+                <li style="display:inline-block;"><a href="contact.html">CONTACT</a></li>
+                <li style="display:inline-block;"><a href="mecharetail.html">MechaRetail</a></li>
               </ul>
             </nav>
           </div>
           <!-- Button right -->
-          <div class="col-md-3 col-sm-12 col-xs-12 text-right get-in-touch-col">
+          <div class="col-md-3 col-sm-12 col-xs-12 text-right get-in-touch-col" style="display:flex;justify-content:flex-end;align-items:center;height:100%;">
             <a href="https://wa.me/917086640797" target="_blank" rel="noopener" class="btn btn-yellow theme-btn get-in-touch-btn" tabindex="0">GET IN TOUCH</a>
           </div>
         </div>
@@ -702,13 +719,16 @@
                 <i class="fa fa-print me-2"></i>3D Printing
               </a>
               <a class="nav-link scrollspy-item" href="#cnc" data-service="cnc-engraving">
-                <i class="fa fa-pen-fancy me-2"></i>CNC Engraving
+                <i class="fa fa-pen-fancy me-2"></i>CNC Engraving and Cutting
               </a>
               <a class="nav-link scrollspy-item" href="#laser" data-service="laser-cutting">
                 <i class="fa fa-cut me-2"></i>Laser Cutting
               </a>
               <a class="nav-link scrollspy-item" href="#training" data-service="training-scanning">
                 <i class="fa fa-chalkboard-teacher me-2"></i>Training & Scanning
+              </a>
+              <a class="nav-link scrollspy-item" href="#personalized-gifts" data-service="personalized-gifts">
+                <i class="fa fa-gift me-2"></i>Personalized 3D Printed Gifts
               </a>
             </nav>
           </nav>
@@ -725,7 +745,7 @@
                 </div>
                 <div class="col-md-6 service-text">
                   <h3>3D Designing</h3>
-                  <p>Precise CAD models for products and prototypes using advanced 3D design tools.</p>
+                  <p>Precise CAD models for product development and prototypes using advanced 3D Designing Software’s at affordable Rate.​</p>
                   <a href="service-3d-designing.html" class="service-knowmore-btn">Know More</a>
                 </div>
               </div>
@@ -740,7 +760,7 @@
                 </div>
                 <div class="col-md-6 service-text">
                   <h3>2D Designing</h3>
-                  <p>Accurate technical drawings for manufacturing, fabrication, and laser/CNC cutting.</p>
+                  <p>Accurate technical drawings for manufacturing, fabrication, and laser/CNC cutting at affordable Rate.​</p>
                   <a href="service-2d-designing.html" class="service-knowmore-btn">Know More</a>
                 </div>
               </div>
@@ -753,7 +773,7 @@
                 </div>
                 <div class="col-md-6 service-text">
                   <h3>3D Printing</h3>
-                  <p>Rapid FDM and resin printing solutions for visual models and functional parts.</p>
+                  <p>Rapid FDM and resin printing solutions for visual models, functional parts, Prototypes and Mass Production at affordable Rate.​</p>
                   <a href="service-3d-printing.html" class="service-knowmore-btn">Know More</a>
                 </div>
               </div>
@@ -767,8 +787,8 @@
                   </div>
                 </div>
                 <div class="col-md-6 service-text">
-                  <h3>CNC Engraving</h3>
-                  <p>High-precision engraving on metal, wood, and acrylic for industrial or creative use.</p>
+                  <h3>CNC Engraving and Cutting</h3>
+                  <p>High-precision engraving on metal, wood, acrylic, Carbon Fiber etc. for industrial, creative, prototyping and production  use at affordable Rate.​</p>
                   <a href="service-cnc-engraving.html" class="service-knowmore-btn">Know More</a>
                 </div>
               </div>
@@ -780,8 +800,8 @@
                   <img src="images/card5.jpg" alt="Laser Cutting">
                 </div>
                 <div class="col-md-6 service-text">
-                  <h3>Laser Cutting</h3>
-                  <p>Smooth and clean cuts on a range of materials for enclosures, signs, and frames.</p>
+                  <h3>Laser Cutting and laser Engraving</h3>
+                  <p>Smooth and clean cuts on a range of materials for enclosures, signs, and frames at affordable Rate. ​</p>
                   <a href="service-laser-cutting.html" class="service-knowmore-btn">Know More</a>
                 </div>
               </div>
@@ -795,9 +815,22 @@
                   </div>
                 </div>
                 <div class="col-md-6 service-text">
-                  <h3>Training & Scanning</h3>
-                  <p>Practical training in CAD software, 3D scanning, and reverse engineering workflows.</p>
+                  <h3>Design Training & Scanning</h3>
+                  <p>Online/Offline Practical training in 3D Designing, 2D Drafting, 3D Printing, 3D scanning and reverse Engineering to Upskill your workforce for efficient product development timeline.​</p>
                   <a href="service-training-scanning.html" class="service-knowmore-btn">Know More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Personalized 3D Printed Gifts Section -->
+            <div class="service-block" data-service="personalized-gifts" id="personalized-gifts">
+              <div class="service-row">
+                <div class="col-md-6 service-image">
+                  <img src="images/card6.jpg" alt="Personalized 3D Printed Gifts">
+                </div>
+                <div class="col-md-6 service-text">
+                  <h3>Personalized 3D Printed Gifts</h3>
+                  <p>Unique, Custom, and Affordable Solutions for Every Occasion, may be its Birthday or Anniversary and many more ​</p>
+                  <a href="service-personalized-gifts.html" class="service-knowmore-btn">Know More</a>
                 </div>
               </div>
             </div>
@@ -823,7 +856,7 @@
             <div class="product-card-body">
               <h3 class="product-title">Robo-Chef V1 Smart Autonomous Rice Cooker</h3>
               <p class="product-desc">A next-gen rice cooker with AI-powered cooking modes, remote control, and energy efficiency. (Description placeholder)</p>
-              <a href="#" class="btn product-btn">View More</a>
+              <a href="product.html" class="btn product-btn">View More</a>
             </div>
           </div>
         </div>
@@ -836,7 +869,7 @@
             <div class="product-card-body">
               <h3 class="product-title">Light-sensitive Smart Helmet Visor</h3>
               <p class="product-desc">Automatically adjusts tint based on ambient light for safer, more comfortable rides. (Description placeholder)</p>
-              <a href="#" class="btn product-btn">View More</a>
+              <a href="product.html" class="btn product-btn">View More</a>
             </div>
           </div>
         </div>
@@ -849,7 +882,7 @@
             <div class="product-card-body">
               <h3 class="product-title">Motion Sensor Light Adapter</h3>
               <p class="product-desc">Plug-and-play adapter that turns any bulb into a smart motion-activated light. (Description placeholder)</p>
-              <a href="#" class="btn product-btn">View More</a>
+              <a href="product.html" class="btn product-btn">View More</a>
             </div>
           </div>
         </div>
@@ -992,77 +1025,6 @@
     </div>
   </section>
 
-  <!-- Testimonial Section -->
-  <section id="testimonials" class="testimonials-section section-padding">
-    <div class="container">
-      <div class="title-base text-center mb-5">
-        <h2 class="section-main-title">Testimonials</h2>
-      </div>
-      <div class="row g-4 testimonials-row justify-content-center align-items-stretch">
-        <!-- Testimonial 1 -->
-        <div class="col-md-4 col-12">
-          <div class="testimonial-card">
-            <div class="testimonial-quote">“Mecha Factory exceeded our expectations with their innovative solutions and rapid turnaround. Highly recommended!”</div>
-            <div class="testimonial-client">
-              <img src="images/client1.jpg" alt="Client 1" class="testimonial-client-img">
-              <div class="testimonial-client-info">
-                <div class="testimonial-rating" style="margin-bottom: 6px; color: #ffd84a; font-size: 1.25rem;">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <div class="testimonial-client-name">Amit Sharma</div>
-                <div class="testimonial-client-role">Product Manager, TechNova</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Testimonial 2 -->
-        <div class="col-md-4 col-12">
-          <div class="testimonial-card">
-            <div class="testimonial-quote">“Their team’s expertise in 3D printing and design helped us bring our concept to life quickly and efficiently.”</div>
-            <div class="testimonial-client">
-              <img src="images/client2.jpg" alt="Client 2" class="testimonial-client-img">
-              <div class="testimonial-client-info">
-                <div class="testimonial-rating" style="margin-bottom: 6px; color: #ffd84a; font-size: 1.25rem;">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <div class="testimonial-client-name">Priya Verma</div>
-                <div class="testimonial-client-role">Founder, MakerSpace</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Testimonial 3 -->
-        <div class="col-md-4 col-12">
-          <div class="testimonial-card">
-            <div class="testimonial-quote">“Professional, creative, and always on time. Mecha Factory is our go-to partner for prototyping.”</div>
-            <div class="testimonial-client">
-              <img src="images/client3.jpg" alt="Client 3" class="testimonial-client-img">
-              <div class="testimonial-client-info">
-                <div class="testimonial-rating" style="margin-bottom: 6px; color: #ffd84a; font-size: 1.25rem;">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <div class="testimonial-client-name">Rahul Das</div>
-                <div class="testimonial-client-role">CEO, InnovateX</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Blogs Section -->
   <section id="blogs" class="blogs-section section-padding">
     <div class="container">
@@ -1074,12 +1036,12 @@
         <div class="col-md-4 col-12">
           <div class="blog-card">
             <div class="blog-image-wrap">
-              <img src="images/blog1.jpg" alt="Blog 1" class="blog-image">
+              <img src="images/gallery1.jpg" alt="3D Printing Blog" class="blog-image">
             </div>
             <div class="blog-card-body">
-              <h3 class="blog-title">The Future of Robotics in Manufacturing</h3>
-              <p class="blog-excerpt">Explore how robotics and automation are revolutionizing modern manufacturing, increasing efficiency and quality. (Excerpt placeholder)</p>
-              <a href="#" class="btn blog-btn">Read More</a>
+              <h3 class="blog-title">The Future of Prototyping – How 3D Printing is Revolutionizing Product Development</h3>
+              <p class="blog-meta">Published by Mecha Factory | Category: 3D Printing</p>
+              <a href="blogs.html#blog-3d-printing" class="btn blog-btn">Read More</a>
             </div>
           </div>
         </div>
@@ -1087,12 +1049,12 @@
         <div class="col-md-4 col-12">
           <div class="blog-card">
             <div class="blog-image-wrap">
-              <img src="images/blog2.jpg" alt="Blog 2" class="blog-image">
+              <img src="images/gallery2.jpg" alt="CNC Engraving Blog" class="blog-image">
             </div>
             <div class="blog-card-body">
-              <h3 class="blog-title">3D Printing: From Prototype to Production</h3>
-              <p class="blog-excerpt">A look at how 3D printing is transforming product development, from rapid prototyping to end-use parts. (Excerpt placeholder)</p>
-              <a href="#" class="btn blog-btn">Read More</a>
+              <h3 class="blog-title">Precision in Every Pass – The Power of CNC Engraving in Modern Manufacturing</h3>
+              <p class="blog-meta">Published by Mecha Factory | Category: CNC Engraving</p>
+              <a href="blogs.html#blog-cnc-engraving" class="btn blog-btn">Read More</a>
             </div>
           </div>
         </div>
@@ -1100,12 +1062,12 @@
         <div class="col-md-4 col-12">
           <div class="blog-card">
             <div class="blog-image-wrap">
-              <img src="images/blog3.jpg" alt="Blog 3" class="blog-image">
+              <img src="images/gallery3.jpg" alt="Laser Engraving Blog" class="blog-image">
             </div>
             <div class="blog-card-body">
-              <h3 class="blog-title">Laser Cutting: Precision for Every Project</h3>
-              <p class="blog-excerpt">Discover the versatility and accuracy of laser cutting for custom enclosures, signage, and more. (Excerpt placeholder)</p>
-              <a href="#" class="btn blog-btn">Read More</a>
+              <h3 class="blog-title">Cutting-Edge Ideas – How Laser Engraving Elevates Customization and Branding</h3>
+              <p class="blog-meta">Published by Mecha Factory | Category: Laser Engraving</p>
+              <a href="blogs.html#blog-laser-engraving" class="btn blog-btn">Read More</a>
             </div>
           </div>
         </div>
@@ -1144,7 +1106,7 @@
         </div>
         <div class="footer-contact-col" style="flex:1 1 320px;min-width:260px;max-width:420px;text-align:center;">
           <div class="footer-map-wrap" style="margin:18px 0 18px 0;">
-            <iframe src="https://www.google.com/maps?q=2+No.+Masjid+Path,+A.K+Dev+Road,+Katahbari,+Guwahati,+Kamrup+Metropolitan,+Assam+781035&output=embed" width="100%" height="220" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.964964479836!2d91.7198350760496!3d26.12505127707313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5d5248b54cf1%3A0x6525f65ec3ab77fd!2sMecha%20Factory!5e0!3m2!1sen!2sin!4v1718030000000!5m2!1sen!2sin" width="100%" height="220" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <a href="https://wa.me/917086640797" class="contact-now-btn" target="_blank" rel="noopener">Contact Now</a>
         </div>

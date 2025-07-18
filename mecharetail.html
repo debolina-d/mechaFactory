@@ -293,15 +293,69 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero-mecharetail">
+  <section class="hero-mecharetail" style="display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:32px;min-height:440px;position:relative;padding-left:5vw;">
     <div class="hero-bg-svg">
       <svg width="100%" height="100%" viewBox="0 0 1440 340" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="position:absolute;top:0;left:0;width:100%;height:100%;"><path fill="#c2c7d1" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
     </div>
-    <div class="hero-card">
-      <h1 style="color:#444a57;">MechaRetail</h1>
-      <div class="hero-tagline">Your destination for smart electronics and mechanical innovation, curated for the modern maker and enthusiast.</div>
+    <div class="hero-card mecharetail-hero-card" style="max-width:900px;width:100%;margin-left:0;background:rgba(255,255,255,0.97);border-radius:28px;box-shadow:0 8px 32px rgba(30,58,138,0.10);padding:40px 36px 36px 36px;text-align:center;position:relative;">
+      <h1 style="font-family:'Poppins',sans-serif;font-size:2.5rem;font-weight:800;color:#222;margin-bottom:36px;letter-spacing:1px;">Mecha Retail</h1>
+      <div class="mecharetail-hero-content" style="font-size:1.18rem;color:#222;line-height:1.7;margin-top:0;">
+        <p><b>We bring <span style="color:#222;font-weight:600;">innovation closer to you</span>.</b> As the retail arm of Mecha Factory, we are dedicated to making advanced technology and essential materials accessible to everyone—</p>
+        <p><span style="color:#222;font-weight:600;">Whether you’re a creator, a business owner, or a homemaker.</span></p>
+        <hr style="border:none;border-top:1.5px solid #e0e6f6;margin:24px 0;">
+        <p>We offer a thoughtfully curated range of <b>ready-to-use products</b> designed to simplify daily life, alongside a comprehensive selection of <b>raw materials, tools, and components</b> to empower innovators and makers.</p>
+        <p><b>Our goal:</b> Make modern living more convenient and support the creative journey of those building the products of tomorrow.</p>
+      </div>
+    </div>
+    <div class="hero-logo-right" style="position:absolute;top:0;right:5vw;z-index:2;display:flex;align-items:flex-start;justify-content:center;pointer-events:none;">
+      <img src="images/mechaRetail.png" alt="Mecha Retail Logo" style="max-width:220px;width:100%;height:auto;object-fit:contain;">
     </div>
   </section>
+
+  <!-- ORDER LIFECYCLE SECTION -->
+  <section class="order-lifecycle-section" style="background:transparent;padding:32px 0 32px 0;">
+    <div class="container" style="max-width:1200px;margin:0 auto;">
+      <h2 class="section-main-title" style="text-align:center;margin-bottom:32px;">Order Lifecycle</h2>
+      <div class="order-lifecycle-steps" style="display:flex;align-items:flex-end;justify-content:space-between;gap:0;flex-wrap:nowrap;overflow-x:auto;">
+        <div class="lifecycle-step" style="flex:1;min-width:100px;text-align:center;">
+          <div style="font-size:1.6rem;">🛒</div>
+          <div style="font-weight:600;font-size:1rem;margin-top:6px;">Click on Buy Now</div>
+        </div>
+        <div style="font-size:1.3rem;padding:0 8px;">→</div>
+        <div class="lifecycle-step" style="flex:1;min-width:100px;text-align:center;">
+          <div style="font-size:1.6rem;">🔢</div>
+          <div style="font-weight:600;font-size:1rem;margin-top:6px;">Select Quantity</div>
+        </div>
+        <div style="font-size:1.3rem;padding:0 8px;">→</div>
+        <div class="lifecycle-step" style="flex:1;min-width:100px;text-align:center;">
+          <div style="font-size:1.6rem;">📩</div>
+          <div style="font-weight:600;font-size:1rem;margin-top:6px;">Submit Order Request</div>
+        </div>
+        <div style="font-size:1.3rem;padding:0 8px;">→</div>
+        <div class="lifecycle-step" style="flex:1;min-width:100px;text-align:center;">
+          <div style="font-size:1.6rem;">📞</div>
+          <div style="font-weight:600;font-size:1rem;margin-top:6px;">Executive Will Call & Confirm</div>
+        </div>
+        <div style="font-size:1.3rem;padding:0 8px;">→</div>
+        <div class="lifecycle-step" style="flex:1;min-width:100px;text-align:center;">
+          <div style="font-size:1.6rem;">💳</div>
+          <div style="font-weight:600;font-size:1rem;margin-top:6px;">Payment</div>
+        </div>
+        <div style="font-size:1.3rem;padding:0 8px;">→</div>
+        <div class="lifecycle-step" style="flex:1;min-width:100px;text-align:center;">
+          <div style="font-size:1.6rem;">🚚</div>
+          <div style="font-weight:600;font-size:1rem;margin-top:6px;">Shipment</div>
+        </div>
+        <div style="font-size:1.3rem;padding:0 8px;">→</div>
+        <div class="lifecycle-step" style="flex:1;min-width:100px;text-align:center;">
+          <div style="font-size:1.6rem;">📦</div>
+          <div style="font-weight:600;font-size:1rem;margin-top:6px;">Delivery</div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Add extra space below order lifecycle section -->
+<div style="height:70px;"></div>
 
   <!-- PRODUCTS SECTION HEADING -->
   <section class="mecharetail-products-section">
@@ -320,6 +374,7 @@
             <button class="qty-btn plus">+</button>
           </div>
           <button class="add-to-cart-btn">Add to Cart</button>
+          <a href="product-bolts.html" class="read-more-btn" style="display:block;margin:12px auto 0 auto;padding:8px 28px;background:#444a57;color:#fff;font-weight:600;border-radius:24px;font-size:1.05rem;text-decoration:none;transition:background 0.18s;max-width:180px;">Read More</a>
         </div>
       </div>
       <!-- Product 2 -->
@@ -335,6 +390,7 @@
             <button class="qty-btn plus">+</button>
           </div>
           <button class="add-to-cart-btn">Add to Cart</button>
+          <a href="product-gears.html" class="read-more-btn" style="display:block;margin:12px auto 0 auto;padding:8px 28px;background:#444a57;color:#fff;font-weight:600;border-radius:24px;font-size:1.05rem;text-decoration:none;transition:background 0.18s;max-width:180px;">Read More</a>
         </div>
       </div>
       <!-- Product 3 -->
@@ -350,6 +406,7 @@
             <button class="qty-btn plus">+</button>
           </div>
           <button class="add-to-cart-btn">Add to Cart</button>
+          <a href="product-bearings.html" class="read-more-btn" style="display:block;margin:12px auto 0 auto;padding:8px 28px;background:#444a57;color:#fff;font-weight:600;border-radius:24px;font-size:1.05rem;text-decoration:none;transition:background 0.18s;max-width:180px;">Read More</a>
         </div>
       </div>
       <!-- Product 4 -->
@@ -365,10 +422,27 @@
             <button class="qty-btn plus">+</button>
           </div>
           <button class="add-to-cart-btn">Add to Cart</button>
+          <a href="product-coupler.html" class="read-more-btn" style="display:block;margin:12px auto 0 auto;padding:8px 28px;background:#444a57;color:#fff;font-weight:600;border-radius:24px;font-size:1.05rem;text-decoration:none;transition:background 0.18s;max-width:180px;">Read More</a>
         </div>
       </div>
     </div>
   </section>
+
+<!-- PAYMENT INFO SECTION -->
+<section class="payment-info-section" style="display:flex;justify-content:center;align-items:center;padding:48px 0 48px 0;background:transparent;">
+  <div style="background:#f8fafc;border-radius:18px;box-shadow:0 8px 32px rgba(30,58,138,0.18), 0 2px 16px rgba(30,58,138,0.12);border:2px solid #e0e6f6;padding:32px 40px;max-width:420px;width:100%;text-align:center;position:relative;">
+    <h2 style="font-size:1.35rem;font-weight:700;color:#1e3a8a;margin-bottom:18px;letter-spacing:1px;text-transform:uppercase;letter-spacing:2px;">Payment Information</h2>
+    <div style="font-size:1.13rem;color:#222;line-height:2.1;margin-bottom:18px;">
+      <div><b>Name:</b> Mecha Retail</div>
+      <div><b>Account No:</b> 50200077041054</div>
+      <div><b>IFSC:</b> HDFC0002282</div>
+    </div>
+    <div style="margin-top:18px;">
+      <div style="font-size:1.08rem;color:#1e3a8a;font-weight:600;margin-bottom:8px;">Scan to Pay</div>
+      <img src="images/payment-qr.jpg" alt="Payment QR Code" style="width:160px;height:160px;object-fit:contain;border-radius:12px;box-shadow:0 4px 16px rgba(30,58,138,0.13);background:#fff;padding:8px;">
+    </div>
+  </div>
+</section>
 
   <!-- Contact Us Section (from index.html) -->
 <section class="contact-us-section section-padding" style="background:transparent;padding:64px 0 0 0;">
@@ -443,7 +517,6 @@
     </div>
   </div>
 </footer>
-<a href="booking.html" class="floating-book-btn" aria-label="Book Now">BOOK NOW</a>
 
   <!-- CART SIDEBAR -->
   <div id="cart-sidebar" class="cart-sidebar">

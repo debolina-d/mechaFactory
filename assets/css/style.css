@@ -2984,3 +2984,187 @@ button.get-in-touch-btn:active,
     margin-left: 0.5rem;
   }
 }
+
+.service-area, .service-area .container-fluid {
+  border: none !important;
+}
+
+.main-navbar .main-menu .nav > li > a {
+  font-size: 1rem;
+  padding: 0.18rem 1.5rem 0.18rem 1.5rem;
+  font-weight: 600;
+}
+
+/* Modern Footer Redesign (GITCS style) */
+.footer-modern {
+  background: linear-gradient(120deg, #1e3a8a 0%, #112b6c 100%) !important;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+.footer-modern-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.footer-modern-col.about-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 32px;
+}
+.footer-modern-col.links-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 220px;
+  max-width: 260px;
+}
+.footer-modern-col.newsletter-col {
+  background: #12244a;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30,58,138,0.10);
+  padding: 36px 28px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+@media (max-width: 1100px) {
+  .footer-modern-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0 8px;
+  }
+  .footer-modern-col.about-col,
+  .footer-modern-col.links-col,
+  .footer-modern-col.newsletter-col {
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    min-width: unset;
+    max-width: 100%;
+  }
+}
+.footer-logo img {
+  height: 220px;
+  max-width: 420px;
+  width: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+.footer-about-text {
+  color: #e0e6f6;
+  font-size: 0.68rem;
+  line-height: 1.18;
+  margin-bottom: 10px;
+  font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  word-spacing: 0.2px;
+}
+.footer-modern-col .footer-col-title {
+  text-align: center;
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.footer-modern-col .footer-newsletter-text {
+  color: #e0e6f6;
+  font-size: 1.01rem;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.footer-modern-col .footer-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  align-items: center;
+}
+.footer-modern-col .footer-newsletter-input {
+  padding: 16px 18px;
+  border-radius: 10px;
+  border: 1.5px solid #2a3e6e;
+  background: #192c54;
+  color: #fff;
+  font-size: 1.08rem;
+  outline: none;
+  margin-bottom: 0;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.06);
+}
+.footer-modern-col .footer-newsletter-input:focus {
+  border-color: #ffd84a;
+  box-shadow: 0 4px 16px rgba(30,58,138,0.13);
+}
+.footer-modern-col .footer-newsletter-btn {
+  background: linear-gradient(90deg, #2563eb 0%, #1e3a8a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 0;
+  font-size: 1.13rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.10);
+}
+.footer-modern-col .footer-newsletter-btn:hover, .footer-modern-col .footer-newsletter-btn:focus {
+  background: #fff !important;
+  color: #1e3a8a !important;
+  transform: scale(1.03);
+}
+.footer-modern-bottom {
+  border-top: 1.2px solid #1e3a8a;
+  margin-top: 10px;
+  padding: 7px 0 2px 0;
+  text-align: center;
+  color: #e0e6f6;
+  font-size: 0.81rem;
+  letter-spacing: 0.2px;
+  background: transparent;
+}
+@media (max-width: 1100px) {
+  .footer-modern-container {
+    flex-direction: column;
+    gap: 0;
+    padding: 0 8px;
+  }
+  .footer-modern-col {
+    max-width: 100%;
+    padding: 0 0 12px 0;
+    border: none;
+  }
+  .footer-modern-col.links-col,
+  .footer-modern-col.contact-col {
+    margin-left: 0;
+  }
+  .footer-modern-col:not(:last-child)::after {
+    display: none;
+  }
+}

@@ -3168,3 +3168,64 @@ button.get-in-touch-btn:active,
     display: none;
   }
 }
+
+/* Project Cards Grid */
+#projects-card-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+  row-gap: 2.2rem;
+  column-gap: 2.2rem;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+.project-card .card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #232b3a; /* lighter than #181c23 */
+  transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+  box-shadow: 0 2px 16px rgba(30,58,138,0.08);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+.project-card .card:hover {
+  box-shadow: 0 8px 32px rgba(30,58,138,0.18);
+  transform: translateY(-4px) scale(1.02);
+  background: #2d3650;
+}
+@media (min-width: 992px) {
+  /* 2 cards per row on large screens */
+  #projects-card-grid > .project-card {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+}
+@media (max-width: 991px) and (min-width: 600px) {
+  /* 1 card per row on tablets */
+  #projects-card-grid > .project-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  #projects-card-grid > .project-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 1.5rem !important;
+  }
+  .project-card .card {
+    border-radius: 14px;
+  }
+  .project-img-wrap img {
+    max-height: 90px;
+  }
+  .card-title {
+    font-size: 1.05rem;
+  }
+  .card-body {
+    padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+  }
+}

@@ -18,11 +18,7 @@
       color: #fff;
       font-family: 'Poppins',sans-serif;
       width: 100vw;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1300;
-      left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;
+      position: relative;
     }
     .top-bar .top-bar-content {
       display: flex;
@@ -47,8 +43,8 @@
       background: #fff;
       padding: 0.08rem 2.5rem 0.08rem 0.5rem;
       box-shadow: none;
-      position: fixed !important;
-      top: 2.1rem;
+      position: static !important;
+      top: auto;
       left: 0;
       width: 100vw;
       z-index: 1200;
@@ -193,13 +189,12 @@
       background: #1e3a8a;
       color: #222;
     }
+    .section-main-title {
+      margin-top: 10px !important;
+    }
   </style>
 </head>
-<body>
-  <!-- Disclaimer -->
-  <div style="background:#f8fafc;color:#888;font-size:1.08rem;font-weight:500;text-align:center;padding:14px 8px 10px 8px;border-radius:0 0 12px 12px;box-shadow:0 2px 8px rgba(30,58,138,0.06);margin-bottom:24px;">
-    <span style="font-weight:700;">Disclaimer:</span> All the projects shown here are associated or collaboratively developed by Mecha Factory or our Employees.
-  </div>
+<body style="margin:0;padding:0;margin-top:0 !important;padding-top:0 !important;">
   <!-- HEADER START -->
   <header>
     <!-- TOPBAR (DARK) -->
@@ -254,6 +249,10 @@
         </div>
       </div>
     </div>
+    <!-- Disclaimer (below navbar, no top margin) -->
+    <div style="background:#f8fafc;color:#888;font-size:1.08rem;font-weight:500;text-align:center;padding:10px 8px 8px 8px;border-radius:0 0 12px 12px;box-shadow:0 2px 8px rgba(30,58,138,0.06);margin-bottom:10px;margin-top:32px;">
+      <span style="font-weight:700;">Disclaimer:</span> All the projects shown here are associated or collaboratively developed by Mecha Factory or our Employees.
+    </div>
   </header>
   <!-- PROJECTS HERO SECTION -->
   <section class="blogs-section section-padding">
@@ -261,10 +260,312 @@
       <div class="title-base text-center mb-5">
         <h2 class="section-main-title">Projects</h2>
       </div>
-      <div class="row g-4 blogs-row">
-        <!-- Placeholder for future project content -->
-        <div class="col-12 text-center" style="padding: 60px 0; color: #888; font-size: 1.25rem;">
-          Project showcase coming soon. Content will be provided.
+      <div class="row g-4 blogs-row" id="projects-card-grid">
+        <!-- Project Card Example: Copy and update image src as you provide images -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/RoboChef1.jpg" alt="Robo Chef – The Smart Autonomous Rice Cooker" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/robotArm.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Robo Chef – The Smart Autonomous Rice Cooker</h5>
+              <div class="project-summary" style="font-size:0.97em;margin-bottom:0.5em;">A fully autonomous rice cooker that prepares rice without human intervention. Set your meal schedule once and enjoy fresh rice daily with zero effort.</div>
+              <ul style="padding-left:1.1em;margin-bottom:0.5em;font-size:0.98em;">
+                <li>Autonomous rice cooker requiring zero human effort.</li>
+                <li>Store rice once a month, set meal times via app/system.</li>
+                <li>Electricity: 1000W/h, Water: 3L/cooking.</li>
+                <li>Saves time and effort for users.</li>
+              </ul>
+              <div class="project-extra" style="font-size:0.93em;color:#bfc9da;margin-top:0.5em;">Smart app integration • Designed for busy households • Reliable and energy-efficient</div>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/hot-press-machine.jpg" alt="Hot Press Machine – Banana Leaf Plate Manufacturing" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/gallery1.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Hot Press Machine – Banana Leaf Plate Manufacturing</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Shapes banana, sal, lotus leaves into plates/bowls.</li>
+                <li>1.5-ton press, 360W heater, 2 pieces/min, 10,000 Rs/machine.</li>
+                <li>Biodegradable, modular, affordable.</li>
+                <li>Tested, TRL 7.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/food-carrier.jpg" alt="Food Carrier" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/gallery2.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Food Carrier</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>3-wheeler electric food carrier for Royal Dhaba.</li>
+                <li>Butterfly doors, refrigerated cargo, hygienic transport.</li>
+                <li>3kW battery, 1.2kW motor, 90km/charge, 700kg cargo.</li>
+                <li>Designed and built in 3 months.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/automated-mecha-electro-vehicle.jpg" alt="Automated Mecha Electro Vehicle – AMEV V1" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/gallery3.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Automated Mecha Electro Vehicle – AMEV V1</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>4-wheeler multi-utility EV using recycled materials.</li>
+                <li>1.2kW motor, 3kW battery, 85-90km/charge, 4-5hr charge.</li>
+                <li>Seats 5, 200kg luggage, e-rickshaw replacement.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 5 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/biogas-plant.jpg" alt="Biogas Plant" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/gallery4.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Biogas Plant</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Fixed-dome biogas plant for hostel kitchen.</li>
+                <li>Uses kitchen/cow waste, 2m³/day biogas, 50kg/day input.</li>
+                <li>Eco-friendly, sustainable energy solution.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 6 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/3.JPG" alt="Go Kart Design – IKR 2024 Session 9" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/gallery5.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Go Kart Design – IKR 2024 Session 9</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Designed for IKR-2024, India’s biggest Go-Kart event.</li>
+                <li>Collaborative, multi-department engineering.</li>
+                <li>Validated by rule book, innovative design.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 7 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/green-smash.png" alt="Green Smash Training Machine" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/gallery6.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Green Smash Training Machine</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Volleyball training and dispenser machine.</li>
+                <li>Modified slider crank, bamboo/wood, eco-friendly.</li>
+                <li>CAD validated, patent pending, safe design.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 8 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/17.png" alt="Intelligent Sensor-Based Biodegradable Waste Collection Unit" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/consumer-products.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Intelligent Sensor-Based Biodegradable Waste Collection Unit</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Sensor-based, sustainable waste management.</li>
+                <li>Zero waste, waste-to-product, multi-output.</li>
+                <li>Shreds paper/plastic, produces fertilizer/chemical.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 9 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/22.png" alt="Development of Autonomous Electric Vehicle for In-Campus Mobility" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/automobile.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Development of Autonomous Electric Vehicle for In-Campus Mobility</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Autonomous EV for campus/private areas.</li>
+                <li>Eco-friendly drivetrain, innovative design.</li>
+                <li>Reduces driver cost, hassle-free mobility.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 10 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/portable-water-jar.jpg" alt="Portable Water Jar Trolley" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/card1.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Portable Water Jar Trolley</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Special wheel and brake for stairs.</li>
+                <li>Foldable, lightweight, multi-object transport.</li>
+                <li>Water jar, gas cylinder, etc. can be carried.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 11 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/Fish Feeder photo 1.png" alt="Automatic Animal Feeding Device" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/card2.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Automatic Animal Feeding Device</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Minimal human intervention, flexible size.</li>
+                <li>Equal, optimal feed distribution.</li>
+                <li>Timed, demand-based supply.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 12 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/water-filter.jpg" alt="Portable Water Filter" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/card3.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Portable Water Filter</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Multi-stage, compact, manual/gravity-fed.</li>
+                <li>Removes bacteria/metals, replaceable cartridges.</li>
+                <li>For emergency/survival use.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 13 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/methane-detector.jpg" alt="Methane Detector for Waste Landfills" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/card4.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Methane Detector for Waste Landfills</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Real-time detection, wireless alert, solar-powered.</li>
+                <li>Data logging, weatherproof, landfill safety.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 14 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/flower-tub.jpg" alt="Eco-Friendly Flower Tub" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/card5.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Eco-Friendly Flower Tub</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Biodegradable, eco-friendly, stackable.</li>
+                <li>Aesthetic, low-cost, modern design.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 15 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/finder-scope.jpg" alt="Finder Scope with Integrated Camera" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/card6.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Finder Scope with Integrated Camera</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Precision finder, digital camera, FOV adjustment.</li>
+                <li>Real-time feed, night vision, slider control.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 16 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/drone.jpg" alt="Dynamic Eye for Art and Sculpture" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/drone.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Dynamic Eye for Art and Sculpture</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Mechanized, realistic movement, custom expressions.</li>
+                <li>Interactive, battery/sensor activated, art use.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 17 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/Sink Crasher.png" alt="Sink Integrated Food Waste Crusher" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/gallery1.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Sink Integrated Food Waste Crusher</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Compact, integrated with sink outlet.</li>
+                <li>Food waste grinding/disposal with water.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Project 18 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4 project-card">
+          <div class="card h-100 shadow-sm border-0" style="border-radius:18px;overflow:hidden;background:#181c23;">
+            <div class="project-img-wrap" style="background:#222;text-align:center;padding:18px 0 0 0;">
+              <img src="images/animal-repellent-machine.jpg" alt="Animal Repellent Machine Using Sound and Photo Visual" class="img-fluid" style="max-height:180px;width:auto;margin:0 auto;object-fit:contain;">
+              <!-- IMAGE: images/gallery2.jpg (replace with your image) -->
+            </div>
+            <div class="card-body" style="color:#e0e6f6;">
+              <h5 class="card-title" style="font-weight:600;font-size:1.18rem;">Animal Repellent Machine Using Sound and Photo Visual</h5>
+              <ul style="padding-left:1.1em;margin-bottom:0;font-size:0.98em;">
+                <li>Motion-activated ultrasonic repellent.</li>
+                <li>Solar powered, weatherproof, eco-friendly.</li>
+                <li>Protects crops, homes, public spaces.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

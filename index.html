@@ -1045,20 +1045,6 @@
       color: #1e3a8a;
       transform: scale(1.04);
     }
-    .menu-center-col {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 320px;
-      flex: 1 1 auto;
-    }
-    @media (max-width: 900px) {
-      .menu-center-col {
-        justify-content: flex-end;
-        min-width: 0;
-        flex: 1 1 auto;
-      }
-    }
   </style>
 </head>
 <body>
@@ -1075,7 +1061,7 @@
     <!-- MAIN NAVBAR (WHITE) -->
     <div class="main-navbar sticky-bar">
       <div class="menu-wrap">
-        <div class="row align-items-center">
+        <div class="row align-items-center" style="display:flex;align-items:center;justify-content:space-between;width:100%;min-height:unset;">
           <!-- Logo left -->
           <div class="col-md-3 col-sm-6 col-xs-6 logo-col">
             <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:10px;">
@@ -1084,7 +1070,7 @@
             </a>
           </div>
           <!-- Menu center -->
-          <div class="menu-center-col">
+          <div class="col-md-6 col-sm-6 col-xs-6" style="display:flex;justify-content:center;align-items:center;min-width:320px;">
             <nav class="main-menu" aria-label="Main Navigation" style="width:100%;position:relative;">
               <button type="button" class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
                 <i class="fa fa-bars"></i>

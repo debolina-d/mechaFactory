@@ -143,6 +143,7 @@
     @media (max-width: 900px) {
       .main-navbar {
         padding-right: 1rem;
+        padding-left: 1rem;
       }
       .main-navbar .navbar-brand img {
         max-height: 56px;
@@ -160,6 +161,93 @@
       }
       .main-navbar .logo-col {
         margin-left: 0.5rem;
+      }
+      /* Mobile menu improvements */
+      .main-navbar .main-menu {
+        position: relative;
+      }
+      .navbar-toggle {
+        display: block !important;
+        background: none;
+        border: none;
+        outline: none;
+        padding: 8px;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+      }
+      .navbar-toggle i {
+        font-size: 1.5em;
+        color: #222;
+        transition: color 0.2s;
+      }
+      .navbar-toggle:hover i {
+        color: #1e3a8a;
+      }
+      #mobile-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        border-radius: 0 0 12px 12px;
+        padding: 16px 0;
+        z-index: 9999;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 8px;
+      }
+      #mobile-menu li {
+        display: block;
+        margin: 0;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      #mobile-menu li:last-child {
+        border-bottom: none;
+      }
+      #mobile-menu li a {
+        display: block;
+        padding: 16px 24px;
+        color: #222;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: background 0.2s, color 0.2s;
+      }
+      #mobile-menu li a:hover {
+        background: #1e3a8a;
+        color: #fff;
+      }
+      .get-in-touch-col {
+        display: none !important;
+      }
+    }
+    
+    /* Additional mobile improvements for smaller screens */
+    @media (max-width: 600px) {
+      .main-navbar .navbar-brand span {
+        font-size: 1rem;
+      }
+      .main-navbar .navbar-brand img {
+        max-height: 48px;
+        height: 48px;
+      }
+      .navbar-toggle {
+        padding: 6px;
+      }
+      .navbar-toggle i {
+        font-size: 1.3em;
+      }
+      #mobile-menu li a {
+        padding: 14px 20px;
+        font-size: 0.95rem;
       }
     }
     /* Consistent navy blue hover for nav menu */
@@ -301,6 +389,11 @@
       display: flex;
       align-items: flex-end;
       margin-bottom: 12px;
+    }
+    .parallelogram-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
     .parallelogram:hover {
       transform: skew(-18deg) scale(1.04) translateY(-4px);
@@ -952,6 +1045,20 @@
       color: #1e3a8a;
       transform: scale(1.04);
     }
+    .menu-center-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 320px;
+      flex: 1 1 auto;
+    }
+    @media (max-width: 900px) {
+      .menu-center-col {
+        justify-content: flex-end;
+        min-width: 0;
+        flex: 1 1 auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -968,7 +1075,7 @@
     <!-- MAIN NAVBAR (WHITE) -->
     <div class="main-navbar sticky-bar">
       <div class="menu-wrap">
-        <div class="row align-items-center" style="display:flex;align-items:center;justify-content:space-between;width:100%;min-height:unset;">
+        <div class="row align-items-center">
           <!-- Logo left -->
           <div class="col-md-3 col-sm-6 col-xs-6 logo-col">
             <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:10px;">
@@ -977,10 +1084,10 @@
             </a>
           </div>
           <!-- Menu center -->
-          <div class="col-md-6 col-sm-6 col-xs-6" style="display:flex;justify-content:center;align-items:center;min-width:320px;">
-            <nav class="main-menu" aria-label="Main Navigation" style="width:100%;">
-              <button type="button" class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu" style="background:none;border:none;outline:none;margin-right:10px;display:none;">
-                <i class="fa fa-bars" style="font-size:1.5em;color:#222;"></i>
+          <div class="menu-center-col">
+            <nav class="main-menu" aria-label="Main Navigation" style="width:100%;position:relative;">
+              <button type="button" class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fa fa-bars"></i>
               </button>
               <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;gap:0;">
                 <li style="margin:0 0.2rem;"><a href="index.html">HOME</a></li>
@@ -991,14 +1098,14 @@
                 <li style="margin:0 0.2rem;"><a href="contact.html">CONTACT</a></li>
                 <li style="margin:0 0.2rem;"><a href="mecharetail.html">Mecha Retail</a></li>
               </ul>
-              <ul class="nav navbar-nav ms-rounded" id="mobile-menu" style="display:none;flex-direction:column;gap:0;align-items:flex-start;justify-content:flex-start;margin:0;padding:0;list-style:none;text-transform:uppercase;position:absolute;top:48px;left:0;width:100vw;background:#fff;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
-                <li style="display:inline-block;"><a href="index.html">HOME</a></li>
-                <li style="display:inline-block;"><a href="about.html">ABOUT</a></li>
-                <li style="display:inline-block;"><a href="index.html#services">SERVICES</a></li>
-                <li style="display:inline-block;"><a href="product.html">PRODUCTS</a></li>
-                <li style="display:inline-block;"><a href="projects.html">PROJECTS</a></li>
-                <li style="display:inline-block;"><a href="contact.html">CONTACT</a></li>
-                <li style="display:inline-block;"><a href="mecharetail.html">Mecha Retail</a></li>
+              <ul class="nav navbar-nav ms-rounded" id="mobile-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="index.html#services">SERVICES</a></li>
+                <li><a href="product.html">PRODUCTS</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="mecharetail.html">Mecha Retail</a></li>
               </ul>
             </nav>
           </div>
@@ -1014,18 +1121,26 @@
   <!-- Hero Categories Section (now the main hero) -->
   <section id="hero-categories">
     <div class="parallelogram-grid">
-      <div class="parallelogram" style="background-image: url('images/drone.jpg');">
-        <div class="parallelogram-content" style="font-style: normal;">Defence and Drone</div>
-      </div>
-      <div class="parallelogram" style="background-image: url('images/automobile.jpg');">
-        <div class="parallelogram-content" style="font-style: normal;">Automobile</div>
-      </div>
-      <div class="parallelogram" style="background-image: url('images/robotics.jpg');">
-        <div class="parallelogram-content" style="font-style: normal;">Robotics and Automation</div>
-      </div>
-      <div class="parallelogram" style="background-image: url('images/consumer-products.jpg');">
-        <div class="parallelogram-content" style="font-style: normal;">Consumer Products</div>
-      </div>
+      <a href="projects.html?category=defence-drone" class="parallelogram-link">
+        <div class="parallelogram" style="background-image: url('images/drone.jpg');">
+          <div class="parallelogram-content" style="font-style: normal;">Defence and Drone</div>
+        </div>
+      </a>
+      <a href="projects.html?category=automobile" class="parallelogram-link">
+        <div class="parallelogram" style="background-image: url('images/automobile.jpg');">
+          <div class="parallelogram-content" style="font-style: normal;">Automobile</div>
+        </div>
+      </a>
+      <a href="projects.html?category=robotics-automation" class="parallelogram-link">
+        <div class="parallelogram" style="background-image: url('images/robotics.jpg');">
+          <div class="parallelogram-content" style="font-style: normal;">Robotics and Automation</div>
+        </div>
+      </a>
+      <a href="projects.html?category=consumer-products" class="parallelogram-link">
+        <div class="parallelogram" style="background-image: url('images/consumer-products.jpg');">
+          <div class="parallelogram-content" style="font-style: normal;">Consumer Products</div>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -1649,10 +1764,12 @@
 const navbarToggle = document.getElementById('navbar-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 const desktopMenu = document.getElementById('desktop-menu');
+
 function handleResize() {
   if (window.innerWidth <= 900) {
     navbarToggle.style.display = 'block';
     desktopMenu.style.display = 'none';
+    mobileMenu.style.display = 'none';
   } else {
     navbarToggle.style.display = 'none';
     desktopMenu.style.display = 'flex';
@@ -1660,11 +1777,42 @@ function handleResize() {
     navbarToggle.setAttribute('aria-expanded', 'false');
   }
 }
+
 navbarToggle.addEventListener('click', function() {
   const expanded = navbarToggle.getAttribute('aria-expanded') === 'true';
   navbarToggle.setAttribute('aria-expanded', !expanded);
-  mobileMenu.style.display = expanded ? 'none' : 'flex';
+  
+  if (expanded) {
+    mobileMenu.style.display = 'none';
+    navbarToggle.querySelector('i').classList.remove('fa-times');
+    navbarToggle.querySelector('i').classList.add('fa-bars');
+  } else {
+    mobileMenu.style.display = 'flex';
+    navbarToggle.querySelector('i').classList.remove('fa-bars');
+    navbarToggle.querySelector('i').classList.add('fa-times');
+  }
 });
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+  if (!navbarToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+    mobileMenu.style.display = 'none';
+    navbarToggle.setAttribute('aria-expanded', 'false');
+    navbarToggle.querySelector('i').classList.remove('fa-times');
+    navbarToggle.querySelector('i').classList.add('fa-bars');
+  }
+});
+
+// Close mobile menu when clicking on a link
+mobileMenu.addEventListener('click', function(event) {
+  if (event.target.tagName === 'A') {
+    mobileMenu.style.display = 'none';
+    navbarToggle.setAttribute('aria-expanded', 'false');
+    navbarToggle.querySelector('i').classList.remove('fa-times');
+    navbarToggle.querySelector('i').classList.add('fa-bars');
+  }
+});
+
 window.addEventListener('resize', handleResize);
 document.addEventListener('DOMContentLoaded', handleResize);
 

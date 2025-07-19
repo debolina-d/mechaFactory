@@ -184,11 +184,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-right: 0;
+        border-radius: 4px;
+        transition: background 0.2s;
+      }
+      .navbar-toggle:hover {
+        background: rgba(30, 58, 138, 0.05);
       }
       .navbar-toggle i {
         font-size: 1.5em;
         color: #222;
         transition: color 0.2s;
+        line-height: 1;
+        display: block;
       }
       .navbar-toggle:hover i {
         color: #1e3a8a;
@@ -262,6 +270,7 @@
         padding: 6px;
         width: 36px;
         height: 36px;
+        right: 8px;
       }
       .navbar-toggle i {
         font-size: 1.3em;
@@ -1268,6 +1277,45 @@
       .contact-now-btn:hover {
         background: #ffd84a !important;
         color: #1e3a8a !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .top-bar {
+        padding: 0.2rem 0 !important;
+        font-size: 0.75rem !important;
+      }
+      .top-bar .top-bar-content {
+        gap: 1.2rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+      .top-bar span {
+        gap: 0.3rem !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+      }
+      .top-bar i {
+        font-size: 0.9em !important;
+        flex-shrink: 0 !important;
+      }
+      .top-bar span:first-child {
+        flex: 1 1 100% !important;
+        margin-bottom: 0.2rem !important;
+      }
+      .top-bar span:nth-child(2) {
+        flex: 1 1 45% !important;
+        text-align: center !important;
+      }
+      .top-bar span:nth-child(3) {
+        flex: 1 1 45% !important;
+        text-align: center !important;
       }
     }
   </style>

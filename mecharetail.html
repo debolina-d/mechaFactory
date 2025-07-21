@@ -454,9 +454,11 @@
   .payment-info-flex {
     flex-direction: column !important;
     gap: 18px !important;
-    padding: 18px 8px !important;
+    padding: 14px 4vw !important;
     text-align: center !important;
     align-items: center !important;
+    max-width: 98vw !important;
+    min-width: 0 !important;
   }
   .payment-info-text, .payment-info-qr {
     width: 100% !important;
@@ -464,6 +466,20 @@
     text-align: center !important;
     justify-content: center !important;
     align-items: center !important;
+  }
+  .payment-info-text h2 {
+    font-size: 1.08rem !important;
+    margin-bottom: 10px !important;
+  }
+  .payment-info-text div {
+    font-size: 0.98rem !important;
+    margin-bottom: 10px !important;
+  }
+  .payment-info-qr img {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 90vw !important;
+    min-width: 0 !important;
   }
 }
 </style>

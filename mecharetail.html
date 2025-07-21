@@ -256,6 +256,114 @@
   transform: scale(1.08);
 }
 </style>
+
+
+<style>
+@media (max-width: 768px) {
+  /* Completely hide the top contact bar on mobile */
+  .top-bar { display: none !important; height: 0 !important; min-height: 0 !important; }
+  /* Navbar: logo and hamburger alignment */
+  .main-navbar {
+    height: 64px !important;
+    min-height: 64px !important;
+    background: #fff !important;
+    box-shadow: 0 1px 4px rgba(30,58,138,0.06);
+    display: flex !important;
+    align-items: center !important;
+  }
+  .main-navbar .container-fluid {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 64px !important;
+    min-height: 64px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .main-navbar .navbar-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 0 !important;
+    padding: 0 1rem 0 1rem !important;
+    height: 48px !important;
+  }
+  .main-navbar .navbar-brand img {
+    max-height: 36px !important;
+    height: 36px !important;
+    margin-right: 6px !important;
+    display: block !important;
+  }
+  .main-navbar .navbar-toggler {
+    margin-left: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 36px !important;
+    width: 36px !important;
+    padding: 0 1rem 0 0 !important;
+    border-radius: 6px !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: 1px solid #e0e6f6 !important;
+    z-index: 1001 !important;
+  }
+  /* Mobile menu dropdown */
+  .navbar-collapse {
+    position: absolute !important;
+    top: 64px !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: #fff !important;
+    box-shadow: 0 8px 24px rgba(30,58,138,0.10);
+    border-radius: 0 0 12px 12px;
+    padding: 12px 0 8px 0 !important;
+    z-index: 1000 !important;
+    display: none;
+    flex-direction: column !important;
+    gap: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    overflow: hidden;
+  }
+  .navbar-collapse.show {
+    display: flex !important;
+  }
+  .mecha-navbar-nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+  .mecha-navbar-nav .nav-item {
+    width: 100% !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+  .mecha-navbar-nav .nav-link {
+    display: block !important;
+    width: 100% !important;
+    padding: 14px 24px !important;
+    font-size: 1.08rem !important;
+    text-align: left !important;
+    border-radius: 0 !important;
+    color: #222 !important;
+    background: none !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    transition: background 0.2s, color 0.2s;
+  }
+  .mecha-navbar-nav .nav-link:last-child {
+    border-bottom: none !important;
+  }
+  .mecha-navbar-nav .nav-link:hover,
+  .mecha-navbar-nav .nav-link:focus {
+    background: #f5f7fa !important;
+    color: #1e3a8a !important;
+  }
+}
+</style>
+</style>
 </head>
 <body>
   <!-- HEADER START -->
@@ -297,9 +405,10 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero-mecharetail" style="display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:32px;min-height:440px;position:relative;padding-left:5vw;">
+  <section class="hero-mecharetail" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:440px;position:relative;padding-left:0;">
     <div class="hero-bg-svg">
       <svg width="100%" height="100%" viewBox="0 0 1440 340" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="position:absolute;top:0;left:0;width:100%;height:100%;"><path fill="#c2c7d1" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+      <img src="images/mechaRetail.png" alt="Mecha Retail Logo" class="hero-logo-overlay" style="position:absolute;top:32px;right:5vw;max-width:220px;width:22vw;min-width:100px;height:auto;z-index:2;pointer-events:none;">
     </div>
     <div class="hero-card mecharetail-hero-card" style="max-width:900px;width:100%;margin-left:0;background:rgba(255,255,255,0.97);border-radius:28px;box-shadow:0 8px 32px rgba(30,58,138,0.10);padding:40px 36px 36px 36px;text-align:center;position:relative;">
       <h1 style="font-family:'Poppins',sans-serif;font-size:2.5rem;font-weight:800;color:#222;margin-bottom:36px;letter-spacing:1px;">Mecha Retail</h1>
@@ -311,10 +420,26 @@
         <p><b>Our goal:</b> Make modern living more convenient and support the creative journey of those building the products of tomorrow.</p>
       </div>
     </div>
-    <div class="hero-logo-right" style="position:absolute;top:0;right:5vw;z-index:2;display:flex;align-items:flex-start;justify-content:center;pointer-events:none;">
-      <img src="images/mechaRetail.png" alt="Mecha Retail Logo" style="max-width:220px;width:100%;height:auto;object-fit:contain;">
-    </div>
   </section>
+<style>
+.hero-logo-overlay {
+  box-shadow: 0 4px 24px rgba(30,58,138,0.10);
+  border-radius: 18px;
+  background: #fff;
+  padding: 8px 18px;
+}
+@media (max-width: 700px) {
+  .hero-logo-overlay {
+    max-width: 100px !important;
+    width: 38vw !important;
+    min-width: 48px !important;
+    top: 12px !important;
+    right: 2vw !important;
+    left: auto !important;
+    padding: 4px 8px !important;
+  }
+}
+</style>
 
   <!-- ORDER LIFECYCLE SECTION -->
   <section class="order-lifecycle-section" style="background:transparent;padding:32px 0 32px 0;">

@@ -1331,50 +1331,30 @@
         <span><i class="fa fa-calendar"></i> Mon – Sat: 9:00 AM – 6:00 PM</span>
       </div>
     </div>
-    <!-- MAIN NAVBAR (WHITE) -->
-    <div class="main-navbar sticky-bar">
-      <div class="menu-wrap">
-        <div class="row align-items-center" style="display:flex;align-items:center;justify-content:space-between;width:100%;min-height:unset;">
-          <!-- Logo left -->
-          <div class="col-md-3 col-sm-6 col-xs-6 logo-col">
-            <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:10px;">
-              <img src="images/mflogo.png" alt="Mecha Factory Logo">
-              <span>Mecha Factory</span>
-            </a>
-          </div>
-          <!-- Menu center -->
-          <div class="col-md-6 col-sm-6 col-xs-6" style="display:flex;justify-content:center;align-items:center;min-width:320px;">
-            <nav class="main-menu" aria-label="Main Navigation" style="width:100%;position:relative;">
-              <button type="button" class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
-                <i class="fa fa-bars"></i>
-              </button>
-              <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;gap:0;">
-                <li style="margin:0 0.2rem;"><a href="index.html">HOME</a></li>
-                <li style="margin:0 0.2rem;"><a href="about.html">ABOUT</a></li>
-                <li style="margin:0 0.2rem;"><a href="index.html#services">SERVICES</a></li>
-                <li style="margin:0 0.2rem;"><a href="product.html">PRODUCTS</a></li>
-                <li style="margin:0 0.2rem;"><a href="projects.html">PROJECTS</a></li>
-                <li style="margin:0 0.2rem;"><a href="contact.html">CONTACT</a></li>
-                <li style="margin:0 0.2rem;"><a href="mecharetail.html">Mecha Retail</a></li>
-              </ul>
-              <ul class="nav navbar-nav ms-rounded" id="mobile-menu">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="index.html#services">SERVICES</a></li>
-                <li><a href="product.html">PRODUCTS</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="mecharetail.html">Mecha Retail</a></li>
-              </ul>
-            </nav>
-          </div>
-          <!-- Button right -->
-          <div class="col-md-3 col-sm-12 col-xs-12 text-right get-in-touch-col">
-            <a href="https://wa.me/917086640797" target="_blank" rel="noopener" class="btn btn-yellow theme-btn get-in-touch-btn" tabindex="0">GET IN TOUCH</a>
-          </div>
+    <!-- MAIN NAVBAR (COMPACT, BOOTSTRAP 5) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mecha-navbar-compact shadow-sm">
+      <div class="container-fluid px-3 px-lg-4">
+        <a class="navbar-brand d-flex align-items-center py-0" href="index.html" style="text-decoration:none;">
+          <img src="images/mflogo.png" alt="Mecha Factory Logo" height="44" class="me-2" style="max-height:44px;width:auto;cursor:pointer;">
+          <span class="fw-bold mecha-navbar-brand-text" style="cursor:pointer;">Mecha Factory</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 mecha-navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#services">SERVICES</a></li>
+            <li class="nav-item"><a class="nav-link" href="product.html">PRODUCTS</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+            <li class="nav-item"><a class="nav-link" href="mecharetail.html">MECHA RETAIL</a></li>
+          </ul>
+          <a href="https://wa.me/917002141830" target="_blank" rel="noopener" class="btn btn-primary mecha-navbar-btn ms-lg-3">GET IN TOUCH</a>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- Hero Categories Section (now the main hero) -->
@@ -1404,22 +1384,23 @@
   </section>
 
   <!-- About Us Section -->
-  <div class="about-section-outer">
-    <div class="about-bg-svg">
-      <svg width="100%" height="320" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;width:100%;height:320px;z-index:0;pointer-events:none;"><path fill="#e9eefa" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-    </div>
-    <section id="aboutus" class="about-area section-padding" data-animate>
-      <h2 class="section-main-title">About Us</h2>
-      <div class="about-row-flex">
-        <!-- Left: Main Content -->
-        <div class="about-glass-box">
-          <p>Mecha Factory is a product design and consultancy company offering complete OEM and ODM solutions. We specialize in 3D/2D Design, rapid prototyping, CNC engraving, laser cutting, and Design training—Turning concepts into market-ready solutions.</p>
-          <p>We proudly serve startups, researchers, students, makers, and manufacturers, empowering innovation at every stage.</p>
-          <a href="about.html" class="btn about-btn">Know More</a>
-        </div>
+  <section class="about-section-outer">
+    <div class="about-bg-svg"></div>
+    <div class="about-row-flex about-enhanced">
+      <!-- Left: Image/Visual -->
+      <div class="about-image-col">
+        <img src="images/mflogo.png" alt="Mecha Factory Logo" class="about-main-img" />
       </div>
-    </section>
-  </div>
+      <!-- Right: Text Content -->
+      <div class="about-glass-box about-text-col">
+        <h2 class="section-main-title">About Us</h2>
+        <blockquote class="about-quote">"We don't just design. We deliver."</blockquote>
+        <p>Mecha Factory is a product design and consultancy company offering complete OEM and ODM solutions. We specialize in 3D/2D Design, rapid prototyping, CNC engraving, laser cutting, and Design training.</p>
+        <p>We proudly serve startups, researchers, students, makers, and manufacturers, empowering innovation at every stage.</p>
+        <a href="about.html" class="btn about-btn">Know More</a>
+      </div>
+    </div>
+  </section>
 
   <!-- Services Section with Bootstrap ScrollSpy -->
   <section id="services" class="service-area bg-light section-padding" data-bs-spy="scroll" data-bs-target="#services-nav" data-bs-offset="0" tabindex="0">
@@ -1432,7 +1413,7 @@
         <div class="col-md-3 col-lg-2">
           <nav id="services-nav" class="navbar navbar-light bg-light flex-column align-items-stretch p-3" style="position: sticky; top: 20px; height: fit-content; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
             <h5 class="navbar-brand mb-3 text-center w-100" style="color: #1e3a8a; font-weight: 600;">Our Services</h5>
-            <nav class="nav nav-pills flex-column">
+            <nav class="nav nav-pills flex-column services-nav-leftalign">
               <a class="nav-link scrollspy-item" href="#design3d" data-service="3d-designing">
                 <i class="fa fa-cubes me-2"></i>3D Designing
               </a>
@@ -1496,7 +1477,7 @@
             <div class="service-block" data-service="3d-printing" id="printing">
               <div class="service-row">
                 <div class="col-md-6 service-image service-image-3dprinting">
-                  <img src="images/card3.jpg" alt="3D Printing">
+                  <img src="images/3D printing station.jpg" alt="3D Printing">
                 </div>
                 <div class="col-md-6 service-text">
                   <h3>3D Printing</h3>
@@ -1524,7 +1505,7 @@
             <div class="service-block" data-service="laser-cutting" id="laser">
               <div class="service-row">
                 <div class="col-md-6 service-image">
-                  <img src="images/card5.jpg" alt="Laser Cutting">
+                  <img src="images/laser.jpg" alt="Laser Cutting">
                 </div>
                 <div class="col-md-6 service-text">
                   <h3>Laser Cutting and laser Engraving</h3>
@@ -1538,7 +1519,7 @@
               <div class="service-row flex-row-reverse">
                 <div class="col-md-6 service-image">
                   <div class="service-image-inner">
-                    <img src="images/card6.jpg" alt="Training & Scanning">
+                    <img src="images/3d Training.jpg" alt="Training & Scanning">
                   </div>
                 </div>
                 <div class="col-md-6 service-text">
@@ -1601,7 +1582,7 @@
       </div>
     </div>
     <div class="service-card-mobile">
-      <img src="images/card3.jpg" alt="3D Printing">
+      <img src="images/3D printing station.jpg" alt="3D Printing">
       <div class="service-card-mobile-body">
         <div class="service-card-mobile-title">3D Printing</div>
         <div class="service-card-mobile-desc">Rapid FDM and resin printing solutions for visual models, functional parts, Prototypes and Mass Production at affordable Rate.​</div>
@@ -1617,7 +1598,7 @@
       </div>
     </div>
     <div class="service-card-mobile">
-      <img src="images/card5.jpg" alt="Laser Cutting">
+      <img src="images/laser.jpg" alt="Laser Cutting">
       <div class="service-card-mobile-body">
         <div class="service-card-mobile-title">Laser Cutting and laser Engraving</div>
         <div class="service-card-mobile-desc">Smooth and clean cuts on a range of materials for enclosures, signs, and frames at affordable Rate. ​</div>
@@ -1625,7 +1606,7 @@
       </div>
     </div>
     <div class="service-card-mobile">
-      <img src="images/card6.jpg" alt="Training & Scanning">
+      <img src="images/3d Training.jpg" alt="Training & Scanning">
       <div class="service-card-mobile-body">
         <div class="service-card-mobile-title">Design Training & Scanning</div>
         <div class="service-card-mobile-desc">Online/Offline Practical training in 3D Designing, 2D Drafting, 3D Printing, 3D scanning and reverse Engineering to Upskill your workforce for efficient product development timeline.​</div>
@@ -1729,8 +1710,8 @@
 
   <!-- Gallery Section -->
   <div class="gallery-section-outer" style="position:relative;overflow:hidden;">
-    <div class="gallery-bg-svg">
-      <svg width="100%" height="320" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;width:100%;height:320px;z-index:0;pointer-events:none;"><path fill="#e9eefa" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+    <div class="gallery-bg-svg" style="position:absolute;top:0;left:0;width:100vw;height:320px;z-index:0;pointer-events:none;overflow:hidden;">
+      <svg width="100vw" height="320" viewBox="0 0 1920 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100vw;height:320px;display:block;"><path fill="#e9eefa" fill-opacity="1" d="M0,160L80,170.7C160,181,320,203,480,197.3C640,192,800,160,960,133.3C1120,107,1280,85,1440,101.3C1600,117,1760,171,1840,197.3L1920,224L1920,0L1840,0C1760,0,1600,0,1440,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
     </div>
     <section id="gallery" class="gallery-section section-padding gallery-bg-transparent" style="position:relative;z-index:1;background:transparent;">
       <div class="container">
@@ -2039,7 +2020,7 @@
           <div class="footer-map-wrap" style="margin:18px 0 18px 0;">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.964964479836!2d91.7198350760496!3d26.12505127707313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5d5248b54cf1%3A0x6525f65ec3ab77fd!2sMecha%20Factory!5e0!3m2!1sen!2sin!4v1718030000000!5m2!1sen!2sin" width="100%" height="220" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <a href="https://wa.me/917086640797" class="contact-now-btn" target="_blank" rel="noopener">Contact Now</a>
+          <a href="https://wa.me/917002141830" class="contact-now-btn" target="_blank" rel="noopener">Contact Now</a>
         </div>
       </div>
         </div>
@@ -2060,12 +2041,12 @@
       </div>
         <div class="footer-modern-col links-col">
           <div class="footer-col-title" style="margin-bottom:0;padding-bottom:0;line-height:1;">Links</div>
-          <ul class="footer-links" style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:16px;">
-            <li style="margin-top:0;display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="index.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Home</a></li>
+          <ul class="footer-links" style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 32px;align-items:flex-start;">
+            <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="index.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Home</a></li>
             <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="about.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">About</a></li>
             <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="product.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Products</a></li>
             <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="services.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Services</a></li>
-            <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="projects.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Portfolio</a></li>
+            <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="projects.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Projects</a></li>
             <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="contact.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Contact</a></li>
           </ul>
         </div>

@@ -10,58 +10,42 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body style="margin:0;padding:0;">
-  <!-- HEADER START (copied from mecharetail.html) -->
+  <!-- HEADER START -->
+  <!-- Top Info Bar -->
   <header>
-    <div class="top-bar" style="background:#000 !important;">
-      <div class="top-bar-content" style="display:flex;justify-content:space-between;align-items:center;max-width:1400px;margin:0 auto;padding:8px 20px;color:#fff;">
-        <span style="display:flex;align-items:center;gap:8px;"><i class="fa fa-phone"></i> 7086640797, 7002141830</span>
-        <span style="display:flex;align-items:center;gap:8px;"><i class="fa fa-envelope"></i> mechafactory2021@gmail.com</span>
-        <span style="display:flex;align-items:center;gap:8px;"><i class="fa fa-calendar"></i> Mon – Sat: 9:00 AM – 6:00 PM</span>
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <span><i class="fa fa-phone"></i> 7086640797, 7002141830</span>
+        <span><i class="fa fa-envelope"></i> mechafactory2021@gmail.com</span>
+        <span><i class="fa fa-calendar"></i> Mon – Sat: 9:00 AM – 6:00 PM</span>
       </div>
     </div>
-    <div class="main-navbar sticky-bar" style="background:#fff !important;border-bottom:1px solid #e0e0e0;">
-      <div class="menu-wrap" style="max-width:1400px;margin:0 auto;padding:0 20px;">
-        <div class="row align-items-center" style="display:flex;align-items:center;justify-content:space-between;width:100%;min-height:80px;">
-          <!-- Logo left -->
-          <div class="col-md-3 col-sm-6 col-xs-6 logo-col" style="display:flex;align-items:center;">
-            <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-              <img src="images/mflogo.png" alt="Mecha Factory Logo" style="height:40px;width:auto;">
-              <span style="font-size:1.5rem;font-weight:700;color:#222;font-family:'Poppins',Arial,sans-serif;">Mecha Factory</span>
-            </a>
-          </div>
-          <!-- Menu center -->
-          <div class="col-md-6 col-sm-6 col-xs-6" style="display:flex;justify-content:center;align-items:center;min-width:320px;">
-            <nav class="main-menu" aria-label="Main Navigation" style="width:100%;display:flex;justify-content:center;align-items:center;">
-              <button type="button" class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu" style="background:none;border:none;outline:none;margin-right:10px;display:none;">
-                <i class="fa fa-bars" style="font-size:1.5em;color:#222;"></i>
-              </button>
-              <ul class="nav navbar-nav ms-rounded" id="desktop-menu" style="display:flex !important;align-items:center;justify-content:center;margin:0;padding:0;list-style:none;text-transform:uppercase;gap:0;visibility:visible !important;opacity:1 !important;">
-                <li style="margin:0 0.2rem;display:flex;align-items:center;"><a href="index.html" style="display:flex;align-items:center;padding:0 16px;text-decoration:none;color:#222 !important;font-weight:500;font-size:1rem;text-transform:uppercase;letter-spacing:1px;transition:background 0.2s,color 0.2s;height:80px;visibility:visible !important;opacity:1 !important;">HOME</a></li>
-                <li style="margin:0 0.2rem;display:flex;align-items:center;"><a href="about.html" style="display:flex;align-items:center;padding:0 16px;text-decoration:none;color:#222 !important;font-weight:500;font-size:1rem;text-transform:uppercase;letter-spacing:1px;transition:background 0.2s,color 0.2s;height:80px;visibility:visible !important;opacity:1 !important;">ABOUT</a></li>
-                <li style="margin:0 0.2rem;display:flex;align-items:center;"><a href="index.html#services" style="display:flex;align-items:center;padding:0 16px;text-decoration:none;color:#222 !important;font-weight:500;font-size:1rem;text-transform:uppercase;letter-spacing:1px;transition:background 0.2s,color 0.2s;height:80px;visibility:visible !important;opacity:1 !important;">SERVICES</a></li>
-                <li style="margin:0 0.2rem;display:flex;align-items:center;"><a href="product.html" style="display:flex;align-items:center;padding:0 16px;text-decoration:none;color:#222 !important;font-weight:500;font-size:1rem;text-transform:uppercase;letter-spacing:1px;transition:background 0.2s,color 0.2s;height:80px;visibility:visible !important;opacity:1 !important;">PRODUCTS</a></li>
-                <li style="margin:0 0.2rem;display:flex;align-items:center;"><a href="projects.html" style="display:flex;align-items:center;padding:0 16px;text-decoration:none;color:#222 !important;font-weight:500;font-size:1rem;text-transform:uppercase;letter-spacing:1px;transition:background 0.2s,color 0.2s;height:80px;visibility:visible !important;opacity:1 !important;">PROJECTS</a></li>
-                <li style="margin:0 0.2rem;display:flex;align-items:center;"><a href="contact.html" style="display:flex;align-items:center;padding:0 16px;text-decoration:none;color:#222 !important;font-weight:500;font-size:1rem;text-transform:uppercase;letter-spacing:1px;transition:background 0.2s,color 0.2s;height:80px;visibility:visible !important;opacity:1 !important;">CONTACT</a></li>
-                <li style="margin:0 0.2rem;display:flex;align-items:center;"><a href="mecharetail.html" style="display:flex;align-items:center;padding:0 16px;text-decoration:none;color:#222 !important;font-weight:500;font-size:1rem;text-transform:uppercase;letter-spacing:1px;transition:background 0.2s,color 0.2s;height:80px;visibility:visible !important;opacity:1 !important;">Mecha Retail</a></li>
-              </ul>
-              <ul class="nav navbar-nav ms-rounded" id="mobile-menu" style="display:none;flex-direction:column;gap:0;align-items:flex-start;justify-content:flex-start;margin:0;padding:0;list-style:none;text-transform:uppercase;position:absolute;top:48px;left:0;width:100vw;background:#fff;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
-                <li style="display:inline-block;"><a href="index.html">HOME</a></li>
-                <li style="display:inline-block;"><a href="about.html">ABOUT</a></li>
-                <li style="display:inline-block;"><a href="index.html#services">SERVICES</a></li>
-                <li style="display:inline-block;"><a href="product.html">PRODUCTS</a></li>
-                <li style="display:inline-block;"><a href="projects.html">PROJECTS</a></li>
-                <li style="display:inline-block;"><a href="contact.html">CONTACT</a></li>
-                <li style="display:inline-block;"><a href="mecharetail.html">Mecha Retail</a></li>
-              </ul>
-            </nav>
-          </div>
-          <!-- Button right -->
-          <div class="col-md-3 col-sm-12 col-xs-12 text-right get-in-touch-col" style="display:flex;justify-content:flex-end;align-items:center;">
-            <a href="https://wa.me/917086640797" target="_blank" rel="noopener" class="btn btn-yellow theme-btn get-in-touch-btn" tabindex="0" style="background:#1e3a8a !important;color:#fff !important;border:none;border-radius:30px;padding:12px 24px;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:1px;font-size:1rem;transition:background 0.2s;">GET IN TOUCH</a>
-          </div>
+    <!-- Main Navbar (Compact, Bootstrap 5) -->
+    <!-- BEGIN NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mecha-navbar-compact shadow-sm">
+      <div class="container-fluid px-3 px-lg-4">
+        <a class="navbar-brand d-flex align-items-center py-0" href="index.html">
+          <img src="images/mflogo.png" alt="Mecha Factory Logo" height="48" class="me-2" style="max-height:48px;width:auto;">
+          <span class="fw-bold mecha-navbar-brand-text">Mecha Factory</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 mecha-navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#services">SERVICES</a></li>
+            <li class="nav-item"><a class="nav-link" href="product.html">PRODUCTS</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+            <li class="nav-item"><a class="nav-link" href="mecharetail.html">MECHA RETAIL</a></li>
+          </ul>
+          <a href="https://wa.me/917086640797" target="_blank" rel="noopener" class="btn btn-primary mecha-navbar-btn ms-lg-3">GET IN TOUCH</a>
         </div>
       </div>
-    </div>
+    </nav>
+    <!-- END NAVBAR -->
   </header>
   <style>
     /* Add spacing below navbar */

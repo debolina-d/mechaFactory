@@ -434,19 +434,39 @@
 
 <!-- PAYMENT INFO SECTION -->
 <section class="payment-info-section" style="display:flex;justify-content:center;align-items:center;padding:48px 0 48px 0;background:transparent;">
-  <div style="background:#f8fafc;border-radius:18px;box-shadow:0 8px 32px rgba(30,58,138,0.18), 0 2px 16px rgba(30,58,138,0.12);border:2px solid #e0e6f6;padding:32px 40px;max-width:420px;width:100%;text-align:center;position:relative;">
-    <h2 style="font-size:1.35rem;font-weight:700;color:#1e3a8a;margin-bottom:18px;letter-spacing:1px;text-transform:uppercase;letter-spacing:2px;">Payment Information</h2>
-    <div style="font-size:1.13rem;color:#222;line-height:2.1;margin-bottom:18px;">
-      <div><b>Name:</b> Mecha Retail</div>
-      <div><b>Account No:</b> 50200077041054</div>
-      <div><b>IFSC:</b> HDFC0002282</div>
-    </div>
-    <div style="margin-top:18px;">
+  <div class="payment-info-flex" style="background:#f8fafc;border-radius:18px;box-shadow:0 8px 32px rgba(30,58,138,0.18), 0 2px 16px rgba(30,58,138,0.12);border:2px solid #e0e6f6;padding:32px 40px;max-width:700px;width:100%;display:flex;flex-direction:row;align-items:center;gap:40px;text-align:left;position:relative;">
+    <div class="payment-info-text" style="flex:2;min-width:180px;">
+      <h2 style="font-size:1.35rem;font-weight:700;color:#1e3a8a;margin-bottom:18px;letter-spacing:1px;text-transform:uppercase;letter-spacing:2px;">Payment Information</h2>
+      <div style="font-size:1.13rem;color:#222;line-height:2.1;margin-bottom:18px;">
+        <div><b>Name:</b> Mecha Retail</div>
+        <div><b>Account No:</b> 50200077041054</div>
+        <div><b>IFSC:</b> HDFC0002282</div>
+      </div>
       <div style="font-size:1.08rem;color:#1e3a8a;font-weight:600;margin-bottom:8px;">Scan to Pay</div>
+    </div>
+    <div class="payment-info-qr" style="flex:1;display:flex;justify-content:center;align-items:center;">
       <img src="images/payment-qr.jpg" alt="Payment QR Code" style="width:160px;height:160px;object-fit:contain;border-radius:12px;box-shadow:0 4px 16px rgba(30,58,138,0.13);background:#fff;padding:8px;">
     </div>
   </div>
 </section>
+<style>
+@media (max-width: 700px) {
+  .payment-info-flex {
+    flex-direction: column !important;
+    gap: 18px !important;
+    padding: 18px 8px !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+  .payment-info-text, .payment-info-qr {
+    width: 100% !important;
+    min-width: 0 !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+</style>
 
   <!-- Contact Us Section (from index.html) -->
 <section class="contact-us-section section-padding" style="background:transparent;padding:64px 0 0 0;">

@@ -11,8 +11,8 @@
 </head>
 <body style="margin:0;padding:0;">
   <!-- HEADER START -->
-  <!-- Top Info Bar -->
   <header>
+    <!-- TOPBAR (DARK) -->
     <div class="top-bar">
       <div class="top-bar-content">
         <span><i class="fa fa-phone"></i> 7086640797, 7002141830</span>
@@ -20,13 +20,12 @@
         <span><i class="fa fa-calendar"></i> Mon – Sat: 9:00 AM – 6:00 PM</span>
       </div>
     </div>
-    <!-- Main Navbar (Compact, Bootstrap 5) -->
-    <!-- BEGIN NAVBAR -->
+    <!-- MAIN NAVBAR (COMPACT, BOOTSTRAP 5) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white mecha-navbar-compact shadow-sm">
       <div class="container-fluid px-3 px-lg-4">
-        <a class="navbar-brand d-flex align-items-center py-0" href="index.html">
-          <img src="images/mflogo.png" alt="Mecha Factory Logo" height="48" class="me-2" style="max-height:48px;width:auto;">
-          <span class="fw-bold mecha-navbar-brand-text">Mecha Factory</span>
+        <a class="navbar-brand d-flex align-items-center py-0" href="index.html" style="text-decoration:none;">
+          <img src="images/mflogo.png" alt="Mecha Factory Logo" height="44" class="me-2" style="max-height:44px;width:auto;cursor:pointer;">
+          <span class="fw-bold mecha-navbar-brand-text" style="cursor:pointer;">Mecha Factory</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,11 +40,10 @@
             <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
             <li class="nav-item"><a class="nav-link" href="mecharetail.html">MECHA RETAIL</a></li>
           </ul>
-          <a href="https://wa.me/917086640797" target="_blank" rel="noopener" class="btn btn-primary mecha-navbar-btn ms-lg-3">GET IN TOUCH</a>
+          <a href="https://wa.me/917002141830" target="_blank" rel="noopener" class="btn btn-primary mecha-navbar-btn ms-lg-3">GET IN TOUCH</a>
         </div>
       </div>
     </nav>
-    <!-- END NAVBAR -->
   </header>
   <style>
     /* Add spacing below navbar */
@@ -57,74 +55,266 @@
         margin-bottom: 20px;
       }
     }
+    .product-image-zoom {
+      transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+      cursor: zoom-in;
+    }
+    .product-image-zoom:hover {
+      transform: scale(1.18);
+      z-index: 2;
+      box-shadow: 0 8px 32px rgba(30,58,138,0.18);
+    }
+    .top-bar {
+      background: #222 !important;
+      color: #fff !important;
+      font-size: 0.98rem !important;
+      padding: 0.4rem 0 !important;
+    }
+    .top-bar .top-bar-content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      max-width: 100vw;
+      padding-left: 2rem;
+    }
+    .top-bar span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.05em;
+    }
+    .top-bar i {
+      font-size: 1.15em;
+      vertical-align: middle;
+    }
+    .footer-social-icons a {
+      background: #23408e !important;
+      color: #fff !important;
+      border-radius: 12px !important;
+      width: 48px !important;
+      height: 48px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 2rem !important;
+      margin: 0 8px !important;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      text-decoration: none !important;
+      box-shadow: none !important;
+    }
+    .footer-social-icons a:hover {
+      background: #1e3a8a !important;
+      color: #fff !important;
+      transform: scale(1.08);
+    }
+    /* Responsive alignment for WhatsApp buttons and feature highlights */
+    .product-action-features-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 18px;
+      margin: 24px auto 0 auto;
+      max-width: 1100px;
+    }
+    .product-action-col, .product-feature-col {
+      flex: 1 1 120px;
+      min-width: 120px;
+      max-width: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 0;
+    }
+    .product-action-btn {
+      width: auto;
+      min-width: 120px;
+      max-width: 180px;
+      font-size: 0.98rem;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      box-shadow: 0 1px 4px rgba(30,58,138,0.06);
+      background: #fff;
+      color: #222;
+      border: 2px solid #e0e0e0;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s, border 0.18s;
+    }
+    .product-action-btn:hover, .product-action-btn:focus {
+      background: #f5f5f5;
+      color: #111;
+      border-color: #bfc9da;
+      box-shadow: 0 4px 16px rgba(30,58,138,0.10);
+    }
+    .product-feature-icon {
+      font-size: 1.4rem;
+      color: #1e3a8a;
+      margin-bottom: 4px;
+    }
+    .product-feature-title {
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1px;
+    }
+    .product-feature-desc {
+      font-size: 0.93rem;
+      font-weight: 400;
+      text-align: center;
+      color: #222;
+    }
+    @media (max-width: 900px) {
+      .product-action-features-row {
+        flex-direction: column;
+        gap: 14px;
+        align-items: stretch;
+      }
+      .product-action-col, .product-feature-col {
+        max-width: 100%;
+        min-width: 0;
+        margin-bottom: 0;
+      }
+      .product-action-btn {
+        max-width: 100%;
+        font-size: 0.93rem;
+        padding: 8px 0;
+      }
+      .top-bar .top-bar-content {
+        gap: 1.2rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+      .top-bar span {
+        gap: 0.3rem !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+      }
+    }
+    .product-main-card {
+      margin-bottom: 6px !important;
+    }
+    .product-action-features-row {
+      margin-top: 0 !important;
+      margin-bottom: 48px !important;
+    }
+    .product-action-btn {
+      background: none !important;
+      color: #111 !important;
+      border: none !important;
+      box-shadow: none !important;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0 6px;
+      border-radius: 0;
+      margin-bottom: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-width: 0;
+      max-width: none;
+      transition: color 0.18s;
+      text-decoration: none !important;
+    }
+    .product-action-btn i {
+      color: #23408e !important;
+    }
+    .product-action-btn:hover, .product-action-btn:focus {
+      color: #1e3a8a !important;
+      text-decoration: none !important;
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
   </style>
 
-  <!-- HERO SECTION (matches Mecha Retail) -->
-  <section class="hero-mecharetail" style="display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:32px;min-height:440px;position:relative;padding-left:5vw;">
-    <div class="hero-bg-svg">
-      <svg width="100%" height="100%" viewBox="0 0 1440 340" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="position:absolute;top:0;left:0;width:100%;height:100%;"><path fill="#c2c7d1" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-    </div>
-    <div class="hero-card mecharetail-hero-card" style="max-width:900px;width:100%;margin-left:0;background:rgba(255,255,255,0.97);border-radius:28px;box-shadow:0 8px 32px rgba(30,58,138,0.10);padding:40px 36px 36px 36px;text-align:center;position:relative;z-index:2;">
-      <!-- Product Image Overlapping SVG -->
-      <img src="images/bolts.jpg" alt="Stainless Steel Bolts" style="max-width:260px;width:100%;height:auto;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 16px rgba(30,58,138,0.08);position:relative;z-index:2;">
-      <h1 style="font-size:2.2rem;font-weight:800;color:#1e3a8a;margin-bottom:10px;letter-spacing:1px;">Stainless Steel Bolts</h1>
-      <div style="font-size:1.18rem;color:#222;margin-bottom:18px;">High-strength bolts for industrial assemblies</div>
-      <div style="font-size:1.4rem;font-weight:700;color:#222;margin-bottom:18px;">₹150</div>
-      <div style="font-size:1.05rem;color:#444;max-width:600px;margin:0 auto 18px auto;text-align:justify;">Our stainless steel bolts are engineered for maximum strength and durability, making them ideal for a wide range of industrial and mechanical applications. Resistant to corrosion and designed for easy installation, these bolts ensure secure and long-lasting assemblies.</div>
-      <!-- Add to Cart and Back Buttons (already present) -->
-      <div class="product-card" data-product-id="1" style="box-shadow:none;background:none;align-items:center;">
-        <div class="product-info" style="display:flex;flex-direction:column;align-items:center;">
-          <button class="add-to-cart-btn" id="add-to-cart-bolts" style="background:#444a57;color:#fff;font-weight:600;border-radius:24px;font-size:1.15rem;padding:10px 38px;margin-top:8px;margin-bottom:0;border:none;outline:none;transition:background 0.18s;cursor:pointer;">Add to Cart</button>
-          <div class="quantity-selector" id="qty-selector-bolts" style="display:none;flex-direction:row;align-items:center;gap:16px;margin-top:8px;">
-            <button class="qty-btn minus" id="qty-minus-bolts" style="width:36px;height:36px;border-radius:50%;background:#f5f5f5;border:none;font-size:1.3rem;color:#888;font-weight:700;display:flex;align-items:center;justify-content:center;transition:background 0.18s, color 0.18s;">–</button>
-            <span class="qty-value" id="qty-value-bolts" style="font-size:1.3rem;font-weight:700;color:#1e3a8a;min-width:24px;text-align:center;">1</span>
-            <button class="qty-btn plus" id="qty-plus-bolts" style="width:36px;height:36px;border-radius:50%;background:#232b3a;border:none;font-size:1.3rem;color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;transition:background 0.18s, color 0.18s;">+</button>
+  <!-- PRODUCT DETAIL SECTION -->
+  <section class="product-detail-section" style="background:#f8f9fa;padding:16px 0 48px 0;min-height:600px;">
+    <div class="container" style="max-width:980px;margin:0 auto;">
+      <div class="row g-4 align-items-center" style="background:#fff;border-radius:24px;box-shadow:0 4px 24px rgba(30,58,138,0.10);padding:32px 24px;">
+        <div class="col-md-5 text-center">
+          <img src="images/bolts.jpg" alt="Stainless Steel Bolts" class="product-image-zoom" style="max-width:320px;width:100%;height:auto;border-radius:16px;box-shadow:0 2px 16px rgba(30,58,138,0.08);margin-bottom:18px;">
+          <div class="d-flex justify-content-center gap-3 mt-2">
+            <img src="images/bolts.jpg" alt="Bolts Thumb 1" style="width:56px;height:56px;object-fit:cover;border-radius:8px;border:2px solid #e9eefa;">
+            <img src="images/bolts.jpg" alt="Bolts Thumb 2" style="width:56px;height:56px;object-fit:cover;border-radius:8px;border:2px solid #e9eefa;">
           </div>
-          <a href="mecharetail.html" style="display:inline-flex;align-items:center;gap:8px;color:#1e3a8a;font-size:1.18rem;font-weight:700;text-decoration:none;align-self:flex-start;margin-top:8px;"><span style="font-size:1.3em;">&#8592;</span> Back to Products</a>
+        </div>
+        <div class="col-md-7">
+          <h1 style="font-size:2rem;font-weight:800;color:#1e3a8a;margin-bottom:10px;letter-spacing:1px;">Stainless Steel Bolts</h1>
+          <div style="font-size:1.18rem;color:#222;margin-bottom:18px;">High-strength bolts for industrial assemblies</div>
+          <div style="font-size:2rem;font-weight:700;color:#222;margin-bottom:18px;">₹150 <span style="font-size:1rem;font-weight:400;color:#888;">(Incl. GST)</span></div>
+          <ul style="font-size:1.08rem;color:#222;line-height:2;max-width:700px;margin:0 0 18px 0;text-align:left;">
+            <li>Material: Premium stainless steel</li>
+            <li>Corrosion-resistant finish</li>
+            <li>Available in multiple sizes and thread types</li>
+            <li>High tensile strength for heavy-duty use</li>
+            <li>Easy to install and remove</li>
+            <li>Ideal for machinery, automotive, and construction</li>
+          </ul>
+          <button class="add-to-cart-btn" style="background:#1e3a8a;color:#fff;font-weight:700;border-radius:24px;font-size:1.15rem;padding:12px 38px;margin-top:8px;margin-bottom:0;border:none;outline:none;transition:background 0.18s;cursor:pointer;">Add to Cart</button>
         </div>
       </div>
     </div>
-    <div class="hero-logo-right" style="position:absolute;top:0;right:5vw;z-index:3;display:flex;align-items:flex-start;justify-content:center;pointer-events:none;">
-      <img src="images/mechaRetail.png" alt="Mecha Retail Logo" style="max-width:220px;width:100%;height:auto;object-fit:contain;">
-    </div>
   </section>
 
-  <!-- PRODUCT DETAILS SECTION -->
-  <section class="product-details-section" style="padding:32px 0 48px 0;background:#fff;">
-    <div class="container" style="max-width:900px;margin:0 auto;">
-      <h2 style="font-size:1.3rem;font-weight:700;color:#1e3a8a;margin-bottom:18px;">Specifications & Features</h2>
-      <ul style="font-size:1.08rem;color:#222;line-height:2;max-width:700px;margin:0 auto 0 18px;text-align:left;">
-        <li>Material: Premium stainless steel</li>
-        <li>Corrosion-resistant finish</li>
-        <li>Available in multiple sizes and thread types</li>
-        <li>High tensile strength for heavy-duty use</li>
-        <li>Easy to install and remove</li>
-        <li>Ideal for machinery, automotive, and construction</li>
-      </ul>
+  <!-- Remove all previous WhatsApp buttons and feature highlights, keep only the following single row: -->
+  <div class="product-action-features-row">
+    <div class="product-action-col">
+      <a href="https://wa.me/917002141830?text=I%20have%20a%20bulk%20order%20inquiry" target="_blank" rel="noopener" class="product-action-btn"><i class="fas fa-boxes"></i> HAVE A BULK ORDER?</a>
     </div>
-  </section>
+    <div class="product-feature-col">
+      <i class="fas fa-shipping-fast product-feature-icon"></i>
+      <div class="product-feature-title">Free Delivery</div>
+      <div class="product-feature-desc">over ₹299</div>
+    </div>
+    <div class="product-feature-col">
+      <i class="fas fa-shield-alt product-feature-icon"></i>
+      <div class="product-feature-title">6 Months Warranty</div>
+    </div>
+    <div class="product-feature-col">
+      <i class="fas fa-money-bill-wave product-feature-icon"></i>
+      <div class="product-feature-title">Cash on Delivery<span style="font-weight:400;">*</span></div>
+    </div>
+    <div class="product-action-col">
+      <a href="https://wa.me/917002141830?text=I%20need%20help%20with%20my%20order" target="_blank" rel="noopener" class="product-action-btn"><i class="fab fa-whatsapp"></i> NEED HELP?</a>
+    </div>
+  </div>
 
-  <!-- FOOTER (copied from mecharetail.html) -->
-  <footer class="footer-modern" style="background: linear-gradient(120deg, #1e3a8a 0%, #112b6c 100%) !important; color: #fff; padding: 0; margin: 0; font-family: 'Poppins', Arial, sans-serif; min-height: 220px;">
+  <!-- FOOTER -->
+  <footer class="footer-modern">
     <div class="footer-modern-bg">
-      <div class="footer-modern-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 32px; max-width: 1400px; margin: 0 auto; padding: 64px 32px 24px 32px; color: #fff; font-family: 'Poppins', Arial, sans-serif; font-size: 16px;">
+      <div class="footer-modern-container">
         <div class="footer-modern-col about-col">
           <div class="footer-logo"><img src="images/mflogo.png" alt="Mecha Factory Logo" style="height:320px;max-width:600px;width:auto;display:block;margin-bottom:8px;"></div>
           <div class="footer-social-icons" style="display: flex; justify-content: center; align-items: center; gap: 28px; margin-top: 32px;">
-            <a href="#" aria-label="Facebook" style="color: #fff; background: rgba(255,255,255,0.08); border-radius: 8px; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 4px; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="LinkedIn" style="color: #fff; background: rgba(255,255,255,0.08); border-radius: 8px; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 4px; text-decoration: none;"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Instagram" style="color: #fff; background: rgba(255,255,255,0.08); border-radius: 8px; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 4px; text-decoration: none;"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Twitter" style="color: #fff; background: rgba(255,255,255,0.08); border-radius: 8px; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 4px; text-decoration: none;"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
-        <div class="footer-modern-col links-col" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; min-width: 220px; max-width: 260px;">
-          <div class="footer-col-title" style="margin-bottom:0;padding-bottom:12px;line-height:1;">Links</div>
-          <ul class="footer-links" style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:16px;">
-            <li style="margin-top:0;display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="index.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Home</a></li>
+        <div class="footer-modern-col links-col">
+          <div class="footer-col-title" style="margin-bottom:0;padding-bottom:0;line-height:1;">Links</div>
+          <ul class="footer-links" style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 32px;align-items:flex-start;">
+            <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="index.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Home</a></li>
             <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="about.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">About</a></li>
             <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="product.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Products</a></li>
+            <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="services.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Services</a></li>
             <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="projects.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Projects</a></li>
-            <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="index.html#services" style="color:#e0e6f6;text-decoration:none;">Services</a></li>
             <li style="display:flex;align-items:center;gap:10px;"><span style="color:#bfc9da;font-size:1.1em;">&#8250;</span> <a href="contact.html" style="color:#e0e6f6;text-decoration:none;font-size:1.08em;">Contact</a></li>
           </ul>
         </div>
@@ -137,14 +327,11 @@
           </form>
         </div>
       </div>
-      <div class="footer-modern-bottom" style="background: rgba(17,43,108,0.98); padding: 18px 0 12px 0; width: 100vw; border-top: 1.2px solid #1e3a8a; text-align: center;">
-        <div class="footer-modern-copyright" style="color: #e0e6f6; font-size: 16px; font-family: 'Poppins', Arial, sans-serif;">
-          © Copyright 2025. All Rights Reserved by <b>GITCS</b>
-        </div>
+      <div class="footer-modern-bottom">
+        <div class="footer-modern-copyright">© Copyright 2025. All Rights Reserved by <b>GITCS</b></div>
       </div>
     </div>
   </footer>
-
   <!-- CART SIDEBAR -->
   <div id="cart-sidebar" class="cart-sidebar">
     <div class="cart-header">
@@ -183,7 +370,7 @@
     <span id="cart-badge" class="cart-badge" style="display:none;">0</span>
   </button>
   <script src="assets/js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/script.js"></script>
 </body>

@@ -406,20 +406,97 @@
 
   <!-- HERO SECTION -->
   <section class="hero-mecharetail" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:440px;position:relative;padding-left:0;">
-    <div class="hero-bg-svg">
-      <svg width="100%" height="100%" viewBox="0 0 1440 340" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="position:absolute;top:0;left:0;width:100%;height:100%;"><path fill="#c2c7d1" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-      <img src="images/mechaRetail.png" alt="Mecha Retail Logo" class="hero-logo-overlay" style="position:absolute;top:32px;right:5vw;max-width:220px;width:22vw;min-width:100px;height:auto;z-index:2;pointer-events:none;">
-    </div>
-    <div class="hero-card mecharetail-hero-card" style="max-width:900px;width:100%;margin-left:0;background:rgba(255,255,255,0.97);border-radius:28px;box-shadow:0 8px 32px rgba(30,58,138,0.10);padding:40px 36px 36px 36px;text-align:left;position:relative;">
-      <h1 style="font-family:'Poppins',sans-serif;font-size:2.5rem;font-weight:800;color:#222;margin-bottom:36px;letter-spacing:1px;">Mecha Retail</h1>
-      <div class="mecharetail-hero-content" style="font-size:1.18rem;color:#222;line-height:1.7;margin-top:0;">
-        <p><b>We bring <span style="color:#222;font-weight:600;">innovation closer to you</span>.</b> As the retail arm of Mecha Factory, we are dedicated to making advanced technology and essential materials accessible to everyone—</p>
-        <p style="font-weight:400;">Whether you’re a creator, a business owner, or a homemaker.</p>
-        <hr style="border:none;border-top:1.5px solid #e0e6f6;margin:24px 0;">
-        <p>We offer a thoughtfully curated range of <b>ready-to-use products</b> designed to simplify daily life, alongside a comprehensive selection of <b>raw materials, tools, and components</b> to empower innovators and makers.</p>
-        <p><b>Our goal:</b> Make modern living more convenient and support the creative journey of those building the products of tomorrow.</p>
+    <div class="mecha-retail-hero-box-flex">
+      <div class="mecha-retail-text">
+        <h1 class="mecha-retail-title" style="text-align:left;">Mecha Retail</h1>
+        <div class="mecharetail-hero-content" style="text-align:left; font-size:0.92rem;">
+          <p><b>We bring <span style="color:#222;font-weight:600;">innovation closer to you</span>.</b> As the retail arm of Mecha Factory, we are dedicated to making advanced technology and essential materials accessible to everyone—</p>
+          <p style="font-weight:400;">Whether you’re a creator, a business owner, or a homemaker.</p>
+          <hr style="border:none;border-top:1.5px solid #e0e6f6;margin:24px 0;">
+          <p>We offer a thoughtfully curated range of <b>ready-to-use products</b> designed to simplify daily life, alongside a comprehensive selection of <b>raw materials, tools, and components</b> to empower innovators and makers.</p>
+          <p><b>Our goal:</b> Make modern living more convenient and support the creative journey of those building the products of tomorrow.</p>
+        </div>
+      </div>
+      <div class="mecha-retail-logo">
+        <img src="images/mechaRetail.png" alt="Mecha Retail Logo">
       </div>
     </div>
+    <style>
+      .mecha-retail-hero-box-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        background: #fff;
+        border-radius: 28px;
+        box-shadow: 0 8px 32px rgba(30,58,138,0.10);
+        padding: 32px 48px;
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .mecha-retail-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        font-weight: 800;
+        color: #222;
+        margin-bottom: 24px;
+        letter-spacing: 1px;
+      }
+      .mecha-retail-text {
+        flex: 1 1 0;
+        min-width: 0;
+      }
+      .mecharetail-hero-content {
+        font-size: 1rem;
+        color: #222;
+        line-height: 1.5;
+        margin-top: 0;
+      }
+      .mecha-retail-logo {
+        flex: 0 0 130px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        min-width: 100px;
+        max-width: 150px;
+      }
+      .mecha-retail-logo img {
+        width: 100%;
+        max-width: 130px;
+        min-width: 80px;
+        height: auto;
+        box-shadow: 0 4px 24px rgba(30,58,138,0.10);
+        border-radius: 18px;
+        background: #fff;
+        padding: 8px 18px;
+      }
+      @media (max-width: 900px) {
+        .mecha-retail-hero-box-flex {
+          flex-direction: column;
+          align-items: stretch;
+          padding: 18px 10px;
+          gap: 24px;
+        }
+        .mecha-retail-logo {
+          align-items: center;
+          justify-content: center;
+          max-width: 100%;
+          margin: 0 auto;
+        }
+        .mecha-retail-logo img {
+          max-width: 100px;
+          padding: 6px 10px;
+        }
+        .mecha-retail-title {
+          font-size: 1.3rem;
+          margin-bottom: 14px;
+        }
+        .mecharetail-hero-content {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
   </section>
 <style>
 .hero-logo-overlay {

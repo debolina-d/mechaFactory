@@ -3743,7 +3743,7 @@ button.get-in-touch-btn:active,
 #hero-categories {
   width: 100vw;
   left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;
-  background: #e9eefa; /* Light blue background added */
+  background: #b6d0f7; /* Darker blue background */
   padding: 36px 0 24px 0;
   position: relative;
   z-index: 2;

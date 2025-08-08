@@ -403,15 +403,15 @@
       display: flex;
       justify-content: center;
       align-items: stretch;
-      gap: 32px;
+      gap: 20px;
       max-width: 1200px;
       margin: 0 auto;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
     .parallelogram {
       position: relative;
-      width: 240px;
-      height: 300px;
+      width: 280px;
+      height: 320px;
       background-size: cover;
       background-position: center;
       transform: skew(-18deg);
@@ -423,6 +423,16 @@
       display: flex;
       align-items: flex-end;
       margin-bottom: 12px;
+    }
+    /* Keep image straight while the card remains skewed */
+    .parallelogram::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: var(--bg) center/cover no-repeat;
+      transform: skew(18deg) scale(1.4);
+      transform-origin: center;
     }
     .parallelogram-link {
       text-decoration: none;
@@ -458,23 +468,25 @@
     }
     @media (max-width: 1100px) {
       .parallelogram-grid {
-        gap: 18px;
+        gap: 12px;
       }
       .parallelogram {
-        width: 180px;
-        height: 200px;
+        width: 200px;
+        height: 220px;
       }
     }
     @media (max-width: 700px) {
       .parallelogram-grid {
-        flex-wrap: wrap;
-        gap: 12px;
+        flex-wrap: nowrap;
+        gap: 8px;
+        overflow-x: auto;
+        padding: 0 10px;
       }
       .parallelogram {
-        width: 98vw;
-        max-width: 340px;
+        width: 160px;
         height: 140px;
-        margin: 0 auto 10px auto;
+        margin: 0;
+        flex-shrink: 0;
       }
       .parallelogram-content {
         font-size: 1rem;
@@ -1499,22 +1511,22 @@
   <section id="hero-categories">
     <div class="parallelogram-grid">
       <a href="projects.html?category=defence-drone" class="parallelogram-link">
-        <div class="parallelogram" style="background-image: url('images/drone.jpg');">
+        <div class="parallelogram" style="--bg: url('images/drone.jpg');">
           <div class="parallelogram-content" style="font-style: normal;">Defence and Drone</div>
         </div>
       </a>
       <a href="projects.html?category=automobile" class="parallelogram-link">
-        <div class="parallelogram" style="background-image: url('images/automobile.jpg');">
+        <div class="parallelogram" style="--bg: url('images/automobile.jpg');">
           <div class="parallelogram-content" style="font-style: normal;">Automobile</div>
         </div>
       </a>
       <a href="projects.html?category=robotics-automation" class="parallelogram-link">
-        <div class="parallelogram" style="background-image: url('images/robotics.jpg');">
+        <div class="parallelogram" style="--bg: url('images/robotics.jpg');">
           <div class="parallelogram-content" style="font-style: normal;">Robotics and Automation</div>
         </div>
       </a>
       <a href="projects.html?category=consumer-products" class="parallelogram-link">
-        <div class="parallelogram" style="background-image: url('images/consumer-products.jpg');">
+        <div class="parallelogram" style="--bg: url('images/consumer-products.jpg');">
           <div class="parallelogram-content" style="font-style: normal;">Consumer Products</div>
         </div>
       </a>
